@@ -1,0 +1,13 @@
+.u-listUnstyled,
+.u-listInline {
+  padding-left: 0;
+  list-style: none;
+}
+
+.u-listInline {
+  display: flex;
+}
+
+.u-listInline > li {
+  flex: 1;
+}

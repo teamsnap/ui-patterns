@@ -1,0 +1,17 @@
+---
+title: Documentation
+notes: |
+  General documentation of naming conventions and library usage.
+---
+
+<h1>{{title}}</h1>
+
+{{{notes}}}
+
+<ul>
+  {{#each (pages "docs" ignore="index")}}
+    <li>
+      <a href="{{@root.baseurl}}/{{url}}">{{data.title}}</a>
+    </li>
+  {{/each}}
+</ul>

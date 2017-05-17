@@ -1,0 +1,17 @@
+:root {
+  --Swatch-width: 100%;
+  --Swatch-height: calc(10em * (9 / 16)); /* 16:9 */
+  --Swatch-stroke: rgba(0, 0, 0, 0.1);
+  --Swatch-stroke-width: 2px;
+}
+
+/**
+ * 1. Improves swatch visibility on low-contrast background colors.
+ * 2. Double the intended stroke-width because only the inner half will be
+ *    within the visible viewBox.
+ */
+
+.Swatch {
+  width: var(--Swatch-width);
+  height: var(--Swatch-height);
+}

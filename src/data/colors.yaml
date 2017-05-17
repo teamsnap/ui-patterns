@@ -1,0 +1,31 @@
+Brand:
+  - label: "TeamSnap Blue"
+    color: "#1a6baf"
+  - label: "Link"
+    color: "#3a9bec"
+  - label: "Link Hover"
+    color: "#2687D8"
+
+Neutral:
+  - label: "Default Text"
+    color: "#5A6069"
+  - label: "Light Text"
+    color: "#828891"
+  - label: "Borders"
+    color: "#e7e7e7"
+
+Action:
+  - label: "Primary Action / Yes"
+    color: "#7FC243"
+  - label: "Primary Action Hover"
+    color: "#75B839"
+  - label: "Primary Action Border"
+    color: "#70AA3B"
+
+Danger:
+  - label: "Danger / No"
+    color: "#E26362"
+  - label: "Danger Hover"
+    color: "#D85958"
+  - label: "Danger Border"
+    color: "#C1424B"
