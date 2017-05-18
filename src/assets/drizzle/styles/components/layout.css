@@ -32,5 +32,6 @@
   .Layout-main {
     margin-left: var(--Layout-nav-width);
     padding: 2.5vh 5%;
+    min-height: 100vh;
   }
 }
