@@ -18,6 +18,12 @@ pre {
   padding: var(--space);
 }
 
+code {
+  background-color: color(#f4f4f4 blend(var(--color-white) 30%));
+  color: var(--color-orange);
+  padding: .125rem;
+}
+
 .token {
   &.comment,
   &.prolog,

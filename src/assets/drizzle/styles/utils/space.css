@@ -49,6 +49,10 @@
   margin-top: var(--space) !important;
 }
 
+.u-marginTopSmall {
+  margin-top: calc(var(--space) / 2) !important;
+}
+
 .u-marginBottom {
   margin-bottom: var(--space) !important;
 }
@@ -60,6 +64,10 @@
 
 .u-rhythm > * + * {
   margin-top: var(--space);
+}
+
+.u-rhythmSmall > * + * {
+  margin-top: calc(var(--space) / 2);
 }
 
 .u-noMargin {
