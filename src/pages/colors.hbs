@@ -8,7 +8,7 @@ notes: |
 
 {{#each (data "colors")}}
   <h3 class="drizzle-u-capitalize">{{@key}}</h3>
-  <ul class="drizzle-u-listInline">
+  <ul class="drizzle-u-listInline drizzle-u-noPadBottom">
     {{#each this}}
       <li class="drizzle-u-marginBottom">
         {{> drizzle.swatch }}

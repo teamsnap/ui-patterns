@@ -1,7 +1,8 @@
 <{{tag}} {{#if id}}id="{{id}}"{{/if}} class="
   drizzle-u-inlineBlock
   drizzle-u-alignMiddle
-  drizzle-u-padRight">
+  drizzle-u-padRight
+  drizzle-u-noMarginBottom">
   {{#if id}}
     <a href="#{{id}}" class="drizzle-u-linkHidden">{{> @partial-block }}</a>
   {{else}}
@@ -12,7 +13,8 @@
   <ul class="
     drizzle-u-inlineBlock
     drizzle-u-alignMiddle
-    drizzle-u-listUnstyled">
+    drizzle-u-listUnstyled
+    drizzle-u-noPadBottom">
     {{#each labels as |label|}}
       <li class="drizzle-Label drizzle-Label--{{label}}">
         {{label}}

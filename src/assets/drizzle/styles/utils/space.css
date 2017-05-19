@@ -23,6 +23,11 @@
   padding-bottom: var(--space) !important;
 }
 
+.u-noPadBottom {
+  padding-bottom: 0 !important;
+}
+
+
 .u-padEnds {
   padding-bottom: var(--space) !important;
   padding-top: var(--space) !important;

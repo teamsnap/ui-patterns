@@ -1,11 +1,9 @@
 <div class="drizzle-Item drizzle-u-rhythm">
   {{!-- Header, labels --}}
   <div class="drizzle-u-marginEnds">
-    {{#unless data.notitle}}
       {{#> drizzle.labelheader tag="h2" id=(toSlug name) labels=data.labels}}
         {{name}}
       {{/drizzle.labelheader}}
-    {{/unless}}
   </div>
   {{!-- Notes --}}
   {{#if data.notes}}

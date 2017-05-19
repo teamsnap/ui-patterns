@@ -72,6 +72,7 @@
 .Nav-item {
   display: block;
   padding: var(--Nav-item-padding);
+  margin-bottom: 0;
 
   &.is-active {
     background: var(--Nav-active-background);
