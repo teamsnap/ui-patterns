@@ -7,7 +7,7 @@ This library includes the [teamsnap-ui](https://github.com/teamsnap/teamsnap-ui)
 ## Quick Start
 
 1. Clone this repo.
-2. Make sure your `node` and `npm` versions are relatively up to date.
+2. Make sure your `node` and `npm` versions are relatively up to date. Node versions as early as v4.2.3 are known to cause issues.
 3. `npm start`
 
 ## Documentation
