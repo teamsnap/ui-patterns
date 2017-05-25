@@ -1,0 +1,23 @@
+/**
+ * Override a few styles from the Classic toggle for use in the Drizzle UI
+ */
+
+/* Remove the labels within the toggle */
+.drizzle__check-toggle label:before {
+  content: '' !important;
+}
+
+/* Reduce the width since the labels are no longer there */
+.drizzle__check-toggle label {
+  width: 27px;
+}
+
+/* Add a nice little transition */
+.drizzle__check-toggle label:after {
+  transition: all ease 100ms;
+}
+
+/* Make just the left side change since we can't animate `auto` */
+.drizzle__check-toggle input[type="checkbox"]:checked + label:after {
+  left: 14px;
+}

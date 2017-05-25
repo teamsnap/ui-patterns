@@ -17,8 +17,19 @@
     </a>
   </div>
   <div class="drizzle-Nav-main" id="nav-menu">
+
+    <div class="drizzle-Nav-item drizzle-u-marginTop drizzle-u-flex drizzle-u-flexJustifyBetween drizzle-u-flexAlignItemsCenter">
+      <label for="codePreview">Source Code Preview</label>
+      <div class="drizzle__check-toggle">
+        <input type="checkbox" id="codePreview" checked class="js-drizzleCodePreviewToggle">
+        <label></label>
+      </div>
+    </div>
+
+
+
     {{!-- Top-level pages --}}
-    <h3 class="drizzle-Nav-item drizzle-u-marginTop">Intro</h3>
+    <h3 class="drizzle-Nav-item">Intro</h3>
     <ul class="drizzle-Nav-menu">
       {{#each (pages sortby="order")}}
         <li>

@@ -1,6 +1,7 @@
 'use strict';
 
 import 'prismjs';
+import {u} from 'umbrellajs';
 
 const dom = {};
 
@@ -40,3 +41,8 @@ if (dom.frameContainers.length) {
     });
   });
 }
+
+
+u('.js-drizzleCodePreviewToggle').on('click', () => {
+  u('.js-drizzleCodePreview').toggleClass('drizzle-u-hidden');
+})
