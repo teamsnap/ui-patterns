@@ -1,5 +1,6 @@
 ---
 title: Naming Conventions
+layout: prose
 ---
 
 # {{title}}
@@ -19,12 +20,11 @@ to any element within a component.
 
 Syntax: `u-[sm-|md-|lg-]<utilityName>`
 
+<br>
 
-
-<a name="u-utilityName"></a>
 ### u-utilityName
 
-Utilities must use a camel case name. What follows is an example of how various
+Utilities use a camel case name. What follows is an example of how various
 utilities can be used to create a simple structure within a component.
 
 ```html
@@ -38,18 +38,21 @@ utilities can be used to create a simple structure within a component.
 </div>
 ```
 
+<br>
+
 ### Responsive utilities
 
 Certain utilities have responsive variants using the patterns: `u-sm-<name>`,
 `u-md-<name>`, and `u-lg-<name>` for small, medium, and large Media Query
 breakpoints.
 
+<br>
 
 ## Components
 
 The CSS responsible for component-specific styling.
 
-Syntax: `[<namespace>-]<ComponentName>[-descendentName][--modifierName]`
+Syntax: `<ComponentName>[-descendentName][--modifierName]`
 
 This has several benefits when reading and writing HTML and CSS:
 
@@ -59,10 +62,9 @@ This has several benefits when reading and writing HTML and CSS:
 * It helps to decouple presentation semantics from document semantics.
 
 
-<a name="ComponentName"></a>
 ### ComponentName
 
-The component's name must be written in pascal case. Nothing else in the
+The component's name is written in pascal case. Nothing else in the
 HTML/CSS uses pascal case.
 
 ```css
@@ -75,19 +77,21 @@ HTML/CSS uses pascal case.
 </article>
 ```
 
-<a name="ComponentName--modifierName"></a>
+<br>
+
 ### ComponentName--modifierName
 
 A component modifier is a class that modifies the presentation of the base
 component in some form (e.g., for a certain configuration of the component).
-Modifier names must be written in camel case and be separated from the
+Modifier names are written in camel case and separated from the
 component name by two hyphens. The class should be included in the HTML _in
 addition_ to the base component class.
 
 ```css
 /* Core button */
 .Button { /* … */ }
-/* Primary button style */
+
+/* Primary button modifier */
 .Button--primary { /* … */ }
 ```
 
@@ -95,12 +99,13 @@ addition_ to the base component class.
 <button class="Button Button--primary" type="button">…</button>
 ```
 
-<a name="ComponentName-descendentName"></a>
+<br>
+
 ### ComponentName-descendentName
 
 A component descendent is a class that is attached to a descendent node of a
 component. It's responsible for applying presentation directly to the
-descendent on behalf of a particular component. Descendent names must be
+descendent on behalf of a particular component. Descendent names are
 written in camel case.
 
 ```html
@@ -114,11 +119,12 @@ written in camel case.
 </article>
 ```
 
-<a name="is-stateOfComponent"></a>
+<br>
+
 ### ComponentName.is-stateOfComponent
 
 Use `is-stateName` to reflect changes to a component's state. The state name
-must be camel case. **Never style these classes directly; they should always be
+is written in camel case. **Never style these classes directly; they should always be
 used as an adjoining class.**
 
 This means that the same state names can be used in multiple contexts, but

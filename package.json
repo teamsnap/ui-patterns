@@ -52,7 +52,8 @@
     "suitcss-components-button": "^5.0.0",
     "suitcss-components-grid": "^3.0.2",
     "suitcss-utils": "^1.0.0",
-    "suitcss-utils-flex": "^2.0.0"
+    "suitcss-utils-flex": "^2.0.0",
+    "umbrellajs": "^2.7.0"
   },
   "scripts": {
     "prestart": "npm install",
