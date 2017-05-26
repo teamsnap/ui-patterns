@@ -21,14 +21,14 @@ styles:
 </ul>
 
 <table class="u-size-full">
-	<thead>
-		<tr>
-			<th>Name</th>
+  <thead>
+  <tr>
+  <th>Name</th>
       <th>Date</th>
       <th>Description</th>
-		</tr>
-	</thead>
-	<tbody>
+  </tr>
+  </thead>
+  <tbody>
     {{#iterate 12}}
   		<tr>
   			<td>{{random "name"}}</td>
@@ -36,7 +36,7 @@ styles:
   			<td>{{random "sentence"}}</td>
   		</tr>
     {{/iterate}}
-	</tbody>
+  </tbody>
 </table>
 
 {{#each (data "articles")}}
