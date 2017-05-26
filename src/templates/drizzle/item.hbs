@@ -1,11 +1,9 @@
 <div class="drizzle-Item drizzle-u-rhythm">
   {{!-- Header, labels --}}
-  <div class="drizzle-u-marginEnds">
-    {{#unless data.notitle}}
-      {{#> drizzle.labelheader tag="h2" id=(toSlug name) labels=data.labels}}
-        {{name}}
-      {{/drizzle.labelheader}}
-    {{/unless}}
+  <div>    
+    {{#> drizzle.labelheader tag="h2" id=(toSlug name) labels=data.labels}}
+      {{name}}
+    {{/drizzle.labelheader}}
   </div>
   {{!-- Notes --}}
   {{#if data.notes}}
@@ -15,7 +13,7 @@
   {{/if}}
   {{!-- Links --}}
   {{#if data.links}}
-    <div class="drizzle-u-inlineBlock">
+    <div class="drizzle-u-inlineBlock drizzle-u-padBottom">
       <ul class="drizzle-Arrange drizzle-Arrange--withGutter">
         {{#each data.links as |url label|}}
           <li class="drizzle-Arrange-sizeFit">
@@ -32,15 +30,11 @@
     </div>
   {{/if}}
   {{!-- Preview --}}
-  <div>
-    {{#unless data.previewless}}
-      <div class="drizzle-u-padBottom drizzle-u-cf drizzle-u-posRelative {{data.previewClass}}">
-        {{{pattern id @root}}}
-      </div>
-    {{/unless}}
-    {{!-- Code sample --}}
-    {{#unless data.sourceless}}
-      <pre class="drizzle-u-pad drizzle-u-marginTop js-drizzleCodePreview"><code class="language-markup">{{{patternSource id @root}}}</code></pre>
-    {{/unless}}
+  <div class="drizzle-u-cf drizzle-u-posRelative {{data.previewClass}}">
+    {{{pattern id @root}}}
   </div>
+  {{!-- Code sample --}}
+  {{#unless data.sourceless}}
+    <pre class="drizzle-u-pad js-drizzleCodePreview"><code class="language-markup">{{{patternSource id @root}}}</code></pre>
+  {{/unless}}
 </div>
