@@ -1,6 +1,6 @@
 ---
-title: First Demo Example
-notes: This is an example demo.
+title: Sample Prototype
+notes: This is an example prototype using styles from classic and the new CSS components to build a design.
 layout: blank
 labels:
   - inprogress
@@ -9,14 +9,29 @@ styles:
   - demo-1
 ---
 
-<h1>{{title}}</h1>
+{{!-- You can mix and match classic styles and new components since the app as well as this library are still importing these styles --}}
 
-{{#each (data "articles")}}
-  <article>
-    <header>
-      <h2>{{title}}</h2>
-      <p>Published: <time pubdate="pubdate">{{timestamp date format="MMM Do, YYYY"}}</time></p>
-    </header>
-    {{{body}}}
-  </article>
-{{/each}}
+<div class="-container">
+  <h1>{{title}}</h1>
+  <div class="__panel">
+    <div class="__panel-body u-pad-large">
+      {{{embed  "patterns.components.step-nav.base"}}}
+      <h2>
+        {{#iterate 5}}
+          {{capitalize (random "word")}}
+        {{/iterate}}
+      </h2>
+      {{random "paragraph" sentences=3}}
+      <p class="u-space-top">
+        <button class="Button Button--negative">
+          <i class="ss-delete"></i>
+          Cancel
+        </button>
+        <button class="Button Button--primary">
+          <i class="ss-check"></i>
+          Continue
+        </button>
+      </p>
+    </div>
+  </div>
+</div>
