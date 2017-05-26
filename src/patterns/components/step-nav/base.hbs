@@ -1,0 +1,29 @@
+---
+hidden: true
+---
+
+<div class="StepNav {{stepNavClass}}">
+  {{#if stepNavTitle}}
+    <div class="StepNav-title">
+      <h2 class="StepNav-titleText">{{stepNavTitle}}</h2>
+    </div>
+  {{/if}}
+  <ul class="StepNav-steps">
+    {{#block "steps"}}
+      {{{embed "patterns.components.step-nav.step"
+        stepEnabled=true
+        stepTitle="Completed Step"
+      }}}
+      {{{embed "patterns.components.step-nav.step"
+        stepEnabled=true
+        stepActive=true
+        stepIcon="ss-location"
+        stepTitle="Current Step"
+      }}}
+      {{{embed "patterns.components.step-nav.step"
+        stepIcon="ss-lock"
+        stepTitle="Next Step"
+      }}}
+    {{/block}}
+  </ul>
+</div>

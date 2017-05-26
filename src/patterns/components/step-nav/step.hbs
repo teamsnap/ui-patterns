@@ -1,0 +1,10 @@
+---
+hidden: true
+---
+
+<li class="StepNav-step {{#if stepEnabled}}is-enabled{{/if}} {{#if stepActive}}is-active{{/if}}">
+  {{#or stepEnabled stepActive}}<a href="#"{{else}}<span{{/or}} class="StepNav-stepLink">
+        <i class="StepNav-stepIcon {{defaultTo stepIcon "ss-check"}}"></i>
+        <span class="StepNav-stepTitle">{{defaultTo stepTitle "Step"}}</span>
+      {{#or stepEnabled stepActive}}</a>{{else}}</span>{{/or}}
+</li>
