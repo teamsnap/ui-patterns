@@ -1,6 +1,7 @@
 ---
 title: Documentation
 notes: General documentation of naming conventions, submodules and eventually style guide references.
+layout: prose
 ---
 
 <h1>{{title}}</h1>
@@ -10,9 +11,32 @@ notes: General documentation of naming conventions, submodules and eventually st
 <p>The docs below provide some details specific to the TeamSnap library.</p>
 
 <ul>
-  {{#each (pages "docs" ignore="index")}}
+  {{#each (pages "docs" ignore="index" sortby="order")}}
     <li>
       <a href="{{@root.baseurl}}/{{url}}">{{data.title}}</a>
     </li>
   {{/each}}
 </ul>
+
+<h2>Tools</h2>
+<dl>
+  <dt>
+    <strong>Handlebars</strong>
+  </dt>
+  <dd>Handlebars is included for easy template authoring. The <a href="http://handlebarsjs.com/">handlebars docs</a> provide some great info.</dd>
+
+  <dt class="u-space-top-small">
+    <strong>Handlebars Layouts</strong>
+  </dt>
+  <dd>The <a href="https://github.com/shannonmoeller/handlebars-layouts">`handlebars-layouts`</a> helper suite is included to provide extensible "layout" behavior to all templates.</dd>
+
+  <dt class="u-space-top-small">
+    <strong>Handlebars Helpers</strong>
+  </dt>
+  <dd>Included in this toolkit is an extensive <a href="https://github.com/cloudfour/core-hbs-helpers/tree/master/lib">open-source handlebars helpers library</a>. This is a great resource to help with all your templating needs.</dd>
+
+  <dt class="u-space-top-small">
+    <strong>Chance.js</strong>
+  </dt>
+  <dd>The <a href="https://github.com/cloudfour/core-hbs-helpers/blob/master/lib/random.js">"random"</a> handlebar helper makes use of <a href="http://chancejs.com/">Chance.js</a>, making it easy to generate all sorts of data on the fly.</dd>
+</dl>

@@ -1,6 +1,7 @@
 ---
 title: Working with Submodules
 layout: prose
+order: 2
 ---
 
 # {{title}}
