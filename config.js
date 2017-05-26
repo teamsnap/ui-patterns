@@ -3,8 +3,14 @@
 module.exports = {
   'ui': {
     src: './src/teamsnap-ui/src/index.scss',
+    dest: './dist/assets/toolkit/styles/teamsnap.scss',
+    name: 'ui'
+  },
+
+  'demos': {
+    src: './src/assets/toolkit/styles/*.scss',
     dest: './dist/assets/toolkit/styles',
-    name: 'css:toolkit'
+    name: 'demos'
   },
 
   'css:drizzle': {
@@ -69,7 +75,10 @@ module.exports = {
         tasks: ['css']
       },
       {
-        match: ['./src/teamsnap-ui/src/**/*.scss'],
+        match: [
+          './src/teamsnap-ui/src/**/*.scss',
+          './src/assets/**/*.scss'          
+        ],
         tasks: ['sass']
       },
       {

@@ -20,7 +20,7 @@ pre {
 
 code {
   background-color: color(#f4f4f4 blend(var(--color-white) 30%));
-  color: var(--color-orange);
+  color: #f75b02;
   padding: .125rem;
 }
 
@@ -36,7 +36,7 @@ code {
   &.string,
   &.atrule,
   &.attr-value {
-    color: var(--color-orange);
+    color: #f75b02;
   }
 
   &.property,

@@ -1,28 +1,20 @@
-<div class="StepNav StepNav--small">
-  <ul class="StepNav-steps">
-    <li class="StepNav-step is-enabled">
-      <a class="StepNav-stepLink" href="#">
-        <i class="StepNav-stepIcon ss-check"></i>
-        <span class="StepNav-stepTitle">Completed Step</span>
-      </a>
-    </li>
-    <li class="StepNav-step is-enabled is-active">
-      <a class="StepNav-stepLink" href="#">
-        <i class="StepNav-stepIcon ss-location"></i>
-        <span class="StepNav-stepTitle">Current Step</span>
-      </a>
-    </li>
-    <li class="StepNav-step">
-      <span class="StepNav-stepLink">
-        <i class="StepNav-stepIcon ss-lock"></i>
-        <span class="StepNav-stepTitle">Next Step</span>
-      </span>
-    </li>
-    <li class="StepNav-step">
-      <span class="StepNav-stepLink">
-        <i class="StepNav-stepIcon ss-lock"></i>
-        <span class="StepNav-stepTitle">Last Step</span>
-      </span>
-    </li>
-  </ul>
-</div>
+{{#embed  "patterns.components.step-nav.base" stepNavClass="StepNav--small"}}
+  {{#content "steps"}}
+    {{{embed "patterns.components.step-nav.step"
+      stepEnabled=true
+      stepTitle="Completed Step"
+    }}}
+    {{{embed "patterns.components.step-nav.step"
+      stepEnabled=true
+      stepActive=true
+      stepIcon="ss-location"
+      stepTitle="Current Step"
+    }}}
+    {{#iterate 2}}
+      {{{embed "patterns.components.step-nav.step"
+        stepIcon="ss-lock"
+        stepTitle="Next Step"
+      }}}
+    {{/iterate}}
+  {{/content}}
+{{/embed}}

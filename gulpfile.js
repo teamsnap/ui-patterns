@@ -30,13 +30,18 @@ Object.assign(config.drizzle, { helpers });
 tasks.css(gulp, config['css:drizzle']);
 gulp.task('css', ['css:drizzle']);
 
-// Register Teamsnap UI Sass compilation
-gulp.task('sass', function () {
-  return gulp.src(config.ui.src)
+// Add sass function for compiling Sass
+function compileSass(cfg) {
+  return gulp.src(cfg.src)
 	.pipe(sass().on('error', sass.logError))
 	.pipe(prefix('last 1 version'))
-	.pipe(rename('teamsnap-ui.css'))
-  .pipe(gulp.dest(config.ui.dest))
+  .pipe(gulp.dest(cfg.dest))
+}
+
+// Run Sass compile on Teamsnap UI and Demo CSS
+gulp.task('sass', function() {
+  compileSass(config.ui);
+  compileSass(config.demos);
 });
 
 // Register Drizzle builder task

@@ -1,0 +1,8 @@
+// Import sass variables from Teamsnap UI so that you can use 'em if you want
+@import "../../../teamsnap-ui/src/base/config.scss";
+
+body {
+  padding: 2em;
+  background: $color-success--light;
+  min-height: 100vh;
+}

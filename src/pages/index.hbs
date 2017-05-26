@@ -1,21 +1,18 @@
 ---
 title: Overview
+layout: prose
 order: 1
 ---
 
 <h1>{{title}}</h1>
 
 <p>
-  This UI toolkit is a highly-modular design system for rapid web page
-  development. It contains different materials that can be assembled into more
-  complex page layouts. It includes working examples, code snippets and
-  documentation.
+  This UI toolkit is a design system for building, using and documenting the new <a href="https://github.com/teamsnap/teamsnap-ui">teamsnap-ui</a> CSS components.  It includes tools for prototyping with the new styles, but also imports Classic CSS to mirror the production environment and allow for building prototypes with Classic styles when necessary.
 </p>
 
-<h3>Some Pages</h3>
-
 <dl>
-  {{#with (page "colors")}}
+
+  {{#with (page "docs/index")}}
     <dt>
       <a href="{{@root.baseurl}}/{{url}}">{{data.title}}</a>
     </dt>
@@ -24,7 +21,7 @@ order: 1
     </dd>
   {{/with}}
 
-  {{#with (page "docs/index")}}
+  {{#with (page "colors")}}
     <dt>
       <a href="{{@root.baseurl}}/{{url}}">{{data.title}}</a>
     </dt>
