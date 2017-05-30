@@ -1,0 +1,24 @@
+---
+notes: |
+  Flexbox-based grid that has modifiers for gutters, equal column heights and different alignments. Grid cells are sized separately with sizing utilities.
+
+  ### Available Classes:
+  + `Grid`: base container class
+  + `Grid--fit`: modifier to equally distribute cells
+  + `Grid--equalHeight`: modifier to make cells in a row the same height
+  + `Grid--alignCenter`: modifier to align cells horizontally center
+  + `Grid--alignMiddle`: modifier to align cells vertically center
+  + `Grid-cell`: child of `Grid`
+
+links:
+  SUIT CSS Grid: https://github.com/suitcss/components-grid
+---
+
+<div class="Grid Grid--fit Grid--withGutter">
+  <div class="Grid-cell">
+    <p class="u-pad" data-bg="fill">A grid cell</p>
+  </div>
+  <div class="Grid-cell">
+    <p class="u-pad" data-bg="fill">Another grid cell</p>
+  </div>
+</div>
