@@ -1,3 +1,7 @@
 .u-colorWhite {
   color: white !important;
 }
+
+[data-bg="fill"] {
+  background-color: #f7f7f7;
+}

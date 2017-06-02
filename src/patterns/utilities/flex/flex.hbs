@@ -1,0 +1,98 @@
+---
+name: SUIT CSS Flexbox Utilities
+links:
+  SUIT CSS Flex Utilities: https://github.com/suitcss/utils-flex
+  A Complete Guide to Flexbox: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+  Flexbugs: https://github.com/philipwalton/flexbugs
+  Centering with Flexbox: https://medium.com/@samserif/flexbox-s-best-kept-secret-bd3d892826b6
+sourceless: true
+---
+<h3>Available Classes</h3>
+
+<p><strong>flex-container</strong></p>
+<ul>
+  <li><code>u-flex</code> - Create a flex container</li>
+  <li><code>u-flexInline</code> - Create an inline flex container</li>
+</ul>
+<p><strong>flex-direction</strong></p>
+<ul>
+  <li><code>u-flexRow</code> - Displays items in a row</li>
+  <li><code>u-flexRowReverse</code> - Reverses items in a row</li>
+  <li><code>u-flexCol</code> - Display items in a column</li>
+  <li><code>u-flexColReverse</code> - Reverses items in a column</li>
+</ul>
+<p><strong>flex-wrap</strong></p>
+<ul>
+  <li><code>u-flexWrap</code> - Wrap items onto another line when space allows</li>
+  <li><code>u-flexNoWrap</code> - Force items to stay on one line</li>
+  <li><code>u-flexWrapReverse</code> - Wrap items and reverse direction</li>
+</ul>
+<p><strong>justify-content</strong></p>
+<ul>
+  <li><code>u-flexJustifyStart</code> - Align items at the start of the main axis</li>
+  <li><code>u-flexJustifyEnd</code> - Align items at the end of the main axis</li>
+  <li><code>u-flexJustifyCenter</code> - Align items at the center of the main axis</li>
+  <li><code>u-flexJustifyBetween</code> - Items have space between each other on main axis</li>
+  <li><code>u-flexJustifyAround</code> - Items have space around each other on main axis</li>
+</ul>
+<p><strong>align-items</strong></p>
+<ul>
+  <li><code>u-flexAlignItemsStretch</code> - Items stretch to fill container</li>
+  <li><code>u-flexAlignItemsStart</code> - Cross-start margin edge of the items is placed on the cross-start line</li>
+  <li><code>u-flexAlignItemsEnd</code> - Cross-end margin edge of the items is placed on the cross-end line</li>
+  <li><code>u-flexAlignItemsCenter</code> - Items are centered in the cross-axis</li>
+  <li><code>u-flexAlignItemsBaseline</code> - Items have their baselines aligned on the cross axis</li>
+</ul>
+<p><strong>align-content</strong></p>
+<ul>
+  <li><code>u-flexAlignContentStart</code> - Items are packed to the start of the container</li>
+  <li><code>u-flexAlignContentEnd</code> - Items are packed to the end of the container</li>
+  <li><code>u-flexAlignContentCenter</code> - Items are packed to the centre of the container</li>
+  <li><code>u-flexAlignContentStretch</code> - Lines stretch to take up the remaining space</li>
+  <li><code>u-flexAlignContentBetween</code> - Lines evenly distributed; first and last lines at container edge</li>
+  <li><code>u-flexAlignContentAround</code> - Lines evenly distributed with equal space around each line</li>
+</ul>
+<p><strong>align-self</strong></p>
+<ul>
+  <li><code>u-flexAlignSelfStart</code> - Aligns single item at cross axis start</li>
+  <li><code>u-flexAlignSelfEnd</code> - Aligns single item at cross axis end</li>
+  <li><code>u-flexAlignSelfCenter</code> - Aligns single item at cross axis centre-</li>
+  <li><code>u-flexAlignSelfStretch</code> - Stretches single item from cross start to end</li>
+  <li><code>u-flexAlignSelfAuto</code> - Uses the default set by <code>align-items</code></li>
+</ul>
+<p><strong>order</strong></p>
+<ul>
+  <li><code>u-flexOrderFirst</code> - Positions an item at the start</li>
+  <li><code>u-flexOrderLast</code> - Positions an item at the end</li>
+  <li><code>u-flexOrderNone</code> - Sets item order to the default of <code>0</code></li>
+</ul>
+<p><strong>flex-grow</strong></p>
+<ul>
+  <li><code>u-flexGrow1</code> - Specify how much the flex item will grow relatively</li>
+</ul>
+<p><strong>flex-shrink</strong></p>
+<p><code>X</code> can be any of the following numbers: <code>0</code>, <code>1</code></p>
+<ul>
+  <li><code>u-flexShrinkX</code> - Specify how much the flex item will shrink relatively</li>
+</ul>
+<p><strong>flex-basis</strong></p>
+<p>Used to override other utilities and tweak <a href="https://www.w3.org/TR/css-flexbox-1/images/rel-vs-abs-flex.svg">how space is
+distributed</a>.</p>
+<ul>
+  <li><code>u-flexBasisAuto</code></li>
+  <li><code>u-flexBasis0</code></li>
+</ul>
+<p><strong>flex</code> shorthand</strong></p>
+<ul>
+  <li><code>u-flexInitial</code> - Sizes the item based on the width/height properties</li>
+  <li><code>u-flexAuto</code> - Sizes the item based on the width/height properties, but makes them fully flexible, so that they absorb any free space along the main axis.</li>
+  <li><code>u-flexNone</code> - Sizes the item according to the width/height properties, but makes the flex item fully inflexible. Similar to initial, except that flex items are not allowed to shrink, even in overflow situations.</li>
+</ul>
+<p><strong>Aligning with <code>auto</code> margins</strong></p>
+<ul>
+  <li><code>u-flexExpand</code> - Expand all margins to fill remaining space</li>
+  <li><code>u-flexExpandTop</code> - Expand top margin to fill remaining space</li>
+  <li><code>u-flexExpandRight</code> - Expand right margin to fill remaining space</li>
+  <li><code>u-flexExpandBottom</code> - Expand bottom margin to fill remaining space</li>
+  <li><code>u-flexExpandLeft</code> - Expand left margin to fill remaining space</li>
+</ul>

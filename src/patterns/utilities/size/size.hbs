@@ -1,0 +1,28 @@
+---
+name: Sizing Utilities
+notes: |
+  Base 24 percentage sizing and intrinsic width sizing utilities.
+  ### Classes
+  `X` = 1-24
+  + `u-sizeXof24`
+  + `u-sizeFull` can also be used for 100%
+  + `u-sizeFit` makes an element shrink wrap its content.
+  + `u-sizeFill` makes an element fill the remaining space.
+previewClass: drizzle-u-rhythm drizzle-u-textCenter
+sourceless: true
+---
+
+<div class="Grid Grid--withGutter">
+  <div class="Grid-cell u-sizeFit">
+    <p data-bg="fill"><code>u-sizeFit</code> shrink-wraps content.</p>
+  </div>
+  <div class="Grid-cell u-sizeFill">
+    <p data-bg="fill"><code>u-sizeFill</code> fills remaining space.</p>
+  </div>
+</div>
+
+{{#iterate 24}}
+  <div class="u-size{{@count}}of24" data-bg="fill">
+    <small>{{@count}}/24</small>
+  </div>
+{{/iterate}}
