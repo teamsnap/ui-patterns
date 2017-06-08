@@ -1,0 +1,44 @@
+---
+name: Percentage
+order: 1
+notes: |
+  Size utilities include percentage widths for 24 columns, with reduced fractions for all divisors of 24.
+
+  `X` must be an integer less than `Y`
+
+  `Y` can be 2, 3, 4, 6, 8, 12 or 24
+
+  + `u-sizeXofY`
+  + `u-sizeFull` for 100%
+
+previewClass: drizzle-u-rhythm drizzle-u-textCenter
+sourceless: true
+---
+
+<div class="Grid Grid--withGutter">
+  {{#iterate 2}}
+    <div class="Grid-cell u-size{{@count}}of3">
+      <div data-bg="fill">
+        <small><code>u-size{{@count}}of3</code></small>
+      </div>
+    </div>
+  {{/iterate}}
+</div>
+
+<div class="Grid Grid--withGutter">
+  <div class="Grid-cell u-size5of24">
+    <div data-bg="fill">
+      <small><code>u-size5of24</code></small>
+    </div>
+  </div>
+  <div class="Grid-cell u-size7of24">
+    <div data-bg="fill">
+      <small><code>u-size7of24</code></small>
+    </div>
+  </div>
+  <div class="Grid-cell u-size12of24">
+    <div data-bg="fill">
+      <small><code>u-size12of24</code></small> or <small><code>u-size1of2</code></small>
+    </div>
+  </div>
+</div>

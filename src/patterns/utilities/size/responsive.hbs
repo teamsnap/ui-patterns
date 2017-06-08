@@ -1,0 +1,27 @@
+---
+name: Responsive
+order: 2
+notes: |
+  Sizing classes can be limited by media queries for responsive sizing:
+
+  + `u-xs-sizeXofY`
+  + `u-sm-sizeXofY`
+  + `u-md-sizeXofY`
+  + `u-lg-sizeXofY`
+  + `u-[xs, sm, md or lg]-sizeFull`
+
+  <p>(Pull screen wider and narrower to see sizes change)</p>
+
+previewClass: drizzle-u-rhythm drizzle-u-textCenter
+sourceless: true
+---
+
+<div class="Grid Grid--withGutter">
+  {{#iterate 6}}
+    <div class="Grid-cell u-size1of2 u-sm-size1of3 u-md-size1of4 u-lg-size1of6 u-space-top-small">
+      <div data-bg="fill" class="u-pad">
+
+      </div>
+    </div>
+  {{/iterate}}
+</div>
