@@ -1,0 +1,20 @@
+---
+title: Icons
+notes: |
+  SVG versions of the Pika icon font symbols.
+---
+
+<h1>{{title}}</h1>
+<p>SVG versions of the Pika icon font symbols display inline and inherit parent <code>font-size</code> and <code>color</code>.</p>
+<p>For more usage information see the <a href="patterns/components/icon.html">Icon</a> component.</p>
+
+<ul class="Grid Grid--withGutter drizzle-u-listUnstyled">
+  {{#each (data "icons")}}
+    <li class="Grid-cell align-center u-size6of24 u-space-top-small">
+      <div class="u-pad-large" data-bg="fill">
+        <h1>{{svg this class="Icon"}}</h1>
+        <p>{{this}}</p>
+      </div>
+    </li>
+  {{/each}}
+</ul>

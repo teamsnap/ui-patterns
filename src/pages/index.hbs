@@ -30,6 +30,15 @@ order: 1
     </dd>
   {{/with}}
 
+  {{#with (page "icons")}}
+    <dt>
+      <a href="{{@root.baseurl}}/{{url}}">{{data.title}}</a>
+    </dt>
+    <dd class="drizzle-u-padBottom">
+      {{{data.notes}}}
+    </dd>
+  {{/with}}
+
   {{#with (page "demos/index")}}
     <dt>
       <a href="{{@root.baseurl}}/{{url}}">{{data.title}}</a>
