@@ -14,6 +14,12 @@ const sass = require('gulp-sass');
 const gulpif = require('gulp-if');
 const csso = require('gulp-csso');
 
+// Customize inline SVG helper base path
+helpers.svg = helpers.svg.create({
+  basePath: './src/teamsnap-ui/src/assets/icons/'
+});
+
+
 // Append config
 Object.assign(config.drizzle, { helpers });
 
