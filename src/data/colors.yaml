@@ -1,31 +1,55 @@
-Brand:
-  - label: "TeamSnap Blue"
-    color: "#1a6baf"
-  - label: "Link"
-    color: "#3a9bec"
-  - label: "Link Hover"
-    color: "#2687D8"
+TS Blue:
+  - label: "scaleColor($ts-blue, -3)"
+    color: "#124A7A"
+  - label: "scaleColor($ts-blue, -1)"
+    color: "#17609D"
+  - label: "$ts-blue"
+    color: "#1A6BAF"
+  - label: "scaleColor($ts-blue, 1)"
+    color: "#317AB7"
+  - label: "scaleColor($ts-blue, 10)"
+    color: "#F3F7FA"
 
-Neutral:
-  - label: "Default Text"
-    color: "#5A6069"
-  - label: "Light Text"
-    color: "#828891"
-  - label: "Borders"
-    color: "#e7e7e7"
+TS Dark Blue:
+  - label: "scaleColor($ts-darkblue, -3)"
+    color: "#0F3458"
+  - label: "$ts-darkblue"
+    color: "#13426E"
+  - label: "scaleColor($ts-darkblue, 10)"
+    color: "#F2F5F7"
 
-Action:
-  - label: "Primary Action / Yes"
+TS Green:
+  - label: "scaleColor($ts-green, -3)"
+    color: "#659B35"
+  - label: "scaleColor($ts-green, -1)"
+    color: "#72AE3C"
+  - label: "$ts-green"
     color: "#7FC243"
-  - label: "Primary Action Hover"
-    color: "#75B839"
-  - label: "Primary Action Border"
-    color: "#70AA3B"
+  - label: "scaleColor($ts-green, 10)"
+    color: "#F8FBF5"
 
-Danger:
-  - label: "Danger / No"
-    color: "#E26362"
-  - label: "Danger Hover"
-    color: "#D85958"
-  - label: "Danger Border"
-    color: "#C1424B"
+TS Orange:
+  - label: "$ts-orange"
+    color: "#FF8F00"
+  - label: "scaleColor($ts-orange, 10)"
+    color: "#FFF9F2"
+
+TS Black:
+  - label: "$ts-black"
+    color: "#222222"
+  - label: "scaleColor($ts-black, 1)"
+    color: "#383838"
+  - label: "scaleColor($ts-black, 4)"
+    color: "#7A7A7A"
+
+TS Grey:
+  - label: "$ts-grey"
+    color: "#d6d6d6"
+  - label: "scaleColor($ts-grey, 4)"
+    color: "#E6E6E6"
+  - label: "scaleColor($ts-grey, 8)"
+    color: "#F6F6F6"
+  - label: "scaleColor($ts-grey, 10)"
+    color: "#FCFCFC"
+  - label: "$ts-white"
+    color: "#ffffff"
