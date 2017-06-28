@@ -14,9 +14,10 @@ All of the following `git submodule` commands are to be executed from the `ui-pa
 
 command | description
 --- | ---
-`git submodule update src/teamsnap-ui` | This will update (or reset) the `teamsnap-ui` submodule by checking out the files at the current submodule commit hash that has been committed to the `ui-patterns` repository.
-`git submodule update --remote src/teamsnap-ui` | This will update the `teamsnap-ui` submodule by checking out the latest from the _remote_ repository. This is handy if you want to pull in the latest commit from `master` in the `teamsnap-ui` remote repository.
-`git diff --submodule src/teamsnap-ui` | This will show us a diff of the `teamsnap-ui` submodule only.
+`git submodule update --init` | Run this if you have just cloned the `ui-patterns` repo. This will initialize and populate the submodule.
+`git submodule update` | This will update (or reset) the `teamsnap-ui` submodule by checking out the files at the current submodule commit hash that has been committed to the `ui-patterns` repository.
+`git submodule update --remote` | This will update the `teamsnap-ui` submodule by checking out the latest from the _remote_ repository. This is handy if you want to pull in the latest commit from `master` in the `teamsnap-ui` remote repository.
+`git diff --submodule` | This will show us a diff of the `teamsnap-ui` submodule only.
 
 You can also `cd` into the `src/teamsnap-ui` submodule and work within the CSS the same way you'd work within the `teamsnap-ui` repo. You can commit changes and submit PRs from within this directory.
 
@@ -26,7 +27,7 @@ You can also `cd` into the `src/teamsnap-ui` submodule and work within the CSS t
 
 We want to keep our submodule up to date with remote master. If changes have been made to the remote version of `teamsnap-ui`, we can update our commit hash reference to match by committing it within the `ui-patterns` repo.
 
-0. Run the command `git submodule update --remote src/teamsnap-ui`.
+0. Run the command `git submodule update --remote`.
 
   Alternately, you can always `cd` into the `src/teamsnap-ui` submodule and run `git checkout master` and `git pull` to get the latest.
 
