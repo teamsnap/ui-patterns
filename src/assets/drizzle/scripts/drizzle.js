@@ -45,4 +45,15 @@ if (dom.frameContainers.length) {
 
 u('.js-drizzleCodePreviewToggle').on('click', () => {
   u('.js-drizzleCodePreview').toggleClass('drizzle-u-hidden');
-})
+});
+
+u('.js-drizzleClassicCssToggle').on('click', () => {
+  const style = u('link[rel="stylesheet"][href*="app-team-"]');
+  if(style.attr('disabled')) {
+    style.each(function(element){
+      element.removeAttribute('disabled');
+    });
+  } else {
+    style.attr('disabled', 'disabled');
+  }
+});
