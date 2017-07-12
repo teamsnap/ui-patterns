@@ -8,7 +8,7 @@ const dom = {};
 dom.nav = document.getElementById('nav');
 dom.navMenu = document.getElementById('nav-menu');
 dom.navToggle = dom.nav.querySelector('a[href="#nav"]');
-dom.navLinks = dom.navMenu.querySelectorAll('a');
+dom.navLinks = (dom.navMenu) ? dom.navMenu.querySelectorAll('a') : [];
 
 function setActiveNavItem (pathname) {
   const noIndex = str => str.replace(/index\.html$/, '');
@@ -19,10 +19,12 @@ function setActiveNavItem (pathname) {
   }
 }
 
-dom.navToggle.addEventListener('click', event => {
-  event.preventDefault();
-  dom.nav.classList.toggle('is-active');
-});
+if(dom.navToggle) {
+  dom.navToggle.addEventListener('click', event => {
+    event.preventDefault();
+    dom.nav.classList.toggle('is-active');
+  });
+}
 
 setActiveNavItem(window.location.pathname);
 
