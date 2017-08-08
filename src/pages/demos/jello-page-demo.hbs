@@ -2,30 +2,28 @@
 title: Jello Loader | Full Page Loading Screen
 notes: This example demonstrates the use of jello loader as a full page transition. For example, Rosetta's loading screen as games are being scheduled by Fanapp and sent back to TeamSnap.
 layout: blank
-styles:
-  - demo-4
 ---
 
 <h1>{{title}}</h1>
 
 <div class="main-container">
 
-  <div class="PageLoader PageLoader--jello PageLoader--centered">
+  <div class="Loader Loader--jello Loader--fixedCenter">
 
-    <div class="PageLoader-indicator">
+    <div class="Loader-indicator">
 
-      <span class="PageLoader-indicatorAnimation JelloAnimation">
+      <span class="JelloAnimation">
         <span class="JelloAnimation-shadow"></span>
         <span class="JelloAnimation-box"></span>
       </span>
 
-      <div class="PageLoader-indicatorText">Scheduling Games..</div>
+      <div class="Loader-indicatorText">Scheduling Games..</div>
 
     </div>
 
     <hr class="Divider Divider--indented" />
 
-    <div class="PageLoader-message">Nice Shirt! Is that Valour?</div>
+    <div class="Loader-message">Nice Shirt! Is that Velour?</div>
 
   </div>
 
