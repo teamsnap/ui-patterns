@@ -7,7 +7,7 @@ const dom = {};
 
 dom.nav = document.getElementById('nav');
 dom.navMenu = document.getElementById('nav-menu');
-dom.navToggle = dom.nav.querySelector('a[href="#nav"]');
+dom.navToggle = (dom.navMenu) ? dom.nav.querySelector('a[href="#nav"]') : [];
 dom.navLinks = (dom.navMenu) ? dom.navMenu.querySelectorAll('a') : [];
 
 function setActiveNavItem (pathname) {
@@ -19,7 +19,7 @@ function setActiveNavItem (pathname) {
   }
 }
 
-if(dom.navToggle) {
+if (dom.navToggle.length) {
   dom.navToggle.addEventListener('click', event => {
     event.preventDefault();
     dom.nav.classList.toggle('is-active');

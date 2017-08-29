@@ -1,12 +1,8 @@
-{{#extend "default"}}
+{{#extend "blank" bodyclass="drizzle-Demo"}}
   {{#content "body"}}
     {{> drizzle.nav-demo}}
-    <div class="drizzle-Layout-main">
-      <div class="drizzle-u-pad drizzle-u-rhythm">
-        {{#block "main"}}
+    {{#block "main"}}
 
-        {{/block}}
-      </div>
-    </div>
+    {{/block}}
   {{/content}}
 {{/extend}}
