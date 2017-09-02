@@ -1,0 +1,23 @@
+column_headers:
+  - name: Game/Event
+    class:
+  - name: Result
+    class: u-hidden u-md-block
+  - name: Date
+    class:
+  - name: Time
+    class: u-hidden u-md-block
+  - name: Location
+    class: u-hidden u-md-block
+  - name: Details
+    class: u-hidden u-md-block
+  - name: Manager
+    class: u-textCenter u-borderLeft u-padSidesSm u-xs-padMd
+
+games:
+  - vs. Broncos
+  - vs. Avalanche
+  - March Madness Game 1
+  - March Madness Game 2
+  - March Madness Game 3
+  - Season Playoffs Round One Location TBD

@@ -1,0 +1,403 @@
+---
+title: Tables Demo
+notes: Exploring responsive options for laying out tables with `Panel`, `Grid`, and `u-flex` utilities.
+layout: blank
+styles:
+  - panel-table
+---
+
+
+<div class="Panel">
+  <div class="Panel-header u-flex u-flexJustifyBetween u-flexAlignItemsCenter">
+    <h3 class="u-flexGrow1 Panel-title">Responsive panel with grid and full-width rows</h3>
+    <button class="Button Button--primary">
+      {{svg "plus" class="Icon" role="presentation"}}
+      New
+    </button>
+  </div>
+  <div class="Panel-body">
+    {{#iterate 4}}
+      <div class="Panel-row Grid Grid--alignMiddle">
+        <div class="Grid-cell u-sm-size3of4">
+          <h4>
+            {{#iterate 3}}
+              {{capitalize (random "word")}}
+            {{/iterate}}
+          </h4>
+          <p class="u-space-bottom-none">
+            {{random "sentence"}}
+          </p>
+        </div>
+        <div class="Grid-cell u-sm-size1of4 u-spaceTopMd u-sm-spaceTopNone u-sm-textRight">
+          <button class="Button Button--small">
+            Edit
+          </button>
+          <button class="Button Button--negative Button--small">
+            Delete
+          </button>
+        </div>
+      </div>
+    {{/iterate}}
+  </div>
+  <div class="Panel-footer">
+    <button class="Button Button--negative">Sit</button>
+    <button class="Button Button--primary">Amet</button>
+  </div>
+</div>
+
+<div class="Panel">
+  <div class="Panel-header u-flex u-flexJustifyBetween u-flexAlignItemsCenter">
+    <h3 class="u-flexGrow1 Panel-title">Responsive panel with grid, padded body, no footer</h3>
+    <button class="Button Button--primary">
+      {{svg "plus" class="Icon" role="presentation"}}
+      New
+    </button>
+  </div>
+  <div class="Panel-body u-padSidesMd">
+    {{#iterate 4}}
+      <div class="Panel-row u-padSidesNone Grid Grid--alignMiddle">
+        <div class="Grid-cell u-sm-size3of4">
+          <h4>
+            {{#iterate 3}}
+              {{capitalize (random "word")}}
+            {{/iterate}}
+          </h4>
+          <p class="u-space-bottom-none">
+            {{random "sentence"}}
+          </p>
+        </div>
+        <div class="Grid-cell u-sm-size1of4 u-spaceTopMd u-sm-spaceTopNone u-sm-textRight">
+          <button class="Button Button--small">
+            Edit
+          </button>
+          <button class="Button Button--negative Button--small">
+            Delete
+          </button>
+        </div>
+      </div>
+    {{/iterate}}
+  </div>
+</div>
+
+<div class="Panel Panel--smMax-stacked">
+  <div class="Panel-header u-flex u-flexJustifyBetween u-flexAlignItemsCenter">
+    <h3 class="u-flexGrow1 Panel-title">Panel with simple table, grid</h3>
+    <button class="Button Button--primary">
+      {{svg "edit" class="Icon" role="presentation"}}
+      Edit
+    </button>
+  </div>
+  <div class="Panel-body">
+    {{#iterate 4}}
+      <div class="Panel-row u-padNone Grid">
+        <div class="Panel-cell Panel-cell--header Grid-cell u-md-size1of4">
+          <h4 class="u-spaceBottomNone">
+            {{#iterate 3}}
+              {{capitalize (random "word")}}
+            {{/iterate}}
+          </h4>
+        </div>
+        <div class="Panel-cell Grid-cell u-md-size3of4">
+          <p class="u-spaceBottomNone">
+            {{random "paragraph"}}
+          </p>
+        </div>
+      </div>
+    {{/iterate}}
+  </div>
+  <div class="Panel-footer">
+    <button class="Button Button--negative">Sit</button>
+    <button class="Button Button--primary">Amet</button>
+  </div>
+</div>
+
+<div class="Panel Panel--xsMax-stacked">
+  <div class="Panel-header u-flex u-flexJustifyBetween u-flexAlignItemsCenter">
+    <h3 class="u-flexGrow1 Panel-title">Panel with simple table, no footer, and nested panel rows</h3>
+    <button class="Button Button--primary">
+      {{svg "edit" class="Icon" role="presentation"}}
+      Edit
+    </button>
+  </div>
+  <div class="Panel-body">
+    <div class="Panel-row u-padNone Grid">
+      <div class="Panel-cell Panel-cell--header Grid-cell u-sm-size1of4">
+        <h4 class="u-spaceBottomNone">
+          {{#iterate 3}}
+            {{capitalize (random "word")}}
+          {{/iterate}}
+        </h4>
+      </div>
+      <div class="Panel-cell Grid-cell u-sm-size3of4 u-padEndsNone">
+        {{#iterate 4}}
+          <div class="Panel-row u-padSidesNone">
+            <p>Some list item</p>
+            <button class="Button Button--small">
+              Button
+            </button>
+          </div>
+        {{/iterate}}
+      </div>
+    </div>
+  </div>
+</div>
+
+<h2>Complex table with horizontal scroll, table markup</h2>
+<div class="u-scrollX">
+  <div class="Panel Panel--striped Panel--scroll">
+    <table class="Panel-body">
+      <thead>
+        <tr class="Panel-row u-padNone u-flex u-borderBottom">
+          {{#each (data "schedule.column_headers")}}
+            <td class="Panel-cell u-flexGrow1 {{#compare @index "==" 6}}u-borderLeft u-textCenter{{/compare}}">
+              <h4 class="Panel-title">
+                {{this.name}}
+              </h4>
+            </td>
+          {{/each}}
+        </tr>
+      </thead>
+      <tbody>
+        {{#each (data "schedule.games")}}
+          <tr class="Panel-row u-padNone u-flex">
+            <td class="Panel-cell u-flexGrow1 u-flexGrow1">
+              <strong>
+                <a href="#">{{this}}</a>
+              </strong>
+            </td>
+            <td class="Panel-cell u-flexGrow1">
+              <p class="u-spaceBottomNone">
+                <strong>
+                  {{#maybe}}
+                    W
+                  {{else}}
+                    L
+                  {{/maybe}}
+                </strong>
+                {{random min=1 max=36}}-
+                {{random min=1 max=36}}
+              </p>
+            </td>
+            <td class="Panel-cell u-flexGrow1">
+              <p class="u-spaceBottomNone">{{random "date" string=true}}</p>
+            </td>
+            <td class="Panel-cell u-flexGrow1">
+              <p class="u-spaceBottomNone">11:00 AM - 2:00 PM</p>
+            </td>
+            <td class="Panel-cell u-flexGrow1">
+              <p class="u-spaceBottomNone">{{random "city"}}</p>
+            </td>
+            <td class="Panel-cell u-flexGrow1">
+              <p class="u-spaceBottomNone">{{random "sentence" words=3}}</p>
+            </td>
+            <td class="Panel-cell u-flexGrow1 u-borderLeft u-textCenter">
+              <p class="u-spaceBottomNone u-md-textCenter u-textNoWrap">
+                <button class="Button Button--small">
+                Edit
+                </button>
+                <button class="Button Button--small Button--negative">
+                  Delete
+                </button>
+              </p>
+            </td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+    <div class="Panel-footer">
+      <button class="Button Button--negative">Sit</button>
+      <button class="Button Button--primary">Amet</button>
+    </div>
+  </div>
+</div>
+
+<h2>Complex table with horizontal scroll, non-table markup</h2>
+<div class="u-scrollX">
+  <div class="Panel Panel--striped Panel--scroll">
+    <div class="Panel-body">
+      <div class="Panel-row u-padNone u-flex">
+        {{#each (data "schedule.column_headers")}}
+          <div class="Panel-cell u-flexGrow1 {{#compare @index "==" 6}}u-borderLeft u-textCenter{{/compare}}">
+            <h4 class="Panel-title">
+              {{this.name}}
+            </h4>
+          </div>
+        {{/each}}
+      </div>
+      {{#each (data "schedule.games")}}
+        <div class="Panel-row u-padNone u-flex">
+          <div class="Panel-cell u-flexGrow1">
+            <strong>
+              <a href="#">{{this}}</a>
+            </strong>
+          </div>
+          <div class="Panel-cell u-flexGrow1">
+            <p class="u-spaceBottomNone">
+              <strong>
+                {{#maybe}}
+                  W
+                {{else}}
+                  L
+                {{/maybe}}
+              </strong>
+              {{random min=1 max=36}}-
+              {{random min=1 max=36}}
+            </p>
+          </div>
+          <div class="Panel-cell u-flexGrow1">
+            <p class="u-spaceBottomNone">{{random "date" string=true}}</p>
+          </div>
+          <div class="Panel-cell u-flexGrow1">
+            <p class="u-spaceBottomNone">11:00 AM - 2:00 PM</p>
+          </div>
+          <div class="Panel-cell u-flexGrow1">
+            <p class="u-spaceBottomNone">{{random "city"}}</p>
+          </div>
+          <div class="Panel-cell u-flexGrow1">
+            <p class="u-spaceBottomNone">{{random "sentence" words=3}}</p>
+          </div>
+          <div class="Panel-cell u-flexGrow1 u-borderLeft u-textCenter">
+            <p class="u-spaceBottomNone u-md-textCenter">
+              <button class="Button Button--small">
+              Edit
+              </button>
+              <button class="Button Button--small Button--negative">
+                Delete
+              </button>
+            </p>
+          </div>
+        </div>
+      {{/each}}
+    </div>
+    <div class="Panel-footer">
+      <button class="Button Button--negative">Sit</button>
+      <button class="Button Button--primary">Amet</button>
+    </div>
+  </div>
+</div>
+
+<h2>Complex table with limited columns at smaller screens</h2>
+<div class="Panel Panel--striped">
+  <div class="Panel-body">
+    <div class="Panel-row u-padNone u-flex">
+      {{#each (data "schedule.column_headers")}}
+        <div class="Panel-cell u-flexGrow1 {{this.class}}">
+          <h4 class="Panel-title">
+            {{this.name}}
+          </h4>
+        </div>
+      {{/each}}
+    </div>
+    {{#each (data "schedule.games")}}
+      <div class="Panel-row u-padNone u-flex">
+        <div class="Panel-cell u-flexGrow1">
+          <strong>
+            <a href="#">{{this}}</a>
+          </strong>
+        </div>
+        <div class="Panel-cell u-flexGrow1 u-hidden u-md-block">
+          <p class="u-spaceBottomNone">
+            <strong>
+              {{#maybe}}
+                W
+              {{else}}
+                L
+              {{/maybe}}
+            </strong>
+            {{random min=1 max=36}}-
+            {{random min=1 max=36}}
+          </p>
+        </div>
+        <div class="Panel-cell u-flexGrow1">
+          <p class="u-spaceBottomNone">{{random "date" string=true}}</p>
+        </div>
+        <div class="Panel-cell u-flexGrow1 u-hidden u-md-block">
+          <p class="u-spaceBottomNone">11:00 AM - 2:00 PM</p>
+        </div>
+        <div class="Panel-cell u-flexGrow1 u-hidden u-md-block">
+          <p class="u-spaceBottomNone">{{random "city"}}</p>
+        </div>
+        <div class="Panel-cell u-flexGrow1 u-hidden u-md-block">
+          <p class="u-spaceBottomNone">{{random "sentence" words=3}}</p>
+        </div>
+        <div class="Panel-cell u-flexGrow1 u-borderLeft u-textCenter u-padSm u-xs-padMd">
+          <p class="u-spaceBottomNone u-md-textCenter">
+            <button class="Button Button--small u-block u-size-full u-xs-inlineBlock u-xs-sizeFit u-spaceBottomSm u-xs-spaceBottomNone">
+            Edit
+            </button>
+            <button class="Button Button--small Button--negative u-block u-size-full u-xs-inlineBlock u-xs-sizeFit">
+              Delete
+            </button>
+          </p>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+  <div class="Panel-footer">
+    <button class="Button Button--negative">Sit</button>
+    <button class="Button Button--primary">Amet</button>
+  </div>
+</div>
+
+<h2>Complex table with list display at smaller screens</h2>
+<div class="Panel Panel--striped Panel--smMax-responsiveTable">
+  <div class="Panel-body">
+    <div class="Panel-row u-padNone">
+      {{#each (data "schedule.column_headers")}}
+        <div class="Panel-cell {{#compare @index "==" 6}}u-md-borderLeft u-md-textCenter{{/compare}}">
+          <h4 class="Panel-title">
+            {{this.name}}
+          </h4>
+        </div>
+      {{/each}}
+    </div>
+    {{#each (data "schedule.games")}}
+      <div class="Panel-row u-padSidesNone u-padEndsSm u-md-padEndsNone">
+        <div class="Panel-cell u-padEndsSm u-md-padEndsMd" data-title="Game">
+          <strong>
+            <a href="#">{{this}}</a>
+          </strong>
+        </div>
+        <div class="Panel-cell u-padEndsSm u-md-padEndsMd" data-title="Result">
+          <p class="u-spaceBottomNone">
+            <strong>
+              {{#maybe}}
+                W
+              {{else}}
+                L
+              {{/maybe}}
+            </strong>
+            {{random min=1 max=36}}-
+            {{random min=1 max=36}}
+          </p>
+        </div>
+        <div class="Panel-cell u-padEndsSm u-md-padEndsMd" data-title="Date">
+          <p class="u-spaceBottomNone">{{random "date" string=true}}</p>
+        </div>
+        <div class="Panel-cell u-padEndsSm u-md-padEndsMd" data-title="Time">
+          <p class="u-spaceBottomNone">11:00 AM - 2:00 PM</p>
+        </div>
+        <div class="Panel-cell u-padEndsSm u-md-padEndsMd" data-title="Location">
+          <p class="u-spaceBottomNone">{{random "city"}}</p>
+        </div>
+        <div class="Panel-cell u-padEndsSm u-md-padEndsMd" data-title="Details">
+          <p class="u-spaceBottomNone">{{random "sentence" words=3}}</p>
+        </div>
+        <div class="Panel-cell u-padEndsSm u-md-padEndsMd u-md-borderLeft " data-title="Manager">
+          <p class="u-spaceBottomNone u-md-textCenter u-flexGrow1">
+            <button class="Button Button--small">
+            Edit
+            </button>
+            <button class="Button Button--small Button--negative">
+              Delete
+            </button>
+          </p>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+  <div class="Panel-footer">
+    <button class="Button Button--negative">Sit</button>
+    <button class="Button Button--primary">Amet</button>
+  </div>
+</div>
