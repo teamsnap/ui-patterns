@@ -1,0 +1,78 @@
+// Import sass variables from Teamsnap UI so that you can use 'em if you want
+@import "../../../teamsnap-ui/src/base/index.scss";
+
+// Override everything-selector that sets max width on -header, -footer, -row
+.Panel-header,
+.Panel-footer,
+.Panel-row {
+  max-width: none;
+}
+
+
+// Horizontal scrolling option for wide tables on narrow screens
+//
+// 1. Panel is wrapped in a full-width container that scrolls horizontally
+// 2. Set a min-width on the Panel so it doesn't shrink to fit screen
+
+.u-scrollX {
+  width: 100%; // 1
+  overflow-x: auto; // 1
+}
+
+.Panel--scroll {
+  min-width: $breakpoint-md; // 2
+}
+
+
+
+// Responsive table option in which table columns are displayed as a vertical
+// list, with labels added via a data attribute
+
+.Panel--smMax-responsiveTable {
+  .Panel-row {
+    display: flex;
+    flex-wrap: wrap;
+
+    @media (min-width: $breakpoint-md) {
+      flex-wrap: nowrap;
+    }
+  }
+
+  // Hide the header row
+  .Panel-row:nth-child(1) {
+    display: none;
+
+    @media (min-width: $breakpoint-md) {
+      display: flex;
+    }
+  }
+
+  // Hide overflowing corners in second row which at small
+  // screens is top row
+  @media (max-width: $breakpoint-sm-max) {
+    .Panel-row:nth-child(2) {
+      border-top-left-radius: $border-radius-large;
+      border-top-right-radius: $border-radius-large;
+    }
+  }
+
+  .Panel-cell {
+    flex-basis: 100%;
+    display: flex;
+
+    @media (min-width: $breakpoint-md) {
+      flex-grow: 1;
+      display: block;
+    }
+  }
+
+  .Panel-cell[data-title]:before {
+    font-weight: bold;
+    flex-shrink: 0;
+    width: 30%;
+
+    @media (max-width: $breakpoint-sm-max) {
+      content: attr(data-title) ":\00A0";
+    }
+  }
+}
