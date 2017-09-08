@@ -1,0 +1,115 @@
+---
+title: Responsive Account Settings Prototype
+notes: This example demonstrates the use of responsive panels/tables.
+layout: blank
+---
+
+<h1>{{title}}</h1>
+
+<div class="Grid Grid--alignCenter">
+  <div class="Panel u-size16of24 u-padLg">
+    <div class="Grid Grid--alignCenter">
+      <div class="Grid-cell Grid-cell--center u-textCenter u-pad">
+        <img src="http://marketing-cdn.teamsnap.com/Logogradientemail.png">
+      </div>
+      <div class="Grid-cell Grid-cell--center u-textCenter u-padLg">
+        <a href="">My Teams</a> | <a href="#">Sign Out</a>
+      </div>
+      <div class="Grid-cell Grid-cell--center u-textCenter">
+        <h2>My Account</h2>
+      </div>
+      <div class="Grid-cell Grid-cell--center u-textCenter u-padMd">
+        <div class="ButtonGroup">
+          <button class="Button ss-settings"><span class="u-hidden u-md-inlineBlock">Account</span> Settings</button>
+          <button class="Button ss-businessuser"><span class="u-hidden u-md-inlineBlock">Manage My</span> Teams</button>
+          <button class="Button ss-creditcard"><span class="u-hidden u-md-inlineBlock">Team Billing &</span> Plans</button>
+        </div>
+      </div>
+      <div class="Panel Panel--smMax-stacked">
+        <div class="Panel-header u-flex u-flexJustifyBetween u-flexAlignItemsCenter">
+          <h3 class="u-flexGrow1 Panel-title">Account Settings</h3>
+          <button class="Button">
+            {{svg "edit" class="Icon" role="presentation"}}
+            Edit
+          </button>
+        </div>
+        <div class="Panel-body">
+          <div class="Panel-row u-padNone Grid">
+            <div class="Panel-cell Panel-cell--header Grid-cell u-md-size1of4">
+              <h4 class="u-spaceBottomNone">
+                Name:
+              </h4>
+            </div>
+            <div class="Panel-cell Grid-cell u-md-size3of4">
+              <p class="u-spaceBottomNone">
+                Manny Manager
+              </p>
+            </div>
+          </div>
+          <div class="Panel-row u-padNone Grid">
+            <div class="Panel-cell Panel-cell--header Grid-cell u-md-size1of4">
+              <h4 class="u-spaceBottomNone">
+                Username:
+              </h4>
+            </div>
+            <div class="Panel-cell Grid-cell u-md-size3of4">
+              <p class="u-spaceBottomNone">
+                manny@example.com
+              </p>
+            </div>
+          </div>
+          <div class="Panel-row u-padNone Grid">
+            <div class="Panel-cell Panel-cell--header Grid-cell u-md-size1of4">
+              <h4 class="u-spaceBottomNone">
+                Password:
+              </h4>
+            </div>
+            <div class="Panel-cell Grid-cell u-md-size3of4">
+              <p class="u-spaceBottomNone">
+                hash
+              </p>
+            </div>
+          </div>
+          <div class="Panel-row u-padNone Grid">
+            <div class="Panel-cell Panel-cell--header Grid-cell u-md-size1of4">
+              <h4 class="u-spaceBottomNone">
+                 Account Email:
+              </h4>
+            </div>
+            <div class="Panel-cell Grid-cell u-md-size3of4">
+              <p class="u-spaceBottomNone">
+                <p>manny@example.com</p>
+                <p>This address is only used for account and billing related emails. All team-related emails are sent to the email address you entered into your Player Profile for that team.</p>
+              </p>
+            </div>
+          </div>
+          <div class="Panel-row u-padNone Grid">
+            <div class="Panel-cell Panel-cell--header Grid-cell u-md-size1of4">
+              <h4 class="u-spaceBottomNone">
+                Address:
+              </h4>
+            </div>
+            <div class="Panel-cell Grid-cell u-md-size3of4">
+              <p class="u-spaceBottomNone">
+                Manny Manager
+              </p>
+            </div>
+          </div>
+          <div class="Panel-row u-padNone Grid">
+            <div class="Panel-cell Panel-cell--header Grid-cell u-md-size1of4">
+              <h4 class="u-spaceBottomNone">
+                TeamSnap Lab Rats:
+              </h4>
+            </div>
+            <div class="Panel-cell Grid-cell u-md-size3of4">
+              <p class="u-spaceBottomNone">
+                Nope, I'm not a labrat. <a href="">More Info</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> 
+</div>
+
