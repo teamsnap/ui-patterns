@@ -1,7 +1,4 @@
 {{#extend "blank" htmlclass="drizzle-Layout" bodyclass="drizzle-Layout-body"}}
-  {{#content "head" mode="append"}}
-    <link rel="stylesheet" href="{{@root.baseurl}}/assets/drizzle/styles/drizzle.css">    
-  {{/content}}
   {{#content "body"}}
     {{> drizzle.nav}}
     <div class="drizzle-Layout-main drizzle-u-cf">
@@ -11,9 +8,5 @@
         {{/block}}
       </div>
     </div>
-  {{/content}}
-  {{#content "foot"}}
-    <script src="{{@root.baseurl}}/assets/drizzle/scripts/drizzle.js"></script>
-    <script src="{{@root.baseurl}}/assets/toolkit/scripts/toolkit.js"></script>
   {{/content}}
 {{/extend}}

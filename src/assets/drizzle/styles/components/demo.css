@@ -1,0 +1,11 @@
+.Demo {
+  min-height: 100vh;
+  margin: 0;
+}
+
+.Demo-nav {
+  background-color: #1A6BAF;
+  margin-bottom: 2em;
+  padding: .5em;
+  color: white;
+}

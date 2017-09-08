@@ -7,8 +7,8 @@ const dom = {};
 
 dom.nav = document.getElementById('nav');
 dom.navMenu = document.getElementById('nav-menu');
-dom.navToggle = dom.nav.querySelector('a[href="#nav"]');
-dom.navLinks = dom.navMenu.querySelectorAll('a');
+dom.navToggle = (dom.navMenu) ? dom.nav.querySelector('a[href="#nav"]') : [];
+dom.navLinks = (dom.navMenu) ? dom.navMenu.querySelectorAll('a') : [];
 
 function setActiveNavItem (pathname) {
   const noIndex = str => str.replace(/index\.html$/, '');
@@ -19,10 +19,12 @@ function setActiveNavItem (pathname) {
   }
 }
 
-dom.navToggle.addEventListener('click', event => {
-  event.preventDefault();
-  dom.nav.classList.toggle('is-active');
-});
+if (dom.navToggle.length) {
+  dom.navToggle.addEventListener('click', event => {
+    event.preventDefault();
+    dom.nav.classList.toggle('is-active');
+  });
+}
 
 setActiveNavItem(window.location.pathname);
 
@@ -45,4 +47,15 @@ if (dom.frameContainers.length) {
 
 u('.js-drizzleCodePreviewToggle').on('click', () => {
   u('.js-drizzleCodePreview').toggleClass('drizzle-u-hidden');
-})
+});
+
+u('.js-drizzleClassicCssToggle').on('click', () => {
+  const style = u('link[rel="stylesheet"][href*="app-team-"]');
+  if(style.attr('disabled')) {
+    style.each(function(element){
+      element.removeAttribute('disabled');
+    });
+  } else {
+    style.attr('disabled', 'disabled');
+  }
+});
