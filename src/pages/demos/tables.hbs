@@ -142,76 +142,7 @@ styles:
   </div>
 </div>
 
-<h2>Complex table with horizontal scroll, table markup</h2>
-<div class="u-scrollX">
-  <div class="Panel Panel--striped Panel--scroll">
-    <table class="Panel-body">
-      <thead>
-        <tr class="Panel-row u-padNone u-flex u-borderBottom">
-          {{#each (data "schedule.column_headers")}}
-            <td class="Panel-cell u-flexGrow1 {{#compare @index "==" 6}}u-borderLeft u-textCenter{{/compare}}">
-              <h4 class="Panel-title">
-                {{this.name}}
-              </h4>
-            </td>
-          {{/each}}
-        </tr>
-      </thead>
-      <tbody>
-        {{#each (data "schedule.games")}}
-          <tr class="Panel-row u-padNone u-flex">
-            <td class="Panel-cell u-flexGrow1 u-flexGrow1">
-              <strong>
-                <a href="#">{{this}}</a>
-              </strong>
-            </td>
-            <td class="Panel-cell u-flexGrow1">
-              <p class="u-spaceBottomNone">
-                <strong>
-                  {{#maybe}}
-                    W
-                  {{else}}
-                    L
-                  {{/maybe}}
-                </strong>
-                {{random min=1 max=36}}-
-                {{random min=1 max=36}}
-              </p>
-            </td>
-            <td class="Panel-cell u-flexGrow1">
-              <p class="u-spaceBottomNone">{{random "date" string=true}}</p>
-            </td>
-            <td class="Panel-cell u-flexGrow1">
-              <p class="u-spaceBottomNone">11:00 AM - 2:00 PM</p>
-            </td>
-            <td class="Panel-cell u-flexGrow1">
-              <p class="u-spaceBottomNone">{{random "city"}}</p>
-            </td>
-            <td class="Panel-cell u-flexGrow1">
-              <p class="u-spaceBottomNone">{{random "sentence" words=3}}</p>
-            </td>
-            <td class="Panel-cell u-flexGrow1 u-borderLeft u-textCenter">
-              <p class="u-spaceBottomNone u-md-textCenter u-textNoWrap">
-                <button class="Button Button--small">
-                Edit
-                </button>
-                <button class="Button Button--small Button--negative">
-                  Delete
-                </button>
-              </p>
-            </td>
-          </tr>
-        {{/each}}
-      </tbody>
-    </table>
-    <div class="Panel-footer">
-      <button class="Button Button--negative">Sit</button>
-      <button class="Button Button--primary">Amet</button>
-    </div>
-  </div>
-</div>
-
-<h2>Complex table with horizontal scroll, non-table markup</h2>
+<h2>Complex table with horizontal scroll</h2>
 <div class="u-scrollX">
   <div class="Panel Panel--striped Panel--scroll">
     <div class="Panel-body">
