@@ -21,3 +21,8 @@
     width: 1.5em;
   }
 }
+
+.Item-codePreview {
+  max-height: 30em;
+  overflow-y: auto;
+}
