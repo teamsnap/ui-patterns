@@ -1,7 +1,7 @@
 ---
 order: 3
 notes: |
-  Stack cells at smaller screen sizes. Modifier classes change the default right border on `Panel-cell--header` to a bottom border up to a maximum screen size. Border radius is also managed so that the appropriate children have rounded corners.
+  Use `Panel` modifier classes to stack cells up to a max screen size.
 
   + `Panel--xsMax-stacked`: Stacked until the `xs` breakpoint
   + `Panel--smMax-stacked`: Stacked until the `sm` breakpoint
@@ -22,15 +22,15 @@ notes: |
   </div>
   <div class="Panel-body">
     {{#iterate 3}}
-      <div class="Panel-row Grid u-padNone">
-        <div class="Panel-cell Panel-cell--header Grid-cell u-lg-size1of3">
+      <div class="Panel-row Panel-row--withCells">
+        <div class="Panel-cell Panel-cell--header u-lg-size1of3">
           <h4>
             {{#iterate 2}}
               {{capitalize (random "word")}}
             {{/iterate}}
           </h4>
         </div>
-        <div class="Panel-cell Grid-cell u-lg-size2of3">
+        <div class="Panel-cell u-lg-size2of3">
           {{random "sentence" words=5}}
         </div>
       </div>
