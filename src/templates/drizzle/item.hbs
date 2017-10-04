@@ -1,6 +1,6 @@
 <div class="drizzle-Item drizzle-u-rhythm">
   {{!-- Header, labels --}}
-  <div>    
+  <div>
     {{#> drizzle.labelheader tag="h2" id=(toSlug name) labels=data.labels}}
       {{name}}
     {{/drizzle.labelheader}}
@@ -35,6 +35,6 @@
   </div>
   {{!-- Code sample --}}
   {{#unless data.sourceless}}
-    <pre class="drizzle-u-pad js-drizzleCodePreview"><code class="language-markup">{{{patternSource id @root}}}</code></pre>
+    <pre class="drizzle-u-pad drizzle-Item-codePreview js-drizzleCodePreview"><code class="language-markup">{{{patternSource id @root}}}</code></pre>
   {{/unless}}
 </div>

@@ -1,0 +1,71 @@
+---
+order: 4
+notes: |
+  Use modifier `Panel-row--withCells` to create rows of side-by-side cells.
+
+  By default cells will all be equal width. Use different `flex` or `size` properties to customize cell width.
+
+  Use modifier `Panel--striped` to add zebra striping.
+---
+
+
+
+<div class="Panel Panel--striped">
+    <div class="Panel-body">
+      <div class="Panel-row Panel-row--withCells">
+        {{#each (data "schedule.column_headers")}}
+          <div class="Panel-cell{{#compare @index "==" 6}} u-borderLeft u-textCenter{{/compare}}">
+            <h4 class="Panel-title">{{this.name}}</h4>
+          </div>
+        {{/each}}
+      </div>
+      {{#each (data "schedule.games")}}
+        <div class="Panel-row Panel-row--withCells">
+          <div class="Panel-cell">
+            <strong>
+              <a href="#">{{this}}</a>
+            </strong>
+          </div>
+          <div class="Panel-cell">
+            <p class="u-spaceBottomNone">
+              <strong>
+                {{#maybe}}
+                  W
+                {{else}}
+                  L
+                {{/maybe}}
+              </strong>
+              {{random min=1 max=36}}-
+              {{random min=1 max=36}}
+            </p>
+          </div>
+          <div class="Panel-cell">
+            <p class="u-spaceBottomNone">{{random "date" string=true}}</p>
+          </div>
+          <div class="Panel-cell">
+            <p class="u-spaceBottomNone">11:00 AM - 2:00 PM</p>
+          </div>
+          <div class="Panel-cell">
+            <p class="u-spaceBottomNone">{{random "city"}}</p>
+          </div>
+          <div class="Panel-cell">
+            <p class="u-spaceBottomNone">{{random "sentence" words=3}}</p>
+          </div>
+          <div class="Panel-cell u-borderLeft u-textCenter">
+            <p class="u-spaceBottomNone u-md-textCenter">
+              <button class="Button Button--small">
+              Edit
+              </button>
+              <button class="Button Button--small Button--negative">
+                Delete
+              </button>
+            </p>
+          </div>
+        </div>
+      {{/each}}
+    </div>
+    <div class="Panel-footer">
+      <button class="Button Button--negative">Sit</button>
+      <button class="Button Button--primary">Amet</button>
+    </div>
+  </div>

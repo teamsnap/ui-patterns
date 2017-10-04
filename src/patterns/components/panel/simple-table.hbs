@@ -1,0 +1,38 @@
+---
+order: 2
+notes: |
+  Use modifier `Panel-row--withCells` to display `Panel-cell`s side-by-side in a row.
+
+  By default the cells will be equal width. Use `size` properties to adjust their ratio.
+
+  Use modifier `Panel-cell--header` to define the heading cell.
+---
+
+
+<div class="Panel">
+  <div class="Panel-header">
+    <h3 class="Panel-title">
+      Panel Header
+    </h3>
+    <button class="Panel-button Button">
+      {{svg "edit" class="Icon" role="presentation"}}
+      Edit
+    </button>
+  </div>
+  <div class="Panel-body">
+    {{#iterate 3}}
+      <div class="Panel-row Panel-row--withCells">
+        <div class="Panel-cell Panel-cell--header u-size1of3">
+          <h4>{{#iterate 2}}{{capitalize (random "word")}} {{/iterate}}</h4>
+        </div>
+        <div class="Panel-cell u-size2of3">
+          {{random "sentence" words=5}}
+        </div>
+      </div>
+    {{/iterate}}
+  </div>
+  <div class="Panel-footer">
+    <button class="Button Button--negative">Sit</button>
+    <button class="Button Button--primary">Amet</button>
+  </div>
+</div>
