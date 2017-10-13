@@ -19,7 +19,52 @@ console.log(`toolkit.js is being used at ${Date.now()}.`);
 
 import {u} from 'umbrellajs';
 
-// * 2. Button Group
+//
+// Polyfills
+//
+
+// Array.from()
+import arrayFrom from 'array.from';
+arrayFrom.shim();
+
+// Object.assign()\
+import objectAssign from 'object.assign';
+objectAssign.shim();
+
+// Array.prototype.findIndex()
+import arrayPrototypeFindIndex from 'array.prototype.findindex';
+arrayPrototypeFindIndex.shim();
+
+// Element.classList
+require('./vendor/classList');
+
+
+
+//
+// Primary Navigation
+//
+
+import debounce from 'debounce';
+import PriorityPlus from './components/PriorityPlus';
+
+window.addEventListener('load', function load (event) {
+  // remove listener since the page has already loaded/
+  window.removeEventListener('load', load, false);
+  // find any PriorityPlus elements/
+  var elements = document.querySelectorAll('.js-PriorityPlus');
+  // if any were found, loop through them and initialize the menu/
+  if (elements.length) {
+    Array.from(elements).forEach(function (element) {
+      var thisPriorityPlus = new PriorityPlus(element);
+      // update the nav on resize (but not _too_ often)/
+      window.addEventListener('resize', debounce(() => thisPriorityPlus.update(), 200));
+    });
+  }
+});
+
+
+
+// 2. Demo JS for ButtonGroup
 
 u('.js-ButtonGroupDemo > .Button').on('click', function() {
   u('.js-ButtonGroupDemo > .Button').removeClass('is-active');

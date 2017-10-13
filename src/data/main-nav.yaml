@@ -1,0 +1,35 @@
+- label: Roster
+  symbol: roster
+
+- label: Schedule
+  symbol: schedule
+
+- label: Messages
+  symbol: messages
+
+- label: Manager
+  symbol: megaphone
+
+- label: Availability
+  symbol: availability
+
+- label: Assignments
+  symbol: assignments
+
+- label: Payments
+  symbol: credit-card
+
+- label: Tracking
+  symbol: tracking
+
+- label: Statistics
+  symbol: statistics
+
+- label: Media
+  symbol: media
+
+- label: Team Store
+  symbol: cart
+
+- label: Preferences
+  symbol: settings

@@ -1,0 +1,25 @@
+<ul class="MainNav js-PriorityPlus">
+  {{#each (data "main-nav")}}
+    <li class="MainNav-item js-PriorityPlus-item">
+      <a href="" class="MainNav-link">
+        {{svg symbol class="Icon MainNav-icon" role="presentation"}}
+        <p class="MainNav-label">{{label}}</p>
+      </a>
+    </li>
+  {{/each}}
+  <li class="MainNav-item MainNav-overflow js-PriorityPlus-overflow">
+    <a class="MainNav-link js-PriorityPlus-overflow-toggle" href="#nav-overflow">
+      <p class="MainNav-label">+ More</p>
+    </a>
+    <ul class="MainNav-overflowMenu js-PriorityPlus-overflow-menu" id="nav-overflow">
+      {{#each (data "main-nav")}}
+        <li class="u-size1of3 MainNav-item MainNav-item--overflow js-PriorityPlus-overflow-item">
+          <a class="MainNav-link MainNav-link--overflow">
+            {{svg symbol class="Icon MainNav-icon" role="presentation"}}
+            <p class="MainNav-label">{{label}}</p>
+          </a>
+        </li>
+      {{/each}}
+    </ul>
+  </li>
+</ul>
