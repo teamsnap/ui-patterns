@@ -38,11 +38,41 @@ var radialProgress = function() {
 
 radialProgress();
 
-u('.TreeMenu-branch').on('click', function(e) {
-  e.stopPropagation();
-  if(u(this).hasClass('collapsed')) {
-    u(this).removeClass('collapsed').addClass('open');
-  } else if(u(this).hasClass('open')) {
-    u(this).removeClass('open').addClass('collapsed');
-  }
-});
+// Tree Menu and Miller Menu
+var treeBranch = u('.TreeMenu-branch'),
+    millerBranch = u('.MillerMenu-branch'),
+    treeAccordion = function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      if(u(this).hasClass('collapsed')) {
+        u(this).removeClass('collapsed').addClass('open');
+      } else if(u(this).hasClass('open')) {
+        u(this).removeClass('open').addClass('collapsed');
+      }
+    },
+    millerMenuSlide = function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      var childPanelId = u(this).children('a').attr('href'),
+          breadcrumbContent = u(this).text(),
+          breadcrumbContainer = u('.MillerMenu-breadcrumb'),
+          breadcrumbUpdate = function(){
+            breadcrumbContainer.append('<a href=' + childPanelId + ' >' + breadcrumbContent + ' / </a> /');
+            var breadcrumbs = u('.MillerMenu-breadcrumb a');
+            breadcrumbs.on('click', function(){
+              u('.MillerMenu-level').removeClass('active-level');
+              u(childPanelId).addClass('active-level');
+            })
+          };
+
+      if(u(this).hasClass('has-child')) {
+        u('.MillerMenu-level').removeClass('active-level');
+        u(childPanelId).addClass('active-level');
+        breadcrumbUpdate();
+      }
+    };
+
+u(treeBranch).on('click', treeAccordion);
+u(millerBranch).on('click', treeAccordion).on('click', millerMenuSlide);
+
+
