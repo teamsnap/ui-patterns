@@ -1,168 +1,78 @@
 ---
 hidden: true
 ---
-
-  <div class="Calendar-row Calendar-row--monthHeading">
-    <h3 class="Calendar-month">October</h3>
-    <button class="Button Button--small Button--paginate"><</button>
-    <button class="Button Button--small Button--paginate">></button>
+<div class="Calendar {{class}}">
+  <div class="Calendar-heading">
+    <div class="Calendar-navigation">
+      <a href="#" class="Calendar-navigateBack">
+        <span class="u-hiddenVisually">Previous Month</span>
+        {{svg "left" class="Icon" role="presentation"}}
+      </a>
+      <p class="Calendar-month">March 2018</p>
+      <a href="#" class="Calendar-navigateForward">
+        <span class="u-hiddenVisually">Next Month</span>
+        {{svg "right" class="Icon" role="presentation"}}
+      </a>
+    </div>
+    {{#if today}}
+    <div class="Calendar-headingRight">
+      <button class="Button">Today</button>
+    </div>
+    {{/if}}
   </div>
-  <ul class="Calendar-row Calendar-row--weekHeading">
-    <li class="Calendar-cell Calendar-cell--dayHeading" title="Monday"><span>Monday</span></li>
-    <li class="Calendar-cell Calendar-cell--dayHeading" title="Tuesday"><span>Tuesday</span></li>
-    <li class="Calendar-cell Calendar-cell--dayHeading" title="Wednesday"><span>Wednesday</span></li>
-    <li class="Calendar-cell Calendar-cell--dayHeading" title="Thursday"><span>Thursday</span></li>
-    <li class="Calendar-cell Calendar-cell--dayHeading" title="Friday"><span>Friday</span></li>
-    <li class="Calendar-cell Calendar-cell--dayHeading" title="Saturday"><span>Saturday</span></li>
-    <li class="Calendar-cell Calendar-cell--dayHeading" title="Sunday"><span>Sunday</span></li>
-  </ul>
-  <div class="Calendar-row Calendar-row--week">
-    <div class="Calendar-cell">
-      <p>1</p>
-      <abbr title="Monday">Mon</abbr>
-    </div>
-    <div class="Calendar-cell">
-      <p>2</p>
-      <abbr title="Tuesday">Tue</abbr>
-    </div>
-    <div class="Calendar-cell">
-      <p>3</p>
-      <abbr title="Wednsday">Wed</abbr>
-    </div>
-    <div class="Calendar-cell">
-      <p>4</p>
-      <abbr title="Thursday">Thu</abbr>
-    </div>
-    <div class="Calendar-cell">
-      <p>5</p>
-      <abbr title="Friday">Fri</abbr>
-    </div>
-    <div class="Calendar-cell">
-      <p>6</p>
-      <abbr title="Saturday">Sat</abbr>
-    </div>
-    <div class="Calendar-cell">
-      <p>7</p>
-      <abbr title="Sunday">Sun</abbr>
-    </div>
+  <div class="Calendar-row Calendar-row--columnHeading">
+    {{#each (data "calendar.weekdays")}}
+      <div class="Calendar-cell">
+        {{#if ../abbreviate}}
+          {{abbr}}
+        {{else}}
+          {{name}}
+        {{/if}}
+      </div>
+    {{/each}}
   </div>
-  <div class="Calendar-row Calendar-row--week">
-    <div class="Calendar-cell">
-      <p>8</p>
-      <abbr title="Monday">Mon</abbr>
+  {{#iterate 5}}
+    <div class="Calendar-row">
+      {{#each (data "calendar.weekdays")}}
+        {{setVar "date" (math order "+" (math (math @count "-" 1) "*" 7))}}
+        <div class="Calendar-cell {{#compare date "==" ../../currentDate}} Calendar-cell--current{{/compare}}">
+          <div>
+            <p class="Calendar-date {{#compare date "==" 17}}Calendar-date--hasGame Calendar-date--hasEvent{{/compare}} {{#compare date "==" 23}}Calendar-date--hasEvent{{/compare}}">
+              {{#compare date "<" 32}}
+                {{date}}
+              {{/compare}}
+            </p>
+            <p class="Calendar-day">
+              {{name}}
+            </p>
+          </div>
+          {{#and (compare date "<" 32) ../../content}}
+            <ul>
+              {{#maybe}}
+                <li class="Calendar-listItem">
+                  <a href="#game-or-event">
+                    Practice, 8AM
+                  </a>
+                </li>
+              {{/maybe}}
+              {{#maybe}}
+                <li class="Calendar-listItem">
+                  <a href="#game-or-event">
+                    vs Broncos, 4PM
+                  </a>
+                </li>
+              {{/maybe}}
+              {{#maybe}}
+                <li class="Calendar-listItem">
+                  <a href="#game-or-event">
+                    vs Tornadoes, 7PM
+                  </a>
+                </li>
+              {{/maybe}}
+            </ul>
+          {{/and}}
+        </div>
+      {{/each}}
     </div>
-    <div class="Calendar-cell">
-      <p>9</p>
-      <abbr title="Tuesday">Tue</abbr>
-    </div>
-    <div class="Calendar-cell">
-      <p>10</p>
-      <abbr title="Wednsday">Wed</abbr>
-    </div>
-    <div class="Calendar-cell">
-      <p>11</p>
-      <abbr title="Thursday">Thu</abbr>
-    </div>
-    <div class="Calendar-cell">
-      <p>12</p>
-      <abbr title="Friday">Fri</abbr>
-    </div>
-    <div class="Calendar-cell">
-      <p>13</p>
-      <abbr title="Saturday">Sat</abbr>
-    </div>
-    <div class="Calendar-cell">
-      <p>14</p>
-      <abbr title="Sunday">Sun</abbr>
-    </div>
-  </div>
-  <div class="Calendar-row Calendar-row--week">
-    <div class="Calendar-cell">
-      <p>15</p>
-      <abbr title="Monday">Mon</abbr>
-    </div>
-    <div class="Calendar-cell">
-      <p>16</p>
-      <abbr title="Tuesday">Tue</abbr>
-    </div>
-    <div class="Calendar-cell">
-      <p>17</p>
-      <abbr title="Wednsday">Wed</abbr>
-    </div>
-    <div class="Calendar-cell">
-      <p>18</p>
-      <abbr title="Thursday">Thu</abbr>
-    </div>
-    <div class="Calendar-cell">
-      <p>19</p>
-      <abbr title="Friday">Fri</abbr>
-    </div>
-    <div class="Calendar-cell">
-      <p>20</p>
-      <abbr title="Saturday">Sat</abbr>
-    </div>
-    <div class="Calendar-cell">
-      <p>21</p>
-      <abbr title="Sunday">Sun</abbr>
-    </div>
-  </div>
-  <div class="Calendar-row Calendar-row--week">
-    <div class="Calendar-cell">
-      <p>22</p>
-      <abbr title="Monday">Mon</abbr>
-    </div>
-    <div class="Calendar-cell">
-      <p>23</p>
-      <abbr title="Tuesday">Tue</abbr>
-    </div>
-    <div class="Calendar-cell">
-      <p>24</p>
-      <abbr title="Wednsday">Wed</abbr>
-    </div>
-    <div class="Calendar-cell">
-      <p>25</p>
-      <abbr title="Thursday">Thu</abbr>
-    </div>
-    <div class="Calendar-cell">
-      <p>26</p>
-      <abbr title="Friday">Fri</abbr>
-    </div>
-    <div class="Calendar-cell">
-      <p>27</p>
-      <abbr title="Saturday">Sat</abbr>
-    </div>
-    <div class="Calendar-cell">
-      <p>28</p>
-      <abbr title="Sunday">Sun</abbr>
-    </div>
-  </div>
-  <div class="Calendar-row Calendar-row--week">
-    <div class="Calendar-cell">
-      <p>29</p>
-      <abbr title="Monday">Mon</abbr>
-    </div>
-    <div class="Calendar-cell">
-      <p>30</p>
-      <abbr title="Tuesday">Tue</abbr>
-    </div>
-    <div class="Calendar-cell Calendar-cell--currentDay">
-      <p>31</p>
-      <abbr title="Wednsday">Wed</abbr>
-    </div>
-    <div class="Calendar-cell Calendar-cell--nextMonth">
-      <p>1</p>
-      <abbr title="Thursday">Thu</abbr>
-    </div>
-    <div class="Calendar-cell Calendar-cell--nextMonth">
-      <p>2</p>
-      <abbr title="Friday">Fri</abbr>
-    </div>
-    <div class="Calendar-cell Calendar-cell--nextMonth">
-      <p>3</p>
-      <abbr title="Saturday">Sat</abbr>
-    </div>
-    <div class="Calendar-cell Calendar-cell--nextMonth">
-      <p>4</p>
-      <abbr title="Sunday">Sun</abbr>
-    </div>
-  </div>
+  {{/iterate}}
+</div>

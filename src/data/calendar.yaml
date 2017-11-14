@@ -1,0 +1,22 @@
+weekdays:
+  - name: Monday
+    abbr: Mo
+    order: 1
+  - name: Tuesday
+    abbr: Tu
+    order: 2
+  - name: Wednesday
+    abbr: We
+    order: 3
+  - name: Thursday
+    abbr: Th
+    order: 4
+  - name: Friday
+    abbr: Fr
+    order: 5
+  - name: Saturday
+    abbr: Sa
+    order: 6
+  - name: Sunday
+    abbr: Su
+    order: 7

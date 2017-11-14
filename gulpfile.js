@@ -4,6 +4,7 @@ const drizzle = require('drizzle-builder');
 const gulp = require('gulp');
 const ghPages = require('gulp-gh-pages');
 const helpers = require('@cloudfour/hbs-helpers');
+const handlebars = require('handlebars');
 const tasks = require('@cloudfour/gulp-tasks');
 const env = require('gulp-util').env;
 const config = require('./config');
@@ -19,6 +20,10 @@ helpers.svg = helpers.svg.create({
   basePath: './src/teamsnap-ui/src/assets/icons/'
 });
 
+// Add new helper to define variables
+helpers.setVar = function(name, value) {
+  this[name] = value;
+};
 
 // Append config
 Object.assign(config.drizzle, { helpers });

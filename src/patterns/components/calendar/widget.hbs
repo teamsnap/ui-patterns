@@ -1,14 +1,11 @@
 ---
-notes: |
-  Widget calendar component for sidebar
-  Add "Calendar-widget" class to Calendar class
 order: 2
 ---
-<div style="width:200px;">
-  <section class="Calendar Calendar--widget">
-    <div class="Calendar-heading">
-      <h2 class="Calendar-title pull-left">Schedule</h2>
-    </div>
-    {{{embed  "patterns.components.calendar.base"}}}
-  </section>
+
+<div style="width: 350px">
+  {{{embed "patterns.components.calendar.base"
+    class="Calendar--widget"
+    abbreviate="true"
+    currentDate=20
+  }}}
 </div>

@@ -18,7 +18,6 @@ var firstHalf = u('.ProgressBar--radial.demo .first-half').nodes[0],
     loadingProgress = 85, // loading progress in precentage
     loadingDegrees = (loadingProgress*360)/100; // convert percentage loaded to degrees rotation
 
-console.log(firstHalf);
 // rotate only firstHalf upto 180 degrees, second half if > 180 degrees
 if(loadingDegrees <= 180) {
  firstHalf.style.transform = 'rotate(' + loadingDegrees + 'deg)';
