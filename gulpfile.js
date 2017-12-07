@@ -39,8 +39,8 @@ gulp.task('css', ['css:drizzle']);
 // Add sass function for compiling Sass
 function compileSass(cfg) {
   return gulp.src(cfg.src)
-	.pipe(sass().on('error', sass.logError))
-	.pipe(prefix('last 1 version'))
+  .pipe(sass().on('error', sass.logError))
+  .pipe(prefix('last 1 version'))
   .pipe(gulp.dest(cfg.dest))
 }
 

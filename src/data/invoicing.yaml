@@ -1,0 +1,131 @@
+column_headers:
+  - name: ID
+    class:
+  - name: Payment Status
+    class:
+  - name: Date
+    class:
+  - name: Type
+    class:
+  - name: Net Amount
+    class: u-textRight
+  - name: Gross Amount
+    class: u-textRight
+  - name: Admin
+    class: u-borderLeft u-textCenter
+
+payments:
+  - id: 10001
+    wepay_id: C123456789
+    status: Submitted
+    type: online
+    details: Visa********2301
+    net: 525.00
+    children: true
+  - id: 10002
+    wepay_id: C123456793
+    status: Pending
+    type: online
+    details: Visa********2301
+    net: 900.00
+    children: true
+  - id: 10003
+    wepay_id: C123456797
+    status: Paid
+    type: online
+    details: Visa********2301
+    net: 490.00
+    children: true
+  - id: 10005
+    wepay_id: C123456804
+    status: Paid
+    type: offline
+    details: Check 1308
+    net: 600.00
+    gross: 600.00
+    children: false
+  - id: 10006
+    wepay_id: C123456808
+    status: Refunded
+    type: online
+    details: Visa********2301
+    net: 800.00
+    children: true
+
+transactionsRefunded:
+  - id: 10021
+    wepay_id: C123456789
+    status: Submitted
+    type: online
+    details: Visa********2301
+    net: 800.00
+    class: first
+  - id: 10022
+    wepay_id: C123456793
+    status: Pending
+    type: online
+    details: Visa********2301
+    net: 800.00
+    class:
+  - id: 10023
+    wepay_id: C123456797
+    status: Paid
+    type: online
+    details: Visa********2301
+    net: 800.00
+    class:
+  - id: 10023
+    wepay_id: C123456797
+    status: Refunded
+    type: online
+    details: Visa********2301
+    net: -800.00
+    class:
+
+transactionsPaid:
+  - id: 10031
+    wepay_id: C123456789
+    status: Submitted
+    type: online
+    details: Visa********2301
+    net: 490.00
+    class: first
+  - id: 10032
+    wepay_id: C123456793
+    status: Pending
+    type: online
+    details: Visa********2301
+    net: 490.00
+    class:
+  - id: 10033
+    wepay_id: C123456797
+    status: Paid
+    type: online
+    details: Visa********2301
+    net: 490.00
+    class:
+
+transactionsPending:
+  - id: 10041
+    wepay_id: C123456789
+    status: Submitted
+    type: online
+    details: Visa********2301
+    net: 900.00
+    class: first
+  - id: 10042
+    wepay_id: C123456793
+    status: Pending
+    type: online
+    details: Visa********2301
+    net: 900.00
+    class:
+
+transactionsSubmitted:
+  - id: 10051
+    wepay_id: C123456789
+    status: Submitted
+    type: online
+    details: Visa********2301
+    net: 525.00
+    class: first
