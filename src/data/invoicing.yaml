@@ -49,7 +49,7 @@ payments:
     status: Refunded
     type: online
     details: Visa********2301
-    net: 800.00
+    net: 0.00
     children: true
 
 transactionsRefunded:
