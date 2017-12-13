@@ -16,79 +16,81 @@ notes: |
         {{/each}}
       </div>
       {{#each (data "invoicing.payments")}}
-        <div class="Panel-row Panel-row--withCells {{#compare this.children "===" true}}Panel-row--parent{{/compare}}">
-          <div class="Panel-cell">
-            {{#compare this.children "===" true}}
-              <a href="#"
-                 class="Panel-expandableControl js-expandableControlDemo"
-                 data-control="{{this.id}}">
-                <span class="Panel-expandableControlIcon">
-                  {{svg "right" class="Icon"}}
-                </span>
-                {{this.id}}
-              </a>
-            {{else}}
-              {{this.id}}
-            {{/compare}}
-          </div>
-          <div class="Panel-cell">
-            {{this.status}}
-          </div>
-          <div class="Panel-cell">
-            {{random "date" string=true}}
-          </div>
-          <div class="Panel-cell">
-            {{this.type}}
-          </div>
-          <div class="Panel-cell u-textRight">
-            ${{toFixed this.net}}
-          </div>
-          <div class="Panel-cell u-textRight">
-            {{#compare this.type "===" "offline" }}
-              ${{toFixed this.net}}
-            {{else}}
-              ${{toFixed (math this.net "*" 1.0299 "+" 0.99)}}
-            {{/compare}}
-          </div>
-          <div class="Panel-cell u-borderLeft u-textCenter">
-            <button class="Button Button--small Button--negative">
-                Refund
-            </button>
-          </div>
-        </div>
-        {{#compare this.children "===" true}}
-          <div class="Panel-childRows" data-childRows="{{this.id}}">
-            {{#each (data (concat "invoicing.transactions" this.status))}}
-              <div class="Panel-row Panel-row--withCells">
-                <div class="Panel-cell">
+        {{#compare this.children "===" true}}<div class="Panel-expandableRow">{{/compare}}
+          <div class="Panel-row Panel-row--withCells {{#compare this.children "===" true}}Panel-row--parent{{/compare}}">
+            <div class="Panel-cell">
+              {{#compare this.children "===" true}}
+                <a href="#"
+                   class="Panel-expandableControl js-expandableControlDemo"
+                   data-control="{{this.id}}">
+                  <span class="Panel-expandableControlIcon">
+                    {{svg "right" class="Icon"}}
+                  </span>
                   {{this.id}}
-                </div>
-                <div class="Panel-cell">
-                  {{this.status}}
-                </div>
-                <div class="Panel-cell">
-                  {{random "date" string=true}}
-                </div>
-                <div class="Panel-cell">
-                  {{this.type}}
-                </div>
-                <div class="Panel-cell u-textRight">
-                  ${{toFixed this.net}}
-                </div>
-                <div class="Panel-cell u-textRight">
-                  {{#compare this.type "===" "offline" }}
-                    ${{toFixed this.net}}
-                  {{else}}
-                    ${{toFixed (math this.net "*" 1.0299 "+" 0.99)}}
-                  {{/compare}}
-                </div>
-                <div class="Panel-cell u-borderLeft u-textCenter">
-                  -
-                </div>
-              </div>
-            {{/each}}
+                </a>
+              {{else}}
+                {{this.id}}
+              {{/compare}}
+            </div>
+            <div class="Panel-cell">
+              {{this.status}}
+            </div>
+            <div class="Panel-cell">
+              {{random "date" string=true}}
+            </div>
+            <div class="Panel-cell">
+              {{this.type}}
+            </div>
+            <div class="Panel-cell u-textRight">
+              ${{toFixed this.net}}
+            </div>
+            <div class="Panel-cell u-textRight">
+              {{#compare this.type "===" "offline" }}
+                ${{toFixed this.net}}
+              {{else}}
+                ${{toFixed (math this.net "*" 1.0299 "+" 0.99)}}
+              {{/compare}}
+            </div>
+            <div class="Panel-cell u-borderLeft u-textCenter">
+              <button class="Button Button--small Button--negative">
+                  Refund
+              </button>
+            </div>
           </div>
-        {{/compare}}
+          {{#compare this.children "===" true}}
+            <div class="Panel-childRows" data-childRows="{{this.id}}">
+              {{#each (data (concat "invoicing.transactions" this.status))}}
+                <div class="Panel-row Panel-row--withCells">
+                  <div class="Panel-cell">
+                    {{this.id}}
+                  </div>
+                  <div class="Panel-cell">
+                    {{this.status}}
+                  </div>
+                  <div class="Panel-cell">
+                    {{random "date" string=true}}
+                  </div>
+                  <div class="Panel-cell">
+                    {{this.type}}
+                  </div>
+                  <div class="Panel-cell u-textRight">
+                    ${{toFixed this.net}}
+                  </div>
+                  <div class="Panel-cell u-textRight">
+                    {{#compare this.type "===" "offline" }}
+                      ${{toFixed this.net}}
+                    {{else}}
+                      ${{toFixed (math this.net "*" 1.0299 "+" 0.99)}}
+                    {{/compare}}
+                  </div>
+                  <div class="Panel-cell u-borderLeft u-textCenter">
+                    -
+                  </div>
+                </div>
+              {{/each}}
+            </div>
+          {{/compare}}
+        {{#compare this.children "===" true}}</div>{{/compare}}
       {{/each}}
     </div>
     <div class="Panel-footer">
