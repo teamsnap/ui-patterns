@@ -1,8 +1,9 @@
 ---
 notes: |
   + When applying to an icon, the Tooltip--icon modifier should be used for the appropriate icon styles.
+  + Note: you can add a focus state to pin open tooltips on icons and text by adding `tabindex="0"` to the element
 ---
 
-<span class="Tooltip Tooltip--icon" data-tooltip="Tooltips can be applied to multiple elements simply by adding a class and data attribute.">
+<span class="Tooltip Tooltip--icon" tabindex="0" data-tooltip="Tooltips can be applied to multiple elements simply by adding a class and data attribute.">
   {{svg (defaultTo stepIcon "info") class="Icon"}}
 </span>
