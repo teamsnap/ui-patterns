@@ -1,0 +1,13 @@
+---
+notes: |
+  + note: wrapping around the wrong element may result in conflicting CSS. In the example below, wrapping just the label or just the input would break the adjacent selector in the checkbox component.
+  + The tooltip component may also be applied directly to particilar elements in some cases too.
+  + Tooltips should not be added to elements with the title attribute, as the two will conflict.
+---
+
+<div class="Checkbox Checkbox--inline">
+  <span class="Tooltip" data-tooltip="Tooltips can be applied to various elements by wrapping a specific piece in the tooltip component.">
+    <input class="Checkbox-input" type="checkbox" id="checkbox-1" name="checkbox-1" disabled>
+    <label class="Checkbox-label" for="checkbox-1"></label>
+  </span>
+</div>
