@@ -1,0 +1,23 @@
+---
+notes: |
+  `.InputGroup` can be used to add icons within an input element.
+
+  Classes and modifiers:
+  + `.InputGroup .InputGroup--leftIcon` - Adds space for icon on left side of input
+  + `.InputGroup .InputGroup--rightIcon` - Adds space for icon on right side of input
+  + `.Input-icon` - holds the icon or text element
+---
+
+<div class="InputGroup InputGroup--leftIcon">
+  <input class="Input" type="text" id="Input-1" placeholder="0.00">
+  <span class="InputGroup-icon">$</span>
+</div>
+
+<br />
+
+<div class="InputGroup InputGroup--rightIcon">
+  <input class="Input" type="text" id="Input-date" placeholder="01-01-2017">
+  <span class="InputGroup-icon">
+    {{svg "schedule" class="Icon" role="presentation"}}
+  </span>
+</div>

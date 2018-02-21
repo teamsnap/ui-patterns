@@ -1,0 +1,54 @@
+---
+order: 3
+notes: |
+  + The `.is-notValid` class will add error styling around form elements.
+  + The `.FormGroup-feedback` element can supply the user with detailed feedback.
+  + The `.is-valid` class will add success state styling
+---
+
+<div class="FormGroup is-notValid">
+  <label class="FormGroup-label" for="Input-1">Text Input</label>
+  <input class="Input" type="text" id="Input-1" placeholder="First Name">
+  <div class="FormGroup-feedback">
+    Input is required
+  </div>
+</div>
+
+<div class="FormGroup is-notValid">
+  <label class="FormGroup-label" for="select-1">Select Box</label>
+  <div class="SelectBox">
+    <select class="SelectBox-options" name="select-1" id="select-1">
+      <option value="">Option 1</option>
+      <option value="">Option 2</option>
+      <option value="">Option 3</option>
+      <option value="">Option 4</option>
+      <option value="">Option 5</option>
+    </select>
+  </div>
+  <div class="FormGroup-feedback">
+    Input is required
+  </div>
+</div>
+
+<div class="FormGroup is-notValid">
+  <div class="FormGroup-label u-spaceBottomSm">Select all that apply:</div>
+  <div class="Checkbox Checkbox--inline">
+    <input class="Checkbox-input" type="checkbox" id="checkbox-1" name="checkbox">
+    <label class="Checkbox-label" for="checkbox-1">Checkbox Option 1</label>
+  </div>
+  <div class="Checkbox Checkbox--inline">
+    <input class="Checkbox-input" type="checkbox" id="checkbox-2" name="checkbox">
+    <label class="Checkbox-label" for="checkbox-2">Checkbox Option 2</label>
+  </div>
+  <div class="FormGroup-feedback">
+    Input is required
+  </div>
+</div>
+
+<div class="FormGroup is-valid">
+  <span class="FormGroup-validation">
+    {{svg "check" class="Icon" role="presentation"}}
+  </span>
+  <label class="FormGroup-label" for="Input-1">Text Input</label>
+  <input class="Input" type="text" id="Input-1" placeholder="First Name">  
+</div>
