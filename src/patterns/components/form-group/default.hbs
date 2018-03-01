@@ -1,0 +1,43 @@
+---
+order: 1
+notes: |
+  `.FormGroup` provides a wrapper for grouping form elements - and for styling feedback messages and labels.
+---
+
+<div class="FormGroup">
+  <label class="FormGroup-label" for="Input-1">Text Input</label>
+  <input class="Input" type="text" id="Input-1" placeholder="First Name">
+</div>
+
+<div class="FormGroup">
+  <label class="FormGroup-label" for="select-1">Select Box</label>
+  <div class="SelectBox">
+    <select class="SelectBox-options" name="select-1" id="select-1">
+      <option value="">Option 1</option>
+      <option value="">Option 2</option>
+      <option value="">Option 3</option>
+      <option value="">Option 4</option>
+      <option value="">Option 5</option>
+    </select>
+  </div>
+</div>
+
+<div class="FormGroup">
+  <label class="FormGroup-label" for="Input-1">Amount Input</label>
+  <div class="InputGroup InputGroup--leftIcon">
+    <input class="Input" type="text" id="Input-1" placeholder="0.00">
+    <span class="InputGroup-icon">$</span>
+  </div>
+</div>
+
+<div class="FormGroup">
+  <div class="FormGroup-label u-spaceBottomSm">Select all that apply:</div>
+  <div class="Checkbox Checkbox--inline">
+    <input class="Checkbox-input" type="checkbox" id="checkbox-1" name="checkbox">
+    <label class="Checkbox-label" for="checkbox-1">Checkbox Option 1</label>
+  </div>
+  <div class="Checkbox Checkbox--inline">
+    <input class="Checkbox-input" type="checkbox" id="checkbox-2" name="checkbox">
+    <label class="Checkbox-label" for="checkbox-2">Checkbox Option 2</label>
+  </div>
+</div>
