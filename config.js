@@ -2,7 +2,7 @@
 
 module.exports = {
   'ui': {
-    src: './src/teamsnap-ui/src/teamsnap-ui.scss',
+    src: './src/teamsnap-ui/src/css/teamsnap-ui.scss',
     dest: './dist/assets/toolkit/styles',
     name: 'ui'
   },
@@ -76,7 +76,7 @@ module.exports = {
       },
       {
         match: [
-          './src/teamsnap-ui/src/**/*.scss',
+          './src/teamsnap-ui/src/css/**/*.scss',
           './src/assets/**/*.scss'
         ],
         tasks: ['sass']
