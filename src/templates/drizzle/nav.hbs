@@ -49,7 +49,7 @@
     {{!-- Component Patterns --}}
     <h3 class="drizzle-Nav-item drizzle-u-marginTop">Components</h3>
     <ul class="drizzle-Nav-menu">
-      {{#each (collections "components" sortby="order")}}
+      {{#each (collections "components")}}
         <li>
           {{> nav-item label=name}}
         </li>
@@ -58,7 +58,7 @@
     {{!-- Utility Patterns --}}
     <h3 class="drizzle-Nav-item drizzle-u-marginTop">Utilities</h3>
     <ul class="drizzle-Nav-menu">
-      {{#each (collections "utilities" sortby="order")}}
+      {{#each (collections "utilities")}}
         <li>
           {{> nav-item label=name}}
         </li>
