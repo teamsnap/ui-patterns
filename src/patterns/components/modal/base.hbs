@@ -1,0 +1,43 @@
+<button class="Button js-triggerModal">
+  Open Modal
+</button>
+
+<div class="Modal js-modal">
+  <div class="Modal-content">
+    <h2 class="Modal-heading">Schedule Preferences</h2>
+    <div class="Modal-body">
+      <div class="Checkbox">
+        <input class="Checkbox-input" type="checkbox" id="checkbox-1" name="checkbox-1">
+        <label class="Checkbox-label" for="checkbox-1">Hide past games and events</label>
+      </div>
+      <div>
+        <label for="show">Show:</label>
+        <div class="SelectBox">
+          <select class="SelectBox-options" name="show" id="show">
+            <option value="">Games and Events</option>
+            <option value="">Games Only</option>
+            <option value="">Events Only</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="Modal-footer">
+      <div class="u-xs-size2of3 u-md-size1of2 u-flexExpand">
+        <div class="Grid Grid--withGutter Grid--fit">
+          <div class="Grid-cell">
+            <button class="Button Button--negative Button--large u-sizeFull js-modalClose">
+              {{svg "dismiss" class="Icon" role="presentation"}}
+              Cancel
+            </button>
+          </div>
+          <div class="Grid-cell">
+            <button class="Button Button--primary Button--large u-sizeFull js-modalClose">
+              {{svg "check" class="Icon" role="presentation"}}
+              Save
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

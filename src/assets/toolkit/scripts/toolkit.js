@@ -26,6 +26,19 @@ u('.js-ButtonGroupDemo > .Button').on('click', function() {
   u(this).addClass('is-active');
 });
 
+// * 2. Modal demo
+
+u('.js-triggerModal').on('click', function() {
+  u('.js-modal').addClass('is-open');
+})
+
+u('.js-modalClose').on('click', function() {
+  u('.js-modal').addClass('is-closing');
+  window.setTimeout(function () {
+		u('.js-modal').removeClass('is-open');
+    u('.js-modal').removeClass('is-closing');
+	}, 500);
+})
 
 // * 3. Radial Progress Bar
 
