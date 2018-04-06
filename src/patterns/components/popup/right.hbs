@@ -1,0 +1,51 @@
+---
+order: 4
+notes: |
+  `Popup-container--right` right-aligns the popup with the triggering element. Can be used in conjunction with `Popup--down` to make the popup appear below _and_ right-aligned.
+
+  Classes:
+  - `.Popup-container--right` as a modifier to `Popup-container`
+---
+
+
+<div class="Popup">
+  <button class="Button js-popupToggle">
+    Up Right
+  </button>
+  <div class="Popup-container Popup-container--right js-popupContainer" style="width: 200px">
+    <div class="Popup-content">
+      <div class="u-textBold">
+        <a href="">
+          <p class="u-padEndsSm u-padSidesMd">Action 1</p>
+        </a>
+        <hr class="Divider u-spaceEndsNone">
+        <a href="">
+          <p class="u-padEndsSm u-padSidesMd">
+            Action 2
+          </p>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="Popup">
+  <button class="Button Button--square js-popupToggle">
+    Down Right
+  </button>
+  <div class="Popup-container Popup-container--down Popup-container--right js-popupContainer" style="width: 200px">
+    <div class="Popup-content">
+      <div class="u-textBold">
+        <a href="">
+          <p class="u-padEndsSm u-padSidesMd">Action 1</p>
+        </a>
+        <hr class="Divider u-spaceEndsNone">
+        <a href="">
+          <p class="u-padEndsSm u-padSidesMd">
+            Action 2
+          </p>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

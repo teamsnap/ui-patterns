@@ -1,0 +1,28 @@
+---
+order: 1
+notes: |
+  Standard popup appears _above_ the triggering element, _centered_, and _with_ an arrow pointer.
+
+  Classes:
+  - `.Popup` - Wrapper for both the popup toggle and the popup content
+  - `.Popup-toggle` - Triggering element
+  - `.Popup-container` - Positioning element for the popup content and arrow
+  - `.Popup-content` - Popup box with content
+---
+
+
+<div class="Popup">
+  <button class="Button Popup-toggle js-popupToggle">
+    Default Popup
+  </button>
+  <div class="Popup-container js-popupContainer">
+    <div class="Popup-content u-padMd">
+      <h3 class="u-spaceBottomSm u-textCenter">Confirm This Action</h3>
+      <p>Are you sure you want to do this thing?</p>
+      <div class="u-textCenter u-spaceTopMd">
+        <button class="Button Button--negative">Cancel</button>
+        <button class="Button Button--primary">Confirm</button>
+      </div>
+    </div>
+  </div>
+</div>

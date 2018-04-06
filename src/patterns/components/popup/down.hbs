@@ -1,0 +1,30 @@
+---
+order: 3
+notes: |
+  `Popup-container--down` makes the popup appear below the triggering element. By default it is centered.
+
+  Classes:
+  - `.Popup-container--down` as a modifier to `Popup-container`
+---
+
+
+<div class="Popup">
+  <button class="Button js-popupToggle">
+    Down
+  </button>
+  <div class="Popup-container Popup-container--down js-popupContainer" style="width: 200px">
+    <div class="Popup-content">
+      <div class="u-textBold">
+        <a href="">
+          <p class="u-padEndsSm u-padSidesMd">Action 1</p>
+        </a>
+        <hr class="Divider u-spaceEndsNone">
+        <a href="">
+          <p class="u-padEndsSm u-padSidesMd">
+            Action 2
+          </p>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

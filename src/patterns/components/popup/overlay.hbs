@@ -1,0 +1,25 @@
+---
+order: 2
+notes: |
+  `Popup-container--overlay` makes the popup appear centered directly on top of the triggering element, obscuring the trigger, and has no arrow.
+
+  Classes:
+  - `.Popup-container--overlay` as a modifier to `Popup-container`
+---
+
+
+<div class="Popup">
+  <button class="Button Popup-toggle js-popupToggle">
+    Overlay
+  </button>
+  <div class="Popup-container Popup-container--overlay js-popupContainer">
+    <div class="Popup-content u-padMd">
+      <h3 class="u-spaceBottomSm u-textCenter">Confirm This Action</h3>
+      <p>Are you sure you want to do this thing?</p>
+      <div class="u-textCenter u-spaceTopMd">
+        <button class="Button Button--negative">Cancel</button>
+        <button class="Button Button--primary">Confirm</button>
+      </div>
+    </div>
+  </div>
+</div>

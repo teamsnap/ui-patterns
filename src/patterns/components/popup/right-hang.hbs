@@ -1,0 +1,51 @@
+---
+order: 5
+notes: |
+  `Popup-container--rightHang` "hangs" the popup off the right edge of the triggering element. This one is particularly useful for small buttons or square icon buttons.
+
+  Classes:
+  - `.Popup-container--rightHang` as a modifier to `Popup-container`
+---
+
+
+<div class="Popup">
+  <button class="Button Button--primary Popup-toggle js-popupToggle u-padSidesSm">
+    {{svg "plus" class="Icon" role="presentation"}}
+  </button>
+  <div class="Popup-container Popup-container--rightHang js-popupContainer" style="width: 200px">
+    <div class="Popup-content">
+      <div class="u-textBold">
+        <a href="">
+          <p class="u-padEndsSm u-padSidesMd">Action 1</p>
+        </a>
+        <hr class="Divider u-spaceEndsNone">
+        <a href="">
+          <p class="u-padEndsSm u-padSidesMd">
+            Action 2
+          </p>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="Popup">
+  <button class="Button Button--smallSquare Button--yes Popup-toggle js-popupToggle">
+    {{svg "check" class="Icon" role="presentation"}}
+  </button>
+  <div class="Popup-container Popup-container--rightHang js-popupContainer" style="width: 200px">
+    <div class="Popup-content u-padSm">
+      <div class="ButtonGroup js-ButtonGroupDemo" >
+        <button class="Button u-padSidesXs  Button--yes u-size1of3">
+          Going
+        </button>
+        <button class="Button u-padSidesXs   Button--maybe  u-size1of3">
+          Maybe
+        </button>
+        <button class="Button u-padSidesXs   Button--no u-size1of3">
+          No
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
