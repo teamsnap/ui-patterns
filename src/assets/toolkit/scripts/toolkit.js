@@ -67,3 +67,14 @@ u('.js-expandableControlDemo').on('click', function(e) {
     u('[data-childRows="'+ childRows +'"]').addClass('is-expanded')
   }
 });
+
+
+// * 5. Demo Popup
+
+u('.js-popupToggle').on('click', function() {
+  u(this).siblings('.js-popupContainer').toggleClass('is-open');
+})
+
+u('.js-popupContainer').on('click', function() {
+  u(this).removeClass('is-open');
+})

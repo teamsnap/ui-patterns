@@ -1,0 +1,40 @@
+---
+notes: |
+  There are a couple options for status buttons to suit different use cases.
+
+  One is when a secondary element exists to indicate state, or if the button should represent a status outside of a selected state.
+
+  Classes:
+  - `.Button--yes`
+  - `.Button--maybe`
+  - `.Button--no`
+---
+
+<div class="Popup u-spaceRightMd" style="margin-top: 60px">
+  <button class="Button Button--smallSquare Popup-toggle js-popupToggle">
+  </button>
+  <div class="Popup-container Popup-container--leftHang js-popupContainer is-open">
+    <div class="Popup-content u-padSm">
+      <div class="ButtonGroup js-ButtonGroupDemo" >
+        <button class="Button u-padSidesXs Button--yes u-size1of3">
+          Going
+        </button>
+        <button class="Button u-padSidesXs Button--maybe u-size1of3">
+          Maybe
+        </button>
+        <button class="Button u-padSidesXs Button--no u-size1of3">
+          No
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<button class="Button Button--yes Button--smallSquare u-spaceRightMd">
+  {{svg "check" class="Icon" role="presentation"}}
+</button>
+<button class="Button Button--no Button--smallSquare u-spaceRightMd">
+  {{svg "dismiss" class="Icon" role="presentation"}}
+</button>
+<button class="Button Button--maybe Button--smallSquare u-spaceRightMd">
+  <span class="u-textBold">?</span>
+</button>
