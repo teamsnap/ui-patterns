@@ -1,0 +1,18 @@
+---
+notes: |
+  In cases where a loader needs to display inline, or act similarly to an icon (inheriting parent color and size), there is an SVG loader icon that works with the `.Icon` styles. Simply add the `Icon--loader` modifier to apply the animation.
+---
+
+<button class="Button Button--smallSquare Button--primary">
+  {{svg "loader" class="Icon Icon--loader" role="presentation"}}
+</button>
+
+<h1>
+  {{svg "loader" class="Icon Icon--loader" role="presentation"}}
+  Heading element with loading icon
+</h1>
+
+<button class="Button Button--large">
+  {{svg "loader" class="Icon Icon--loader u-spaceRightSm" role="presentation"}}
+  Loading
+</button>
