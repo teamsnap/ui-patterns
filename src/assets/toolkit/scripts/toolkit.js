@@ -32,24 +32,26 @@ u('.js-ButtonGroupDemo > .Button').on('click', function() {
 // 1. Only run radial progress code if present
 // Note: Builds off example of adding in-line css based on percentage used for bar loading indicators
 
-if(u('.ProgressBar--radial.demo').length) { // 1
+if(u('.RadialProgress').length) { // 1
 
-  var firstHalf = u('.ProgressBar--radial.demo .first-half').nodes[0],
-      secondHalf = u('.ProgressBar--radial.demo .second-half').nodes[0],
-      circleDiv = u('.ProgressBar--radial.demo .circle'),
-      loadingProgress = 85, // loading progress in precentage
-      loadingDegrees = (loadingProgress*360)/100; // convert percentage loaded to degrees rotation
+  u('.RadialProgress').each(function(node, i) {
 
-  // rotate only firstHalf upto 180 degrees, second half if > 180 degrees
-  if(loadingDegrees <= 180) {
-   firstHalf.style.transform = 'rotate(' + loadingDegrees + 'deg)';
-   secondHalf.style.transform = 'rotate(0deg)';
-   circleDiv.removeClass('whole').addClass('half');
-  } else if(loadingDegrees > 180) {
-   firstHalf.style.transform = 'rotate(180deg)';
-   secondHalf.style.transform = 'rotate(' + loadingDegrees + 'deg)';
-   circleDiv.addClass('whole').removeClass('half');
-  }
+    var progress = u(node).data('progress'),
+        progressDegrees = (360 * (progress/100)),
+        circle = u(node).find('.RadialProgress-circle'),
+        firstHalf = u(node).find('.RadialProgress-status').first(),
+        secondHalf =  u(node).find('.RadialProgress-status').last();
+
+    if(progressDegrees <= 180) {
+     firstHalf.style.transform = 'rotate(' + progressDegrees + 'deg)';
+     secondHalf.style.display = 'rotate(0deg)';
+    } else if(progressDegrees > 180) {
+     firstHalf.style.transform = 'rotate(180deg)';
+     secondHalf.style.transform = 'rotate(' + progressDegrees + 'deg)';
+     circle.addClass('whole');
+   }
+
+ });
 
 }
 
@@ -68,13 +70,12 @@ u('.js-expandableControlDemo').on('click', function(e) {
   }
 });
 
+// * 5. Feedback trigger and dismiss
 
-// * 5. Demo Popup
+u('#FeedbackBox--trigger').on('click', function() {
+  u('#FeedbackBox--triggeredPopup').addClass('js-active');
+});
 
-u('.js-popupToggle').on('click', function() {
-  u(this).siblings('.js-popupContainer').toggleClass('is-open');
-})
-
-u('.js-popupContainer').on('click', function() {
-  u(this).removeClass('is-open');
-})
+u('#FeedbackBox--triggeredPopup .Feedback-dismiss').on('click', function() {
+  u('#FeedbackBox--triggeredPopup').removeClass('js-active');
+});

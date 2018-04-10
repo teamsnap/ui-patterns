@@ -1,0 +1,17 @@
+---
+notes: |
+  Example to trigger notification-style feedback animation
+
+order: 3
+
+---
+
+<button class="Button" id="FeedbackBox--trigger">
+  Trigger Dismissible Feedback Box
+</button>
+
+<div class="Feedback Feedback--popup Feedback--dismissible Feedback--positive" id="FeedbackBox--triggeredPopup">
+  <div class="Feedback-icon">{{svg "star" class="Icon" role="presentation"}}</div>
+  <span class="Feedback-title">You are awesome!</span> Give yourself a pat on the back for doing something succesfully.
+  <i type="button" class="Feedback-dismiss">{{svg "dismiss" class="Icon" role="presentation"}}</i>
+</div>
