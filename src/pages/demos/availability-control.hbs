@@ -6,7 +6,6 @@
         <div class="Panel-cell">
           <a href="">Player Name</a>
         </div>
-        {{#iterate 2}}
           <div class="Panel-cell u-textCenter">
           <div class="Popup">
             <button class="Button Button--smallSquare Popup-toggle js-popupToggle">
@@ -28,27 +27,32 @@
             </div>
           </div>
         </div>
-        {{/iterate}}
         {{#iterate 2}}
           <div class="Panel-cell u-textCenter">
           <div class="Popup">
             <button class="Button Button--smallSquare Button--yes Popup-toggle js-popupToggle">
-              {{svg "check" class="Icon" role="presentation"}}
+              {{#compare @count "==" 2}}
+                {{svg "loader" class="Icon Icon--loader" role="presentation"}}
+              {{else}}
+                {{svg "check" class="Icon" role="presentation"}}
+              {{/compare}}
             </button>
-            <div class="Popup-container js-popupContainer" style="width: auto">
+            <div class="Popup-container js-popupContainer" style="width: 300px">
               <div class="Popup-content u-padSm u-flex u-flexAlignItemsCenter">
-                <div class="ButtonGroup js-ButtonGroupDemo u-sizeFill" style="width: 225px">
-                  <button class="Button u-padSidesXs  Button--yes  u-size1of3">
+                <div class="ButtonGroup js-ButtonGroupDemo u-sizeFill">
+                  <button class="Button u-padSidesXs  Button--yes  u-size1of4">
                     Going
                   </button>
-                  <button class="Button u-padSidesXs  Button--maybe u-size1of3">
+                  <button class="Button u-padSidesXs  Button--maybe u-size1of4">
                     Maybe
                   </button>
-                  <button class="Button u-padSidesXs  Button--no u-size1of3">
+                  <button class="Button u-padSidesXs  Button--no u-size1of4">
                     No
                   </button>
+                  <button class="Button u-padSidesXs u-size1of4">
+                    Clear
+                  </button>
                 </div>
-                <a href="" class="u-textBold u-padSidesSm u-spaceLeftSm u-textNoWrap">Reset</a>
               </div>
             </div>
           </div>
@@ -58,7 +62,11 @@
           <div class="Panel-cell u-textCenter">
           <div class="Popup">
             <button class="Button Button--smallSquare Button--maybe Popup-toggle js-popupToggle">
-              <span class="u-textBold">?</span>
+              {{#compare @count "==" 2}}
+                {{svg "loader" class="Icon Icon--loader" role="presentation"}}
+              {{else}}
+                <span class="u-textBold">?</span>
+              {{/compare}}
             </button>
             <div class="Popup-container js-popupContainer">
               <div class="Popup-content u-padSm">
@@ -83,7 +91,7 @@
             <button class="Button Button--smallSquare Button--no Popup-toggle js-popupToggle">
               {{svg "dismiss" class="Icon" role="presentation"}}
             </button>
-            <div class="Popup-container Popup-container--rightHang js-popupContainer">
+            <div class="Popup-container js-popupContainer">
               <div class="Popup-content u-padSm">
                 <div class="ButtonGroup js-ButtonGroupDemo" >
                   <button class="Button u-padSidesXs  Button--yes u-size1of3">
@@ -100,92 +108,15 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="Panel-row Panel-row--withCells u-flexAlignItemsCenter">
-        <div class="Panel-cell">
-          <a href="">Player Name</a>
-        </div>
-        {{#iterate 2}}
-          <div class="Panel-cell u-textCenter">
-          <div class="Popup">
-            <button class="Button Button--smallSquare Popup-toggle js-popupToggle">
-            </button>
-            <div class="Popup-container js-popupContainer">
-              <div class="Popup-content u-padSm">
-                <div class="ButtonGroup js-ButtonGroupDemo" >
-                  <button class="Button u-padSidesXs  Button--yes u-size1of3">
-                    Going
-                  </button>
-                  <button class="Button u-padSidesXs  Button--maybe u-size1of3">
-                    Maybe
-                  </button>
-                  <button class="Button u-padSidesXs  Button--no u-size1of3">
-                    No
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        {{/iterate}}
-        {{#iterate 2}}
-          <div class="Panel-cell u-textCenter">
-          <div class="Popup">
-            <button class="Button Button--smallSquare Button--yes Popup-toggle js-popupToggle">
-              {{svg "check" class="Icon" role="presentation"}}
-            </button>
-            <div class="Popup-container js-popupContainer" style="width: auto">
-              <div class="Popup-content u-padSm u-flex u-flexAlignItemsCenter">
-                <div class="ButtonGroup js-ButtonGroupDemo u-sizeFill" style="width: 225px">
-                  <button class="Button u-padSidesXs  Button--yes  u-size1of3">
-                    Going
-                  </button>
-                  <button class="Button u-padSidesXs  Button--maybe u-size1of3">
-                    Maybe
-                  </button>
-                  <button class="Button u-padSidesXs  Button--no u-size1of3">
-                    No
-                  </button>
-                </div>
-                <a href="" class="u-textBold u-padSidesSm u-spaceLeftSm u-textNoWrap">Reset</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        {{/iterate}}
-        {{#iterate 2}}
-          <div class="Panel-cell u-textCenter">
-          <div class="Popup">
-            <button class="Button Button--smallSquare Button--maybe Popup-toggle js-popupToggle">
-              <span class="u-textBold">?</span>
-            </button>
-            <div class="Popup-container js-popupContainer">
-              <div class="Popup-content u-padSm">
-                <div class="ButtonGroup js-ButtonGroupDemo" >
-                  <button class="Button u-padSidesXs  Button--yes u-size1of3">
-                    Going
-                  </button>
-                  <button class="Button u-padSidesXs   Button--maybe  u-size1of3">
-                    Maybe
-                  </button>
-                  <button class="Button u-padSidesXs   Button--no u-size1of3">
-                    No
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        {{/iterate}}
         <div class="Panel-cell u-textCenter">
           <div class="Popup">
-            <button class="Button Button--smallSquare Button--yes Popup-toggle js-popupToggle">
-              {{svg "check" class="Icon" role="presentation"}}
+            <button class="Button Button--smallSquare Button--no Popup-toggle js-popupToggle">
+              {{svg "loader" class="Icon Icon--loader" role="presentation"}}
             </button>
             <div class="Popup-container Popup-container--rightHang js-popupContainer">
               <div class="Popup-content u-padSm">
                 <div class="ButtonGroup js-ButtonGroupDemo" >
-                  <button class="Button u-padSidesXs  Button--yes  u-size1of3">
+                  <button class="Button u-padSidesXs  Button--yes u-size1of3">
                     Going
                   </button>
                   <button class="Button u-padSidesXs   Button--maybe u-size1of3">
@@ -202,6 +133,4 @@
       </div>
     </div>
   </div>
-
-
 </div>
