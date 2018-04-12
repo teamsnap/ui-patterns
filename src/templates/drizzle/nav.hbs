@@ -28,6 +28,20 @@
 
     {{> drizzle.classic-css-toggle}}
 
+    <div class="drizzle-Nav-item drizzle-u-marginTop">
+      <div class="FieldGroup">
+        <label class="FieldGroup-label" for="select-1">Select a theme</label>
+        <div class="SelectBox">
+          <select class="SelectBox-options js-themeSelect" id="js-themeSelect" name="js-themeSelect">
+            <option value="teamsnap-ui">Default</option>
+            {{#each (data "themes")}}
+              <option value={{theme}}>{{name}}</option>
+            {{/each}}
+          </select>
+        </div>
+      </div>
+    </div>
+
     {{!-- Top-level pages --}}
     <h3 class="drizzle-Nav-item">Intro</h3>
     <ul class="drizzle-Nav-menu">

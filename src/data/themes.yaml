@@ -1,0 +1,71 @@
+- theme: blue-steel
+  name: Blue Steel
+
+- theme: care-bear
+  name: Care Bear
+
+- theme: christmas-sweater
+  name: Christmas Sweater
+
+- theme: custom-aquablue
+  name: Aquablue
+
+- theme: custom-black
+  name: Black
+
+- theme: custom-blue
+  name: Blue
+
+- theme: custom-darkblue
+  name: Dark Blue
+
+- theme: custom-darkgreen
+  name: Dark Green
+
+- theme: custom-darkred
+  name: Dark Red
+
+- theme: custom-goldenyellow
+  name: Golden Yellow
+
+- theme: custom-gray
+  name: Gray
+
+- theme: custom-green
+  name: Green
+
+- theme: custom-leafgreen
+  name: Leaf Green
+
+- theme: custom-lemonyellow
+  name: Lemon Yellow
+
+- theme: custom-lightblue
+  name: Light Blue
+
+- theme: custom-orange
+  name: Orange
+
+- theme: custom-pink
+  name: Pink
+
+- theme: custom-purple
+  name: Purple
+
+- theme: custom-red
+  name: Red
+
+- theme: league
+  name: League
+
+- theme: maple-leaf
+  name: Maple Leaf
+
+- theme: portland-oregon
+  name: Portland Oregon
+
+- theme: ranger-smith
+  name: Ranger Smith
+
+- theme: up-beet
+  name: Up Beet
