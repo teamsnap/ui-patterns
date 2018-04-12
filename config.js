@@ -2,7 +2,10 @@
 
 module.exports = {
   'ui': {
-    src: './src/teamsnap-ui/src/css/teamsnap-ui.scss',
+    src: [
+      './src/teamsnap-ui/src/css/teamsnap-ui.scss',
+      './src/teamsnap-ui/src/css/themes/*.scss'
+    ],
     dest: './dist/assets/toolkit/styles',
     name: 'ui'
   },

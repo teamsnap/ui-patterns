@@ -13,7 +13,10 @@
       {{/if}}
       <link rel="stylesheet" href="{{@root.baseurl}}/assets/drizzle/styles/drizzle.css">
       <link rel="stylesheet" href="https://aa5498032991a101442c-34c0f4eec246050dfc1ee92670a7b97d.ssl.cf1.rackcdn.com/app-team-d0447b9a4fe8ca56541b435630b6aeca.css">
-      <link rel="stylesheet" href="{{@root.baseurl}}/assets/toolkit/styles/teamsnap-ui.css">
+      <link rel="stylesheet" href="{{@root.baseurl}}/assets/toolkit/styles/teamsnap-ui.css" title="teamsnap-ui" class="cssTheme">
+      {{#each (data "themes")}}
+        <link rel="alternate stylesheet" title="{{theme}}" href="{{@root.baseurl}}/assets/toolkit/styles/{{theme}}.css" class="cssTheme">
+      {{/each}}
       {{#each styles}}
         <link rel="stylesheet" href="{{@root.baseurl}}/assets/toolkit/styles/{{this}}.css">
       {{/each}}
