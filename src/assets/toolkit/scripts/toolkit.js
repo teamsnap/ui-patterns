@@ -79,3 +79,13 @@ u('#FeedbackBox--trigger').on('click', function() {
 u('#FeedbackBox--triggeredPopup .Feedback-dismiss').on('click', function() {
   u('#FeedbackBox--triggeredPopup').removeClass('js-active');
 });
+
+// * 6. Demo Popup
+
+u('.js-popupToggle').on('click', function() {
+  u(this).siblings('.js-popupContainer').toggleClass('is-open');
+})
+
+u('.js-popupContainer').on('click', function() {
+  u(this).removeClass('is-open');
+})
