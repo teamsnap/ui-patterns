@@ -37,7 +37,10 @@ module.exports = {
             './src/assets/drizzle/scripts/drizzle.js',
           // Common toolkit scripts
           'toolkit/scripts/toolkit':
-            './src/assets/toolkit/scripts/toolkit.js'
+            './src/assets/toolkit/scripts/toolkit.js',
+          // Hide/Show Password
+          'toolkit/scripts/hide-show-password':
+            './src/assets/toolkit/scripts/hide-show-password.min.js'
         },
         output: {
           path: './dist/assets',
