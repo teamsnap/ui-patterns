@@ -1,0 +1,184 @@
+---
+order: 5
+notes: |
+  Body of table scrolls with fixed header row.
+---
+
+
+<div class="Panel Panel--striped">
+  <div class="Panel-body">
+    <div class="Panel-row Panel-row--withCells">
+      <div class="Panel-cell">
+        <h4 class="Panel-title">
+          <a class="u-flex" href="sortColumn">
+            <span class="u-colorInfo u-textNoWrap">ID</span>
+            <div class="u-colorGrey u-fontSizeXs u-spaceLeftXs">
+              {{svg "up" class="Icon u-block u-colorHighlight" role="presentation"}}
+              {{svg "down" class="Icon u-block" role="presentation"}}
+            </div>
+          </a>
+        </h4>
+      </div>
+      <div class="Panel-cell">
+        <h4 class="Panel-title">
+          <a class="u-flex" href="sortColumn">
+            <span class="u-colorInfo u-textNoWrap">Status</span>
+            <div class="u-colorGrey u-fontSizeXs u-spaceLeftXs">
+              {{svg "up" class="Icon u-block" role="presentation"}}
+              {{svg "down" class="Icon u-block" role="presentation"}}
+            </div>
+          </a>
+        </h4>
+      </div>
+      <div class="Panel-cell">
+        <h4 class="Panel-title">
+          <a class="u-flex" href="sortColumn">
+            <span class="u-colorInfo u-textNoWrap">Date</span>
+            <div class="u-colorGrey u-fontSizeXs u-spaceLeftXs">
+              {{svg "up" class="Icon u-block" role="presentation"}}
+              {{svg "down" class="Icon u-block" role="presentation"}}
+            </div>
+          </a>
+        </h4>
+      </div>
+      <div class="Panel-cell">
+        <h4 class="Panel-title">
+          <a class="u-flex" href="sortColumn">
+            <span class="u-colorInfo u-textNoWrap">Type</span>
+            <div class="u-colorGrey u-fontSizeXs u-spaceLeftXs">
+              {{svg "up" class="Icon u-block" role="presentation"}}
+              {{svg "down" class="Icon u-block" role="presentation"}}
+            </div>
+          </a>
+        </h4>
+      </div>
+      <div class="Panel-cell">
+        <h4 class="Panel-title">
+          <a class="u-flex u-flexJustifyEnd u-spaceNegativeRightSm" href="sortColumn">
+            <span class="u-colorInfo u-textNoWrap">Total</span>
+            <div class="u-colorGrey u-fontSizeXs u-spaceLeftXs">
+              {{svg "up" class="Icon u-block" role="presentation"}}
+              {{svg "down" class="Icon u-block" role="presentation"}}
+            </div>
+          </a>
+        </h4>
+      </div>
+      <div class="Panel-cell">
+        <h4 class="Panel-title">
+          <a class="u-flex u-flexJustifyEnd u-spaceNegativeRightSm" href="sortColumn">
+            <span class="u-colorInfo u-textNoWrap">Payments</span>
+            <div class="u-colorGrey u-fontSizeXs u-spaceLeftXs">
+              {{svg "up" class="Icon u-block" role="presentation"}}
+              {{svg "down" class="Icon u-block" role="presentation"}}
+            </div>
+          </a>
+        </h4>
+      </div>
+      <div class="Panel-cell">
+        <h4 class="Panel-title">
+          <a class="u-flex u-flexJustifyEnd u-spaceNegativeRightSm" href="sortColumn">
+            <span class="u-colorInfo u-textNoWrap">Adjustments</span>
+            <div class="u-colorGrey u-fontSizeXs u-spaceLeftXs">
+              {{svg "up" class="Icon u-block" role="presentation"}}
+              {{svg "down" class="Icon u-block" role="presentation"}}
+            </div>
+          </a>
+        </h4>
+      </div>
+      <div class="Panel-cell">
+        <h4 class="Panel-title">
+          <a class="u-flex u-flexJustifyEnd u-spaceNegativeRightSm" href="sortColumn">
+            <span class="u-colorInfo u-textNoWrap">Balance</span>
+            <div class="u-colorGrey u-fontSizeXs u-spaceLeftXs">
+              {{svg "up" class="Icon u-block" role="presentation"}}
+              {{svg "down" class="Icon u-block" role="presentation"}}
+            </div>
+          </a>
+        </h4>
+      </div>
+      <div class="Panel-cell u-borderLeft u-spaceLeftSm">
+        <h4 class="Panel-title">
+          <a class="u-flex u-flexJustifyCenter" href="sortColumn">
+            <span class="u-colorInfo u-textNoWrap">Admin</span>
+          </a>
+        </h4>
+      </div>
+    </div>
+    <div style="height: 200px; overflow: scroll">
+      {{#each (data "invoicing.payments")}}
+        <div class="Panel-row Panel-row--withCells">
+          <div class="Panel-cell">
+            {{this.id}}
+          </div>
+          <div class="Panel-cell">
+            {{this.status}}
+          </div>
+          <div class="Panel-cell">
+            {{random "date" string=true}}
+          </div>
+          <div class="Panel-cell">
+            {{this.type}}
+          </div>
+          <div class="Panel-cell u-textRight">
+            ${{toFixed this.net}}
+          </div>
+          <div class="Panel-cell u-textRight">
+            {{random "dollar" max=1000}}
+          </div>
+          <div class="Panel-cell u-textRight">
+            {{random "dollar" max=1000}}
+          </div>
+          <div class="Panel-cell u-textRight">
+            {{#compare this.type "===" "offline" }}
+              ${{toFixed this.net}}
+            {{else}}
+              ${{toFixed (math this.net "*" 1.0299 "+" 0.99)}}
+            {{/compare}}
+          </div>
+          <div class="Panel-cell u-borderLeft u-textCenter u-spaceLeftSm">
+            <button class="Button Button--small Button--negative">
+                Refund
+            </button>
+          </div>
+        </div>
+      {{/each}}
+      {{#each (data "invoicing.payments")}}
+        <div class="Panel-row Panel-row--withCells">
+          <div class="Panel-cell">
+            {{this.id}}
+          </div>
+          <div class="Panel-cell">
+            {{this.status}}
+          </div>
+          <div class="Panel-cell">
+            {{random "date" string=true}}
+          </div>
+          <div class="Panel-cell">
+            {{this.type}}
+          </div>
+          <div class="Panel-cell u-textRight">
+            ${{toFixed this.net}}
+          </div>
+          <div class="Panel-cell u-textRight">
+            {{random "dollar" max=1000}}
+          </div>
+          <div class="Panel-cell u-textRight">
+            {{random "dollar" max=1000}}
+          </div>
+          <div class="Panel-cell u-textRight">
+            {{#compare this.type "===" "offline" }}
+              ${{toFixed this.net}}
+            {{else}}
+              ${{toFixed (math this.net "*" 1.0299 "+" 0.99)}}
+            {{/compare}}
+          </div>
+          <div class="Panel-cell u-borderLeft u-textCenter u-spaceLeftSm">
+            <button class="Button Button--small Button--negative">
+                Refund
+            </button>
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  </div>
+</div>
