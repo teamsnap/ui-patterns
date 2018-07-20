@@ -73,11 +73,11 @@ u('.js-expandableControlDemo').on('click', function(e) {
 // * 5. Feedback trigger and dismiss
 
 u('#FeedbackBox--trigger').on('click', function() {
-  u('#FeedbackBox--triggeredPopup').addClass('js-active');
+  u('#FeedbackBox--triggeredPopup').addClass('is-active');
 });
 
 u('#FeedbackBox--triggeredPopup .Feedback-dismiss').on('click', function() {
-  u('#FeedbackBox--triggeredPopup').removeClass('js-active');
+  u('#FeedbackBox--triggeredPopup').removeClass('is-active');
 });
 
 // * 6. Demo Popup
@@ -89,3 +89,34 @@ u('.js-popupToggle').on('click', function() {
 u('.js-popupContainer').on('click', function() {
   u(this).removeClass('is-open');
 })
+
+// * 7. Tabs Javascript
+
+// grabs all demo tab objects
+var $demoTabs      = u('[data-control="tab"]'),
+    $demoContents  = u("[data-tab]");
+
+// sets the default content
+u('[data-default="Tab"]').addClass('is-active');
+
+// function to change active tab and tab content
+u('[data-control="tab"]').on('click', function() {
+
+  var $this          = u(this),
+      target         = $this.data('open'),
+      $content       = $demoContents.filter('[data-tab="' + target + '"]'),
+      group          = u('[data-tab="' + target + '"]').data("group"),
+      $tabGroup      = $demoTabs.filter('[data-group="' + group + '"]'),
+      $contentGroup  = $demoContents.filter('[data-group="' + group + '"]');
+
+      console.log($content)
+
+      if ($this.hasClass("is-active")) return;
+
+      $tabGroup.not($this).removeClass("is-active");
+      $this.addClass("is-active");
+
+      $contentGroup.not($content).removeClass('is-active');
+      $content.addClass('is-active');
+
+});
