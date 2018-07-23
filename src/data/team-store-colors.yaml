@@ -1,0 +1,50 @@
+- value: "#000"
+  name: Black
+- value: "#005cab"
+  name: Royal
+- value: "#002942"
+  name: Navy
+- value: "#a01c33"
+  name: Red
+- value: "#7a2531"
+  name: Cardinal
+- value: "#ffb60f"
+  name: Athletic Gold
+- value: "#ff5113"
+  name: Orange
+- value: "#7aabde"
+  name: Columbia Blue
+- value: "#00512f"
+  name: Forest
+- value: "#4f2683"
+  name: Purple
+- value: "#5f6168"
+  name: Charcoal
+- value: "#005a2f"
+  name: Green
+- value: "#591b1f"
+  name: Maroon
+- value: white
+  name: White
+- value: "#de3f7d"
+  name: Hot Pink
+- value: "#96df73"
+  name: Lime
+- value: "#bdbdbd"
+  name: Grey
+- value: "#4dc5e2"
+  name: Turquoise
+- value: "#fbe700"
+  name: Yellow
+- value: "#413231"
+  name: Dark Brown
+- value: "#c8bb89"
+  name: Vegas Gold
+- value: "#ce7019"
+  name: Texas Orange
+- value: "#006c67"
+  name: Teal
+- value: "#f5c9d3"
+  name: Pink
+- value: "#c4c1a0"
+  name: Khaki

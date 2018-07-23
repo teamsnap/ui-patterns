@@ -31,6 +31,9 @@
     {{#block "foot"}}
       <script src="{{@root.baseurl}}/assets/drizzle/scripts/drizzle.js"></script>
       <script src="{{@root.baseurl}}/assets/toolkit/scripts/toolkit.js"></script>
+      {{#each scripts}}
+        <script src="{{@root.baseurl}}/assets/toolkit/scripts/{{this}}.js"></script>
+      {{/each}}
     {{/block}}
   </body>
 </html>
