@@ -1,0 +1,35 @@
+---
+title: Team Store Edit Configuration
+notes: Edit existing store configuration.
+layout: demo-no-nav
+labels:
+  - inprogress
+  - prototype
+order: 1
+styles:
+  - team-store-demo
+---
+
+<img src="/team-store-images/ios-header.png" class="u-block u-sizeFull u-xs-hidden">
+<div class="u-hidden u-xs-flex" style="background-color: #1A6BAF">
+  <div style="max-width: 1200px" class="u-padSm u-flex u-flexAlignItemsCenter u-flexExpandSides" >
+    {{> team-store-partials.teamsnap-mark}}
+    <h1 style="color: white" class="u-spaceLeftSm">Team Store</h1>
+  </div>
+</div>
+
+<div class="u-xs-padMd">
+  <div class="u-sm-spaceTopLg u-flexExpandSides Panel Panel--hiddenOnSmallestScreens u-maxWidthMd">
+    <h2 class="u-padMd u-xs-padLg u-sm-padSidesXl u-borderBottom">
+      Make Changes to Your Store
+    </h2>
+    <div class="u-spaceMd u-xs-spaceLg u-sm-spaceSidesXl">
+      {{> team-store-partials.config}}
+      <a href="/demos/team-store-configured.html" class="Button Button--large Button--primary u-spaceTopLg u-sm-spaceTopXl u-block u-sizeFull u-xs-size1of2 u-sm-size5of12 u-flexExpandSides u-textCenter">
+        Back to Store
+        {{svg "arrow-right" class="Icon u-spaceLeftSm" role="presentation"}}
+      </a>
+    </div>
+  </div>
+</div>
+<img src="/team-store-images/ios-footer.png" class="u-block u-sizeFull u-xs-hidden u-borderTop" style="position: absolute; top: 163vw">

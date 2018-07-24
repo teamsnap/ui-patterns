@@ -1,0 +1,38 @@
+---
+title: Team Store Setup Confirmation
+notes: Confirmation screen after setup is complete.
+layout: demo-no-nav
+labels:
+  - inprogress
+  - prototype
+order: 1
+styles:
+  - team-store-demo
+---
+
+<img src="/team-store-images/ios-header.png" class="u-block u-sizeFull u-xs-hidden">
+<div class="u-hidden u-xs-flex" style="background-color: #1A6BAF">
+  <div style="max-width: 1200px" class="u-padSm u-flex u-flexAlignItemsCenter u-flexExpandSides" >
+    {{> team-store-partials.teamsnap-mark}}
+    <h1 style="color: white" class="u-spaceLeftSm">Team Store</h1>
+  </div>
+</div>
+
+<div class="u-xs-padMd">
+  <div class="u-sm-spaceTopLg u-flexExpandSides Panel Panel--hiddenOnSmallestScreens u-maxWidthMd">
+    <div class="u-padMd u-xs-padLg u-sm-padXl u-textCenter">
+      <div class='CongratsCheck u-flexExpandSides u-spaceBottomLg'>
+        {{svg "check" class="Icon" role="presentation"}}
+      </div>
+      <h2 style="line-height: 1.2" class="u-spaceBottomMd u-xs-spaceBottomMd">Congratulations!</h2>
+      <p class="u-xs-fontSizeLg u-fontSizeFlexText">
+        You've configured your store.<br> You can make changes at any time to your settings.
+      </p>
+      <a href="/demos/team-store-configured.html" class="Button Button--large Button--primary u-spaceTopLg u-sm-spaceTopXl u-block u-sizeFull u-xs-size1of2 u-sm-size5of12 u-flexExpandSides u-textCenter">
+        Go to Store
+        {{svg "arrow-right" class="Icon u-spaceLeftSm" role="presentation"}}
+      </a>
+    </div>
+  </div>
+</div>
+<img src="/team-store-images/ios-footer.png" class="u-block u-sizeFull u-xs-hidden u-borderTop" style="position: absolute; top: 163vw">

@@ -1,0 +1,151 @@
+::-webkit-scrollbar {
+    display: none;
+}
+
+.u-borderRadiusMd {
+  border-radius: 8px;
+}
+
+.u-fontSizeFlexText {
+  font-size: 4vw !important;
+}
+
+@media (min-width: 480px) {
+  .u-xs-fontSizeXxl {
+    font-size: 26px !important;
+  }
+
+  .u-xs-fontSizeLg {
+    font-size: 16px !important;
+  }
+}
+
+@media (max-width: 479px) {
+  .Panel--hiddenOnSmallestScreens {
+    border: 0;
+    border-radius: 0;
+    background: none;
+    max-height: 146vw;
+    min-height: 146vw;
+    background: white;
+    overflow-y: scroll;
+  }
+}
+
+.u-maxWidthMd {
+  max-width: 600px;
+}
+
+.team-store-slide {
+  margin: 0 8px;
+}
+
+.ColorBlocks {
+  margin-left: -5px;
+  margin-right: -5px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(50px, 1fr));
+}
+
+.ColorBlocks.is-hidden {
+  display: block;
+
+  .ColorBlocks-block:not(.is-active) {
+    display: none;
+  }
+
+  .ColorBlocks-block.is-active {
+    width: 42px;
+    height: 40px;
+
+    &:after {
+      display: none;
+    }
+  }
+}
+
+.ColorBlocks-block {
+  height: 40px;
+  margin: 6px;
+  margin-bottom: 9px;
+  flex-shrink: 0;
+  border-radius: 2px;
+  transition: all ease 200ms;
+  position: relative;
+  display: block;
+
+  &:hover {
+    &::after {
+      width: calc(100% + 2px);
+    }
+  }
+
+  &::after {
+    width: 0;
+    transform: translateX(-50%);
+    background: #7fc243;
+    content: "";
+    height: 5px;
+    left: 50%;
+    position: absolute;
+    top: calc(100% + 4px);
+    transition: width .3s;
+  }
+
+  &.is-active {
+    &::after {
+      width: calc(100% + 2px);
+    }
+  }
+}
+
+.LogoUpload {
+  border: 2px dashed #d6d6d6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  margin: 24px auto;
+  background: white;
+}
+
+.FileRequirements {
+  list-style-position: inside;
+
+  li {
+    list-style-position: inside;
+    padding-bottom: 2px;
+  }
+}
+
+.CongratsCheck {
+  color: #7FC243;
+  border: solid 4px #7FC243;
+  border-radius: 50%;
+  width: 2em;
+  height: 2em;
+  font-size: 3em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Checkbox--large {
+  .Checkbox-label:before {
+    font-size: 12px;
+    height: 20px;
+    width: 20px;
+    line-height: 23px;
+  }
+  .Checkbox-label {
+    padding-left: 28px;
+  }
+}
+
+.ConfigLabel {
+  width: 75px;
+
+  @media (min-width: 480px) {
+    width: 100px;
+  }
+}
