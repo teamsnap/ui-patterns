@@ -1,7 +1,3 @@
-::-webkit-scrollbar {
-    display: none;
-}
-
 .u-borderRadiusMd {
   border-radius: 8px;
 }
@@ -25,12 +21,18 @@
     border: 0;
     border-radius: 0;
     background: none;
-    max-height: 146vw;
-    min-height: 146vw;
     background: white;
-    overflow-y: scroll;
+    padding-bottom: 16px;
+    min-height: 100vh;
+    // max-height: 146vw;
+    // min-height: 146vw;
+    // overflow-y: scroll;
   }
 }
+
+// ::-webkit-scrollbar {
+//     display: none;
+// }
 
 .u-maxWidthMd {
   max-width: 600px;
