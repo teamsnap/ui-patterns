@@ -1,4 +1,4 @@
-<div class="LogoUpload u-textCenter u-padMd u-xs-padXl u-xs-size3of4 u-flexExpandSides">
+<div class="LogoUpload u-textCenter u-padMd u-xs-padXl u-xs-size3of4 u-flexExpandSides js-LogoUpload">
   <div>
     <div style="font-size: 4em; color: #1A6BAF;">
       {{svg "import" class="Icon"}}
@@ -6,16 +6,54 @@
     <div class="u-spaceTopMd u-fontSizeLg">
       <p class="u-hidden u-xs-block">Drag your file here</p>
       <p class="u-hidden u-xs-block u-spaceTopSm u-spaceBottomMd">- or -</p>
-      <p><a href="" class="Button Button--large">Choose a file</a></p>
+      <p><button class="Button Button--large js-ChooseFile">Choose a file</button></p>
     </div>
   </div>
 </div>
-<div class="u-fontSizeFlexText u-xs-fontSizeLg">
-  <p><b>File Requirements:</b></p>
-  <ul class="FileRequirements u-spaceEndsSm">
-    <li>We will <b>not</b> print copyrighted material.</li>
-    <li>Accepted file types: <b>PNG, JPG, and SVG</b>.</li>
-    <li>Image must be at least <b>600px</b> wide.</li>
-    <li>File must be smaller than <b>8 Mb</b>.</li>
-  </ul>
+<div class="js-LogoDemo LogoDemo is-hidden">
+  <div class="u-padSidesMd u-xs-padSidesLg u-padBottomMd u-xs-size3of4 u-flexExpandSides">
+    <div class="team-store-slides">
+      <div class="team-store-slide">
+        <div class="LogoImage u-border u-borderRadiusMd">
+          <img src="/team-store-images/logo-grey-hoodie.jpeg">
+        </div>
+      </div>
+      <div class="team-store-slide">
+        <div class="LogoImage u-border u-borderRadiusMd">
+          <img src="/team-store-images/logo-white-ss.jpeg">
+        </div>
+      </div>
+      <div class="team-store-slide">
+        <div class="LogoImage u-border u-borderRadiusMd">
+          <img src="/team-store-images/logo-white-ls.jpeg">
+        </div>
+      </div>
+    </div>
+  </div>
+  <p class="u-textCenter">
+    <b>Background Removal</b>
+  </p>
+  <section class="u-flex u-flexAlignItemsCenter u-xs-size3of4 u-flexExpandSides">
+    <span>Min</span>
+    <div class="range u-flexGrow1 u-spaceMd" style="position:relative">
+      <input type="range" min="0" max="3" id="custom-art-background-removal" value="1" style="-webkit-appearance: none; background: none; height: 1.5rem; width: 100%;" class="u-block">
+    </div>
+    <span>Max</span>
+  </section>
+  <div class="u-textCenter">
+    <button class="Button Button--no u-spaceEndsMd js-RemoveImage">
+      Remove Image
+    </button>
+  </div>
+</div>
+<div class="u-fontSizeFlexText u-xs-fontSizeLg u-flex u-flexAlignItemsStart">
+  <div class="u-flexGrow1">
+    <p><b>Image Requirements:</b></p>
+    <ul class="FileRequirements u-spaceEndsSm">
+      <li>File type: <b>PNG, JPG or SVG</b>.</li>
+      <li>At least <b>600px</b> wide.</li>
+      <li>Less than <b>8 MB</b>.</li>
+      <li>We can't print copyrighted material.</li>
+    </ul>
+  </div>
 </div>

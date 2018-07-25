@@ -1,6 +1,6 @@
 ---
-title: Team Store Edit Logo
-notes: Edit logo config.
+title: Team Store Setup Review
+notes: Review screen for initial setup.
 layout: demo-no-nav
 labels:
   - inprogress
@@ -10,6 +10,8 @@ styles:
   - team-store-demo
   - slick
   - slick-theme
+scripts:
+ - team-store
 ---
 
 <img src="/team-store-images/ios-header.png" class="u-block u-sizeFull u-xs-hidden">
@@ -22,24 +24,23 @@ styles:
 
 <div class="u-xs-padMd">
   <div class="u-sm-spaceTopLg u-flexExpandSides Panel Panel--hiddenOnSmallestScreens u-maxWidthMd">
-    <div class="u-padMd u-xs-padLg u-sm-padSidesXl u-borderBottom u-flex u-flexAlignItemsBaseline">
-      <h2>Edit/Add Logo</h2>
-      <p class="u-fontSizeLg u-spaceLeftSm">
-        (optional)
-      </p>
+    <div class="u-padMd u-xs-padLg u-sm-padSidesXl u-borderBottom">
+      <h2>Review and Save</h2>
     </div>
     <div class="u-spaceMd u-xs-spaceLg u-sm-spaceSidesXl">
-      {{> team-store-partials.step-3}}
-      <div class="u-spaceTopLg">
+
+      {{> team-store-partials.config}}
+
+      <div class="u-spaceEndsLg">
         <div class="Grid Grid--withGutter Grid--alignCenter">
           <div class="Grid-cell u-size1of2 u-xs-size1of3">
-            <a class="Button Button--negative Button--large u-block u-sizeFull u-textCenter" href="javascript:history.back()">
+            <a class="Button Button--negative Button--large u-block u-sizeFull u-textCenter" href="/demos/team-store-setup.html">
               {{svg "dismiss" class="Icon u-spaceRightSm" role="presentation"}}
               Cancel
             </a>
           </div>
           <div class="Grid-cell u-size1of2 u-xs-size1of3">
-            <a class="Button Button--primary Button--large u-block u-sizeFull u-textCenter" href="javascript:history.back()">
+            <a class="Button Button--primary Button--large u-block u-sizeFull u-textCenter" href="/demos/team-store-pages/team-store-setup-complete.html">
               {{svg "check" class="Icon u-spaceRightSm" role="presentation"}}
               Save
             </a>
@@ -49,6 +50,7 @@ styles:
     </div>
   </div>
 </div>
+
 <img src="/team-store-images/ios-footer.png" class="u-block u-sizeFull u-xs-hidden u-borderTop u-padBottomXs u-borderBottom" style="position: absolute; top: 163vw">
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>

@@ -78,3 +78,15 @@ $('#SecondaryText').keyup(function() {
   console.log(secondaryText);
   $('.js-secondaryText').text(secondaryText);
 })
+
+// Logo Upload
+
+$(".js-ChooseFile").click(function() {
+  $(".js-LogoDemo").removeClass("is-hidden");
+  $(".js-LogoUpload").hide();
+})
+
+$(".js-RemoveImage").click(function() {
+  $(".js-LogoDemo").addClass("is-hidden");
+  $(".js-LogoUpload").show();
+})

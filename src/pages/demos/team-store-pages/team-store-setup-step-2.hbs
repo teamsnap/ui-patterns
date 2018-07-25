@@ -1,6 +1,6 @@
 ---
-title: Team Store Setup Wizard - Step 3
-notes: Initial logo config for team store.
+title: Team Store Setup Wizard - Step 2
+notes: Initial color config for team store.
 layout: demo-no-nav
 labels:
   - inprogress
@@ -10,6 +10,8 @@ styles:
   - team-store-demo
   - slick
   - slick-theme
+scripts:
+ - team-store
 ---
 
 <img src="/team-store-images/ios-header.png" class="u-block u-sizeFull u-xs-hidden">
@@ -22,25 +24,22 @@ styles:
 
 <div class="u-xs-padMd">
   <div class="u-sm-spaceTopLg u-flexExpandSides Panel Panel--hiddenOnSmallestScreens u-maxWidthMd">
-    <div class="u-padMd u-xs-padLg u-sm-padSidesXl u-borderBottom u-flex u-flexAlignItemsBaseline">
-      <h2>Step 3: Add Logo</h2>
-      <p class="u-fontSizeLg u-spaceLeftSm">
-        (optional)
-      </p>
-    </div>
+    <h2 class="u-padMd u-xs-padLg u-sm-padSidesXl u-borderBottom">
+      Step 2: Add Color
+    </h2>
     <div class="u-spaceMd u-xs-spaceLg u-sm-spaceSidesXl">
-      {{> team-store-partials.step-3}}
+      {{> team-store-partials.step-2 }}
       <div class="u-spaceEndsLg">
         <div class="Grid Grid--withGutter">
           <div class="Grid-cell u-size1of2 u-xs-size1of3 u-flexExpandRight">
-            <a class="Button Button--primary Button--large u-block u-sizeFull u-textCenter" href="/demos/team-store-setup-step-2.html">
+            <a class="Button Button--primary Button--large u-block u-sizeFull u-textCenter" href="/demos/team-store-pages/team-store-setup-step-1.html">
               {{svg "arrow-left" class="Icon u-spaceRightSm" role="presentation"}}
               Previous
             </a>
           </div>
           <div class="Grid-cell u-size1of2 u-xs-size1of3 u-flexExpandLeft">
-            <a class="Button Button--primary Button--large u-block u-sizeFull u-textCenter" href="/demos/team-store-setup-review.html">
-              Finish
+            <a class="Button Button--primary Button--large u-block u-sizeFull u-textCenter" href="/demos/team-store-pages/team-store-setup-step-3.html">
+              Next
               {{svg "arrow-right" class="Icon u-spaceLeftSm" role="presentation"}}
             </a>
           </div>
