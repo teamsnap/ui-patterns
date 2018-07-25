@@ -1,6 +1,6 @@
 ---
-title: Team Store Setup Review
-notes: Review screen for initial setup.
+title: Team Store One-Step Setup
+notes: One-step setup option beginning with review of smart defaults and links to customize.
 layout: demo-no-nav
 labels:
   - inprogress
@@ -10,6 +10,8 @@ styles:
   - team-store-demo
   - slick
   - slick-theme
+scripts:
+ - team-store
 ---
 
 <img src="/team-store-images/ios-header.png" class="u-block u-sizeFull u-xs-hidden">
@@ -22,25 +24,19 @@ styles:
 
 <div class="u-xs-padMd">
   <div class="u-sm-spaceTopLg u-flexExpandSides Panel Panel--hiddenOnSmallestScreens u-maxWidthMd">
-    <h2 class="u-padMd u-xs-padLg u-sm-padSidesXl u-borderBottom">
-      Review and Save
-    </h2>
+    <div class="u-padMd u-xs-padLg u-sm-padSidesXl u-borderBottom">
+      <h2>Set Up Your Team Store</h2>
+    </div>
     <div class="u-spaceMd u-xs-spaceLg u-sm-spaceSidesXl">
 
-      {{> team-store-partials.config}}
+      {{> team-store-partials.r2-config }}
 
       <div class="u-spaceEndsLg">
         <div class="Grid Grid--withGutter Grid--alignCenter">
-          <div class="Grid-cell u-size1of2 u-xs-size1of3">
-            <a class="Button Button--negative Button--large u-block u-sizeFull u-textCenter" href="/demos/team-store-setup.html">
-              {{svg "dismiss" class="Icon u-spaceRightSm" role="presentation"}}
-              Cancel
-            </a>
-          </div>
-          <div class="Grid-cell u-size1of2 u-xs-size1of3">
-            <a class="Button Button--primary Button--large u-block u-sizeFull u-textCenter" href="/demos/team-store-setup-complete.html">
-              {{svg "check" class="Icon u-spaceRightSm" role="presentation"}}
-              Save
+          <div class="Grid-cell u-sizeFull u-xs-size1of2">
+            <a class="Button Button--primary Button--large u-block u-sizeFull u-textCenter" href="/demos/team-store-pages/team-store-setup-complete.html">
+              {{svg "check" class="Icon u-spaceRightXs" role="presentation"}}
+              Save Settings
             </a>
           </div>
         </div>
@@ -53,10 +49,3 @@ styles:
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-<script type="text/javascript">
-  $(document).ready(function(){
-    $('.team-store-slides').slick({
-      dots: true
-    });
-  });
-  </script>

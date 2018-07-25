@@ -44,7 +44,11 @@
   margin-left: -5px;
   margin-right: -5px;
   display: grid;
-  grid-template-columns: repeat(auto-fill,minmax(50px, 1fr));
+  grid-template-columns: repeat(auto-fill,minmax(40px, 1fr));
+
+  @media (min-width: 480px) {
+    grid-template-columns: repeat(auto-fill,minmax(50px, 1fr));
+  }
 }
 
 .ColorBlocks.is-hidden {
@@ -55,8 +59,13 @@
   }
 
   .ColorBlocks-block.is-active {
-    width: 42px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
+
+    @media (min-width: 480px) {
+      width: 40px;
+      height: 40px;
+    }
 
     &:after {
       display: none;
@@ -65,7 +74,10 @@
 }
 
 .ColorBlocks-block {
-  height: 40px;
+  height: 30px;
+  @media (min-width: 480px) {
+    height: 40px;
+  }
   margin: 6px;
   margin-bottom: 9px;
   flex-shrink: 0;
@@ -149,3 +161,31 @@
     width: 100px;
   }
 }
+
+.ProductImage {
+  height: 175px;
+  overflow: hidden;
+
+  @media (min-width: 480px) {
+    height: 200px;
+  }
+}
+
+.LogoDemo {
+  &.is-hidden {
+    visibility: hidden;
+    height: 0;
+  }
+  position: relative;
+}
+
+.LogoImage {
+  height: 175px;
+  @media (min-width: 480px) {
+    height: 225px;
+  }
+  overflow: hidden;
+}
+
+// Hashrocket range slider styles
+input[type=range]:focus{outline:none}input[type=range]::-moz-range-track{cursor:pointer;height:.25rem;width:100%}input[type=range]::-ms-track{cursor:pointer;height:.25rem;width:100%}input[type=range]::-webkit-slider-runnable-track{cursor:pointer;height:.25rem;width:100%}input[type=range]::-moz-range-track{background:#1667ac;border-radius:.25rem;overflow:visible}input[type=range]::-moz-range-track:focus{background:#317ab7;outline:none}input[type=range]::-ms-fill-lower{background:#1667ac;border-radius:.25rem;overflow:visible}input[type=range]::-ms-fill-lower:focus{background:#317ab7;outline:none}input[type=range]::-ms-fill-upper{background:#1667ac;border-radius:.25rem;overflow:visible}input[type=range]::-ms-fill-upper:focus{background:#317ab7;outline:none}input[type=range]::-webkit-slider-runnable-track{background:#1667ac;border-radius:.25rem;overflow:visible}input[type=range]::-webkit-slider-runnable-track:focus{background:#317ab7;outline:none}input[type=range]::-ms-tooltip{display:none}input[type=range]::-ms-track{background:transparent;border-color:transparent;border-width:.5rem 0;color:transparent}input[type=range]::-moz-range-thumb{height:1.5rem;width:1.5rem;-webkit-appearance:none;background:#fff;border:.0625rem solid #bcbcbc;box-shadow:0 0 .2rem 0 rgba(0,0,0,.2);border-radius:50%;cursor:pointer;position:relative}input[type=range]::-ms-thumb{height:1.5rem;width:1.5rem;-webkit-appearance:none;background:#fff;border:.0625rem solid #bcbcbc;box-shadow:0 0 .2rem 0 rgba(0,0,0,.2);border-radius:50%;cursor:pointer;position:relative}input[type=range]::-webkit-slider-thumb{height:1.5rem;width:1.5rem;-webkit-appearance:none;background:#fff;border:.0625rem solid #bcbcbc;box-shadow:0 0 .2rem 0 rgba(0,0,0,.2);border-radius:50%;cursor:pointer;position:relative;top:50%;transform:translateY(-50%)}

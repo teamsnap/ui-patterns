@@ -1,0 +1,33 @@
+{{> team-store-partials.r2-config-slider}}
+<div class="FieldGroup">
+  <div class="u-flex u-flexAlignItemsCenter u-flexJustifyBetween">
+    <label class="FieldGroup-label u-fontSizeLg u-flex u-flexAlignItemsCenter" for="Input-1">
+      <span style="font-weight: normal;">Primary Color:</span>
+      <div class="colorThumb js-primaryColorThumb" style="background-color: black"></div>
+      <span class="js-primaryColorSelected u-padLeftXs" >Black</span>
+    </label>
+    <a class="js-primaryColorToggle">Hide colors</a>
+  </div>
+  <div class="ColorBlocks ColorBlocks--primary">
+    {{#each (data "team-store-colors")}}
+      <a class="ColorBlocks-block ColorBlocks-block--primary {{#compare this.name "==" "White"}}u-border{{/compare}} {{#compare this.name "==" "Black"}}is-active{{/compare}}" data-color="{{this.name}}" style="background-color: {{this.value}};">
+      </a>
+    {{/each}}
+  </div>
+</div>
+<div class="FieldGroup">
+  <div class="u-flex u-flexAlignItemsCenter u-flexJustifyBetween">
+    <label class="FieldGroup-label u-fontSizeLg u-flex u-flexAlignItemsCenter" for="Input-1">
+      <span style="font-weight: normal;">Secondary Color:</span>
+      <div class="colorThumb js-secondaryColorThumb" style="background-color: black"></div>
+      <span class="js-secondaryColorSelected u-padLeftXs" >Black</span>
+    </label>
+    <a class="js-secondaryColorToggle">Hide colors</a>
+  </div>
+  <div class="ColorBlocks ColorBlocks--secondary">
+    {{#each (data "team-store-colors")}}
+      <a class="ColorBlocks-block ColorBlocks-block--secondary {{#compare this.name "==" "White"}}u-border{{/compare}} {{#compare this.name "==" "Black"}}is-active{{/compare}}" data-color="{{this.name}}" style="background-color: {{this.value}};">
+      </a>
+    {{/each}}
+  </div>
+</div>

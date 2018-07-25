@@ -9,6 +9,6 @@ notes: |
 
 {{{notes}}}
 
-{{#each (pages "demos" ignore="index")}}
+{{#each (pages "demos" ignore="index" sortby="order")}}
   {{> drizzle.page-item }}
 {{/each}}
