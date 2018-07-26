@@ -1,30 +1,13 @@
 <div class="u-padSidesMd u-xs-padSidesLg u-padBottomMd u-xs-size3of4 u-flexExpandSides">
-  <div class="team-store-slides">
-    <div class="team-store-slide">
-      {{> team-store-partials.apparel_white-1}}
-    </div>
-    <div class="team-store-slide">
-      {{> team-store-partials.apparel_white-2}}
-    </div>
-    <div class="team-store-slide">
-      {{> team-store-partials.apparel_grey-1}}
-    </div>
-    <div class="team-store-slide">
-      {{> team-store-partials.apparel_grey-2}}
-    </div>
-    <div class="team-store-slide">
-      {{> team-store-partials.apparel_colored-1}}
-    </div>
-    <div class="team-store-slide">
-      {{> team-store-partials.apparel_colored-2}}
-    </div>
+  <div class="team-store-slide">
+    {{> team-store-partials.apparel_white-2}}
+    <p class="u-textRight" style="color: #7A7A7A">Sample Layout</p>
   </div>
 </div>
 <div class="FieldGroup">
   <div class="u-flex u-flexAlignItemsCenter u-flexJustifyBetween">
     <label class="FieldGroup-label u-fontSizeLg u-flex u-flexAlignItemsCenter" for="Input-1">
       <span>Primary Color:</span>
-      <div class="colorThumb js-primaryColorThumb" style="background-color: black"></div>
       <span class="js-primaryColorSelected u-padLeftXs" style="font-weight: normal;">Black</span>
     </label>
     <a class="js-primaryColorToggle">Hide colors</a>
@@ -40,14 +23,13 @@
   <div class="u-flex u-flexAlignItemsCenter u-flexJustifyBetween">
     <label class="FieldGroup-label u-fontSizeLg u-flex u-flexAlignItemsCenter" for="Input-1">
       <span>Secondary Color:</span>
-      <div class="colorThumb js-secondaryColorThumb" style="background-color: black"></div>
-      <span class="js-secondaryColorSelected u-padLeftXs" style="font-weight: normal;">Black</span>
+      <span class="js-secondaryColorSelected u-padLeftXs" style="font-weight: normal;">Charcoal</span>
     </label>
     <a class="js-secondaryColorToggle">Hide colors</a>
   </div>
   <div class="ColorBlocks ColorBlocks--secondary">
     {{#each (data "team-store-colors")}}
-      <a class="ColorBlocks-block ColorBlocks-block--secondary {{#compare this.name "==" "White"}}u-border{{/compare}} {{#compare this.name "==" "Black"}}is-active{{/compare}}" data-color="{{this.name}}" style="background-color: {{this.value}};">
+      <a class="ColorBlocks-block ColorBlocks-block--secondary {{#compare this.name "==" "White"}}u-border{{/compare}} {{#compare this.name "==" "Charcoal"}}is-active{{/compare}}" data-color="{{this.name}}" style="background-color: {{this.value}};">
       </a>
     {{/each}}
   </div>
