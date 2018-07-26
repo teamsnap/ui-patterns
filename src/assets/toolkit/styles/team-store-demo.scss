@@ -42,6 +42,8 @@
   margin: 0 8px;
 }
 
+
+
 .ColorBlocks {
   margin-left: -5px;
   margin-right: -5px;
@@ -124,10 +126,11 @@
 }
 
 .FileRequirements {
-  list-style-position: inside;
+  list-style-position: outside;
+  padding-left: 16px;
 
   li {
-    list-style-position: inside;
+    list-style-position: outside;
     padding-bottom: 2px;
   }
 }
@@ -173,6 +176,25 @@
   }
 }
 
+.Tshirt {
+  height: 175px;
+  overflow: hidden;
+
+  @media (min-width: 480px) {
+    height: 200px;
+  }
+
+  img {
+    max-width: 120px;
+    padding-top: 32px;
+  }
+
+  background: url("/team-store-images/white-tshirt.png");
+  background-size: cover;
+  border: solid 1px lightgray;
+  border-radius: 8px;
+}
+
 .LogoDemo {
   &.is-hidden {
     visibility: hidden;
@@ -181,10 +203,15 @@
   position: relative;
 }
 
-.LogoImage {
+.LogoImage, {
   height: 175px;
+  background-color: #e6e6e6;
+
   @media (min-width: 480px) {
     height: 225px;
+  }
+  img {
+    max-height: 150px;
   }
   overflow: hidden;
 }
