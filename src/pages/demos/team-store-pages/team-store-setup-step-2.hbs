@@ -8,8 +8,6 @@ labels:
 order: 1
 styles:
   - team-store-demo
-  - slick
-  - slick-theme
 scripts:
  - team-store
 ---
@@ -21,7 +19,8 @@ scripts:
     <h2 class="u-padMd u-xs-padLg u-sm-padSidesXl u-borderBottom">
       Step 2: Add Color
     </h2>
-    <div class="u-spaceMd u-xs-spaceLg u-sm-spaceSidesXl">
+    <div class="u-padMd u-xs-padLg u-sm-padSidesXl">
+      {{> team-store-partials.layout-preview}}
       {{> team-store-partials.step-2 }}
       <div class="u-spaceEndsLg">
         <div class="Grid Grid--withGutter">
@@ -42,7 +41,5 @@ scripts:
     </div>
   </div>
 </div>
-{{> team-store-partials.ios-footer }}
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>

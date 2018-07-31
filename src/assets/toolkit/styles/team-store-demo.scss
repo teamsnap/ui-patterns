@@ -1,21 +1,3 @@
-.u-borderRadiusMd {
-  border-radius: 8px;
-}
-
-.u-fontSizeFlexText {
-  font-size: 4vw !important;
-}
-
-@media (min-width: 480px) {
-  .u-xs-fontSizeXxl {
-    font-size: 26px !important;
-  }
-
-  .u-xs-fontSizeLg {
-    font-size: 16px !important;
-  }
-}
-
 @media (max-width: 479px) {
   .Panel--hiddenOnSmallestScreens {
     border: 0;
@@ -24,25 +6,20 @@
     background: white;
     padding-bottom: 16px;
     min-height: 100vh;
-    // max-height: 146vw;
-    // min-height: 146vw;
-    // overflow-y: scroll;
   }
 }
-
-// ::-webkit-scrollbar {
-//     display: none;
-// }
 
 .u-maxWidthMd {
   max-width: 600px;
 }
 
-.team-store-slide {
-  margin: 0 8px;
+.ColorBlock {
+  width: 40px;
+  height: 40px;
+  margin-right: 8px;
+  border-radius: 2px;
+  cursor: pointer;
 }
-
-
 
 .ColorBlocks {
   margin-left: -5px;
@@ -115,16 +92,6 @@
   }
 }
 
-.LogoUpload {
-  border: 2px dashed #d6d6d6;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 8px;
-  margin: 24px auto;
-  background: white;
-}
-
 .FileRequirements {
   list-style-position: outside;
   padding-left: 16px;
@@ -133,18 +100,6 @@
     list-style-position: outside;
     padding-bottom: 2px;
   }
-}
-
-.CongratsCheck {
-  color: #7FC243;
-  border: solid 4px #7FC243;
-  border-radius: 50%;
-  width: 2em;
-  height: 2em;
-  font-size: 3em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .Checkbox--large {
@@ -160,25 +115,16 @@
 }
 
 .ConfigLabel {
-  width: 75px;
+  width: 65px;
+  font-weight: 600;
 
   @media (min-width: 480px) {
     width: 100px;
   }
 }
 
-.ProductImage {
-  height: 175px;
-  overflow: hidden;
-
-  @media (min-width: 480px) {
-    height: 200px;
-  }
-}
-
 .Tshirt {
   height: 175px;
-  overflow: hidden;
 
   @media (min-width: 480px) {
     height: 200px;
@@ -195,25 +141,27 @@
   border-radius: 8px;
 }
 
+.LogoUpload {
+  border: 2px dashed #d6d6d6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background: white;
+}
+
 .LogoDemo {
   &.is-hidden {
     visibility: hidden;
     height: 0;
   }
-  position: relative;
 }
 
-.LogoImage, {
-  height: 175px;
-  background-color: #e6e6e6;
-
-  @media (min-width: 480px) {
-    height: 225px;
+.SetupSteps {
+  @media (max-width: 480px) {
+    margin-right: -16px;
+    margin-left: -16px;
   }
-  img {
-    max-height: 150px;
-  }
-  overflow: hidden;
 }
 
 // Hashrocket range slider styles

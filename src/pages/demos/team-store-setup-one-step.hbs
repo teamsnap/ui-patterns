@@ -8,38 +8,38 @@ labels:
 order: 1
 styles:
   - team-store-demo
-  - slick
-  - slick-theme
 scripts:
  - team-store
 ---
 
 {{> team-store-partials.header }}
-
 <div class="u-xs-padMd">
   <div class="u-sm-spaceTopLg u-flexExpandSides Panel Panel--hiddenOnSmallestScreens u-maxWidthMd">
-    <div class="u-padMd u-xs-padLg u-sm-padSidesXl u-borderBottom">
-      <h2>Set Up Your Team Store</h2>
+    <div class="u-padMd u-xs-padLg u-sm-padSidesXl u-borderBottom u-flex u-flexAlignItemsBaseline">
+      <h2 class="js-PageTitle">Set Up Your Team Store</h2>
+      <p class="js-TitleOptional u-fontSizeLg u-spaceLeftSm" style="display: none;">
+        (optional)
+      </p>
     </div>
-    <div class="u-spaceMd u-xs-spaceLg u-sm-spaceSidesXl">
-
-      {{> team-store-partials.r2-config }}
-
-      <div class="u-spaceEndsLg">
-        <div class="Grid Grid--withGutter Grid--alignCenter">
-          <div class="Grid-cell u-sizeFull u-xs-size1of2">
-            <a class="Button Button--primary Button--large u-block u-sizeFull u-textCenter" href="/demos/team-store-pages/team-store-setup-complete.html">
-              {{svg "check" class="Icon u-spaceRightXs" role="presentation"}}
-              Save Settings
-            </a>
-          </div>
-        </div>
+    <div class="u-padMd u-xs-padLg u-sm-padSidesXl">
+      {{> team-store-partials.layout-preview }}
+      <div class="js-SettingsReview">
+        {{> team-store-partials.review }}
+      </div>
+      <div class="js-Text" style="display: none;">
+        {{> team-store-partials.step-1 }}
+        {{> team-store-partials.save-settings }}
+      </div>
+      <div class="js-Color" style="display: none;">
+        {{> team-store-partials.step-2 }}
+        {{> team-store-partials.save-settings }}
+      </div>
+      <div class="js-Logo" style="display: none;">
+        {{> team-store-partials.step-3 }}
+        {{> team-store-partials.save-settings }}
       </div>
     </div>
   </div>
 </div>
 
-{{> team-store-partials.ios-footer}}
-
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
