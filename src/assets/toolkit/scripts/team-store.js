@@ -126,7 +126,7 @@ $(".js-ShowText").click(function() {
 $(".js-EditText").click(function() {
   $(".js-SettingsReview").hide();
   $(".js-Text").show();
-  $(".js-PageTitle").text("Customize Text");
+  $(".js-PageTitle").text("Add Your Team Name");
 })
 
 $(".js-EditColor").click(function() {
@@ -138,7 +138,7 @@ $(".js-EditColor").click(function() {
 $(".js-EditLogo").click(function() {
   $(".js-SettingsReview").hide();
   $(".js-Logo").show();
-  $(".js-PageTitle").text("Add Logo");
+  $(".js-PageTitle").text("Add Your Team Logo");
   $(".js-TitleOptional").show();
   $(".js-ApparelPreview").hide();
 })
@@ -148,7 +148,7 @@ $(".js-EditClose").click(function() {
   $(".js-Text").hide();
   $(".js-Logo").hide();
   $(".js-SettingsReview").show();
-  $(".js-PageTitle").text("Set Up Your Team Store");
+  $(".js-PageTitle").text("Tell Us About Your Team");
   $(".js-TitleOptional").hide();
   $(".js-ApparelPreview").show();
 })
