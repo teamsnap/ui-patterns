@@ -11,7 +11,7 @@
   </div>
   <div class="ColorBlocks ColorBlocks--primary">
     {{#each (data "team-store-colors")}}
-      <a class="ColorBlocks-block ColorBlocks-block--primary{{#compare this.name "==" "White"}}u-border{{/compare}} {{#compare this.name "==" "Black"}}is-active{{/compare}}" data-color="{{this.name}}" style="background-color: {{this.value}};">
+      <a class="ColorBlocks-block ColorBlocks-block--primary {{#compare this.name "==" "White"}}u-border{{/compare}} {{#compare this.name "==" "Black"}}is-active{{/compare}}" data-color="{{this.name}}" style="background-color: {{this.value}};">
       </a>
     {{/each}}
   </div>
