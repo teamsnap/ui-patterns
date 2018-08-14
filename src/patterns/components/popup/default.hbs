@@ -12,15 +12,15 @@ notes: |
 
 
 <div class="Popup">
-  <button class="Button Popup-toggle js-popupToggle">
+  <button class="Button Popup-toggle" data-control="popup" data-open="demo1">
     Default Popup
   </button>
-  <div class="Popup-container js-popupContainer">
+  <div class="Popup-container js-popupContainer" data-popup="demo1">
     <div class="Popup-content u-padMd">
       <h3 class="u-spaceBottomSm u-textCenter">Confirm This Action</h3>
       <p>Are you sure you want to do this thing?</p>
       <div class="u-textCenter u-spaceTopMd">
-        <button class="Button Button--negative">Cancel</button>
+        <button class="Button Button--negative" data-dismiss>Cancel</button>
         <button class="Button Button--primary">Confirm</button>
       </div>
     </div>
