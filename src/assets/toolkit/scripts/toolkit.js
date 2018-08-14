@@ -5,6 +5,9 @@
 // * 2. Button Group
 // * 3. Radial Progress Bar
 // * 4. Collapsable Panel Row
+// * 5. Feedback trigger and dismiss
+// * 6. Popup Javascript
+// * 7. Tabs Javascript
 
 // Notes:
 // *
@@ -80,21 +83,28 @@ u('#FeedbackBox--triggeredPopup .Feedback-dismiss').on('click', function() {
   u('#FeedbackBox--triggeredPopup').removeClass('is-active');
 });
 
-// * 6. Demo Popup
+// * 6. Popup Javascript
 
-u('.js-popupToggle').on('click', function() {
-  u(this).siblings('.js-popupContainer').toggleClass('is-open');
-})
+u('[data-control="popup"]').on('click', function() {
+  var $this          = u(this),
+      target         = $this.data("open"),
+      $content       = u('[data-popup="' + target + '"]');
 
-u('.js-popupContainer').on('click', function() {
-  u(this).removeClass('is-open');
-})
+  $content.toggleClass("is-open");
+});
+
+u('[data-dismiss]').on('click', function() {
+  var $this          = u(this),
+      $content       = $this.closest('[data-popup]');
+
+  $content.removeClass("is-open");
+});
 
 // * 7. Tabs Javascript
 
 // grabs all demo tab objects
 var $demoTabs      = u('[data-control="tab"]'),
-    $demoContents  = u("[data-tab]");
+    $demoTabContent  = u("[data-tab]");
 
 // sets the default content
 u('[data-default="Tab"]').addClass('is-active');
@@ -104,12 +114,10 @@ u('[data-control="tab"]').on('click', function() {
 
   var $this          = u(this),
       target         = $this.data('open'),
-      $content       = $demoContents.filter('[data-tab="' + target + '"]'),
+      $content       = $demoTabContent.filter('[data-tab="' + target + '"]'),
       group          = u('[data-tab="' + target + '"]').data("group"),
       $tabGroup      = $demoTabs.filter('[data-group="' + group + '"]'),
-      $contentGroup  = $demoContents.filter('[data-group="' + group + '"]');
-
-      console.log($content)
+      $contentGroup  = $demoTabContent.filter('[data-group="' + group + '"]');
 
       if ($this.hasClass("is-active")) return;
 
