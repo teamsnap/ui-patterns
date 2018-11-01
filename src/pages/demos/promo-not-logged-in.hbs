@@ -1,0 +1,31 @@
+---
+title: Promo Landing Page for existing users, NOT logged in
+notes: Free team promo for existing users, not logged in
+layout: demo-clean
+labels:
+  - inprogress
+  - prototype
+order: 1
+styles:
+ - promo-styles
+---
+
+{{> promo-partials.header}}
+
+<div class="u-padSidesMd u-xs-padSidesLg">
+  <div class="u-max1200 u-flexExpandSides u-xs-size5of6 u-sm-size2of3 u-md-sizeFull u-padBottomMd u-xs-padEndsLg u-sm-padEndsXl">
+    <div class="Grid Grid--withGutter">
+      <div class="Grid-cell u-md-size5of12">
+        <div class="Panel Panel--full u-padLg">
+          {{> promo-partials.form-not-logged-in}}
+        </div>
+      </div>
+      <div class="Grid-cell u-md-size7of12">
+        <div class="u-md-padLeftLg">
+          {{> promo-partials.value-prop-check}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{{> promo-partials.footer}}
