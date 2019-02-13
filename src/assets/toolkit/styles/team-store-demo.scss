@@ -1,3 +1,232 @@
+.InputGroup--leftIcon .Input {
+  padding-left: 24px;
+}
+
+.InputGroup--leftIcon .InputGroup-icon {
+  border-right: none;;
+}
+
+.InputGroup-icon {
+  width: 30px;
+  color: #979797;
+}
+
+.DropDown {
+  cursor: pointer;
+}
+
+.PastFundraiser:hover {
+  color: #1A6BAF;
+}
+
+.PastFundraiser:not(:last-child) {
+  border-bottom: solid 1px #cecece;
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+}
+
+$Modal-bgColor: #fff;
+$Modal-overlayColor: rgba(0, 0, 0, 0.4);
+$Modal-borderColor: #f7f7f7;
+$Modal-borderWidth: 8px;
+$Modal-animation: 300ms cubic-bezier(0.2, 0.8, 0.4, 1.0);
+
+// * Modal Overlay
+// *
+// * 1. Position overlay so that it covers the viewport
+// * 2. Align modal content in the center of the viewport
+
+.Modal {
+  display: none;
+  position: fixed; // 1
+  top: 0px; // 1
+  bottom: 0px; // 1
+  left: 0px; // 1
+  right: 0px; // 1
+  background-color: $Modal-overlayColor;
+  z-index: 1000;
+  justify-content: center; // 2
+  align-items: start; // 2
+}
+
+.Modal.is-open {
+  display: flex; // 2
+}
+
+.Modal.is-closing {
+  animation: overlayOut $Modal-animation forwards;
+}
+
+// * Modal content (the actual modal)
+// *
+// * 1. Make sure modal is never taller than viewport
+// * 2. Allow content to scroll if content is taller than viewport
+// * 3. Default to 100% for small screens
+// * 4. Default max width (this can be adjusted as necessary at the component level)
+
+.Modal-content {
+  margin-top: 10%;
+  max-height: 100vh; // 1
+  overflow-y: auto; // 2
+  width: 100%; // 3
+  max-width: 600px; // 4
+  background-color: $Modal-bgColor;
+  border-radius: 8px;
+  border: $Modal-borderWidth solid $Modal-borderColor;
+  padding: 24px;
+  animation: modalIn $Modal-animation forwards;
+}
+
+.Modal-heading {
+  font-size: 23px;
+  color: #1A6BAF;
+  font-family: "MuseoSansRounded700Regular";
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.Modal-body {}
+
+.Modal-footer {
+  margin-top: 32px;
+}
+
+.Popup-container--right::before,
+.Popup-container--right::after {
+  right: 20px;
+  @media (min-width: 768px) {
+    right: 42px;
+  }
+}
+
+.ButtonBadge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  border-radius: 50%;
+  background-color: #FF8F00;
+  width: 16px;
+  height: 16px;
+  color: white;
+  font-size: 10px;
+  text-align: center;
+  padding-left: .75px;
+  padding-top: .5px;
+  font-weight: bold;
+}
+
+
+.NewBadge {
+  background: #FF8F00;
+  padding: 2px 6px;
+  color: white;
+  font-size:11px;
+  border-radius: 2px;
+  font-weight: 600;
+}
+
+.Piggy {
+  width: 40px;
+  @media (min-width: 480px) {
+    width: 50px;
+  }
+}
+
+.Toggle--large {
+  .Toggle-label {
+    height: 20px;
+    width: 40px;
+  }
+  .Toggle-label:after {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.Toggle--noLabel {
+  .Toggle-label:before,
+  .Toggle-input:checked + .Toggle-label:before
+   {
+    display: none;
+  }
+}
+
+@media (min-width: 767px) {
+  .Summary {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+
+@media (min-width: 767px) {
+  .u-sm-flexOrderLast {
+    order: 1;
+  }
+
+  .u-sm-borderBottomNone {
+    border-bottom: none !important;
+  }
+}
+
+.RadioButton {
+  input {
+    display: none;
+  }
+  label {
+    display: block;
+    border: #ccc 1px solid;
+    border-radius: 4px;
+    background: white;
+    padding: 4px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: center;
+  }
+  input:checked + label {
+    background: #7fc243;
+    color: white;
+    border-color: #669b36;
+  }
+}
+
+@media (min-width: 480px) {
+  .u-xs-borderBottomMd {
+    border-bottom: solid 2px #e6e6e6 !important;
+  }
+  .u-xs-borderBottomNone {
+    border-bottom: 0 !important;
+  }
+
+  .u-xs-borderRadius {
+    border-radius: 8px;
+  }
+}
+
+.Grid--withGutterSmall {
+  margin: 0 -4px;
+  width: calc(100% + 8px);
+
+  .Grid-cell {
+    padding: 0 4px;
+  }
+}
+
+@media (min-width: 768px) {
+  .u-sm-flexAlignSelfCenter {
+    align-self: center !important;
+  }
+
+  .bgImage {
+    background-image: url(/team-store-images/rocket.png);
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+  }
+}
+
+
 @media (max-width: 479px) {
   .Panel--hiddenOnSmallestScreens {
     border: 0;
@@ -11,6 +240,10 @@
 
 .u-maxWidthMd {
   max-width: 600px;
+}
+
+.u-maxWidthLg {
+  max-width: 1200px;
 }
 
 .ColorBlock {
@@ -111,6 +344,9 @@
   .Checkbox-label {
     padding-left: 28px;
   }
+  &.Checkbox--radio .Checkbox-label:before {
+    border-radius: 10px;
+  }
 }
 
 .ConfigLabel {
@@ -158,6 +394,27 @@
   @media (max-width: 480px) {
     margin-right: -16px;
     margin-left: -16px;
+  }
+}
+
+
+
+
+@keyframes modalIn{
+  0% {
+    transform: scale(0.7);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes overlayOut{
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 

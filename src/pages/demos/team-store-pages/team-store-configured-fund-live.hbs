@@ -1,5 +1,5 @@
 ---
-title: New Fundraiser Banner for Owner/Managers
+title: Fundraiser Live Banner in Store
 layout: demo-no-nav
 labels:
   - inprogress
@@ -12,20 +12,33 @@ styles:
 {{> team-store-partials.header }}
 
 <div class="u-fontSizeLg" style="background: #e7eff7; background: white; border-bottom: 1px solid #d9d9d9;">
+  <div style="background: #7FC243; color: white" class="u-hidden">
+    <div class="u-padMd u-flex u-sizeFull" style="max-width: 1200px; margin: 0 auto;">
+      <p class="u-sizeFill u-textCenter">Click <a href="" style="color: white; text-decoration: underline">here</a> to see new products.</p>
+      <span class="ss-delete"></span>
+    </div>
+  </div>
   <div class="u-padMd" style="max-width: 1200px; margin: 0 auto;">
     <div class="u-flex u-flexJustifyBetween u-flexAlignItemsCenter">
-      <div class="u-flex u-flexAlignItemsCenter">
+      <div class="u-flex u-flexAlignItemsCenter u-flexWrap u-sizeFill">
         {{> team-store-partials.fundraising-icon}}
-        <div class="u-sm-spaceLeftSm">
+        <div class="u-spaceRightXs u-sm-spaceRightLg u-md-spaceRightXl">
           <p>
-            <span>New &mdash; <strong>fundraise for your team</strong>! Set up a goal and collect funds with every purchase.</span>
-          </p>
-          <p class="u-spaceTopXs">
-            <a class="u-textSemibold" href="/demos/fund-dash-new.html">Learn More</a>
+            <strong>Your team fundraiser has started</strong>!<br>
+            Make a donation in your cart before checkout.
           </p>
         </div>
+        <div class="u-sizeFull u-sm-sizeFill u-sm-spaceRightLg u-spaceTopMd u-sm-spaceTopNone u-flexAlignSelfStart">
+          <div class="u-fontSizeLg u-flex u-flexJustifyBetween u-flexAlignItemsCenter u-spaceBottomXs">
+            <p class="u-textSemibold">Progress to Goal:</p>
+            <p class="u-textSemibold">$200 / $1500</p>
+          </div>
+          <div class="ProgressBar ProgressBar--large">
+            <div class="ProgressBar-status" style="width: 35%;"></div>
+          </div>
+        </div>
       </div>
-      <a class="u-textSemibold u-padSidesXs u-flexAlignSelfStart u-sm-flexAlignSelfCenter" href="">
+      <a class="u-textSemibold u-padLeftXs u-flexAlignSelfStart u-sm-flexAlignSelfCenter" href="">
         <span class="ss-delete"></span>
       </a>
     </div>
@@ -55,7 +68,7 @@ styles:
               <p class="u-padEndsSm u-padSidesMd">Store Configuration</p>
             </a>
             <hr class="Divider u-spaceEndsNone">
-            <a href="/demos/fund-dash-new.html" class="u-flex u-flexJustifyBetween u-flexAlignItemsCenter u-padEndsSm u-padSidesMd">
+            <a href="/demos/team-store-pages/fund-dash-started.html" class="u-flex u-flexJustifyBetween u-flexAlignItemsCenter u-padEndsSm u-padSidesMd">
               <span>
                 Fundraising
               </span>

@@ -1,3 +1,20 @@
+// Team Store Fundraising Demo Controls
+
+$('.js-donationRadio').click(function() {
+  if ($('.js-donationRadioOther').is(':checked')) {
+    $('.js-donationOtherAmount').show();
+  } else {
+    $('.js-donationOtherAmount').hide();
+  }
+});
+
+
+$('.js-dropTrigger').click(function() {
+  $(this).next().toggle();
+  console.log('click')
+})
+
+
 // Primary color controls
 
 var toggleColorsPrimary = function() {
@@ -44,6 +61,16 @@ var toggleColorsSecondary = function() {
       $(".js-secondaryColorToggle").text("Hide");
   }
 }
+
+// Modal
+
+$('.js-triggerModal').on('click', function() {
+  $('.js-modal').addClass('is-open');
+})
+
+$('.js-modalClose').on('click', function() {
+		$('.js-modal').removeClass('is-open');
+})
 
 $(".js-secondaryColorToggle").click(function() {
   toggleColorsSecondary();

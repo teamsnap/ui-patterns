@@ -1,0 +1,121 @@
+<div class="Grid">
+  <div class="Grid-cell u-sizeFull">
+    <div class="u-spaceMd u-xs-spaceLg u-sm-spaceSidesXl">
+      <div class="FieldGroup u-fontSizeLg">
+        <div class="Grid Grid--withGutter">
+          <div class="Grid-cell u-sizeFull u-sm-size2of3 u-spaceBottomSm">
+            <label class="FieldGroup-label u-fontSizeLg">Fundraiser Goal</label>
+            <div class="InputGroup InputGroup--leftIcon">
+              <input class="Input Input--large" type="text" id="Input-1" placeholder="0.00">
+              <span class="InputGroup-icon u-textSemibold">$</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="FieldGroup u-fontSizeLg">
+        <div class="js-fixedAmount u-spaceTopSm">
+          <label class="FieldGroup-label u-fontSizeLg">
+            Donation Amounts
+            </label>
+            <div class="Grid Grid--withGutter">
+              <div class="Grid-cell u-size1of3">
+                <div class="InputGroup InputGroup--leftIcon">
+                  <input class="Input Input--large u-sizeFull js-amountInput" type="text" id="Input-1" placeholder="5.00">
+                  <span class="InputGroup-icon js-amountType u-textSemibold">$</span>
+                </div>
+              </div>
+              <div class="Grid-cell u-size1of3">
+                <div class="InputGroup InputGroup--leftIcon">
+                  <input class="Input Input--large u-sizeFull" type="text" id="Input-1" placeholder="10.00">
+                  <span class="InputGroup-icon js-amountType u-textSemibold">$</span>
+                </div>
+              </div>
+              <div class="Grid-cell u-size1of3">
+                <div class="InputGroup InputGroup--leftIcon">
+                  <input class="Input Input--large u-sizeFull" type="text" id="Input-1" placeholder="15.00">
+                  <span class="InputGroup-icon js-amountType u-textSemibold">$</span>
+                </div>
+              </div>
+            </div>
+            <p class="u-spaceTopSm" style="font-weight: normal;">(Visitors can choose one or donate a custom amount)</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="Grid-cell u-sizeFull">
+    <div class="u-spaceMd u-xs-spaceSidesLg u-sm-spaceSidesXl">
+      <h2 class="u-spaceBottomSm">Payment</h2>
+      <p class="u-fontSizeLg u-spaceBottomMd">A check for the full amount of donated funds will be sent at the end of each month.</p>
+
+      <div class="FieldGroup u-fontSizeLg">
+        <label class="FieldGroup-label u-fontSizeLg">Payee Name</label>
+        <input class="Input Input--large" type="text">
+      </div>
+
+      <div class="FieldGroup u-fontSizeLg">
+        <div class="Grid Grid--withGutter">
+          <div class="Grid-cell u-sizeFull u-spaceBottomLg">
+            <label class="FieldGroup-label u-fontSizeLg">
+              Addressee Name
+              <span style="font-weight: normal;">(if different than payee)</span>
+            </label>
+            <input class="Input Input--large" type="text">
+          </div>
+          <div class="Grid-cell u-sizeFull u-md-size1of2 u-spaceBottomLg">
+            <label class="FieldGroup-label u-fontSizeLg">Street Address</label>
+            <input class="Input Input--large" type="text">
+          </div>
+          <div class="Grid-cell u-sizeFull u-md-size1of2 u-spaceBottomLg">
+            <label class="FieldGroup-label u-fontSizeLg">City</label>
+            <input class="Input Input--large" type="text">
+          </div>
+          <div class="Grid-cell u-sizeFull u-spaceBottomLg">
+            <label class="FieldGroup-label u-fontSizeLg">Country</label>
+            <div class="SelectBox SelectBox--large">
+              <select class="SelectBox-options" name="select-2" id="select-2">
+                <option value=""></option>
+                <option value="">Option 2</option>
+                <option value="">Option 3</option>
+                <option value="">Option 4</option>
+                <option value="">Option 5</option>
+              </select>
+            </div>
+          </div>
+          <div class="Grid-cell u-sizeFull u-xs-size1of2">
+            <label class="FieldGroup-label u-fontSizeLg">State</label>
+            <div class="SelectBox SelectBox--large">
+              <select class="SelectBox-options" name="select-2" id="select-2">
+                <option value=""></option>
+                <option value="">Option 2</option>
+                <option value="">Option 3</option>
+                <option value="">Option 4</option>
+                <option value="">Option 5</option>
+              </select>
+            </div>
+          </div>
+          <div class="Grid-cell u-sizeFull u-xs-size1of2">
+            <label class="FieldGroup-label u-fontSizeLg">Zip/Postal Code</label>
+            <input class="Input Input--large" type="text">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="u-spaceBottomXl u-spaceTopLg">
+  <div class="Grid Grid--withGutter Grid--alignCenter">
+    <div class="Grid-cell u-size1of2 u-xs-size1of3">
+      <a class="Button Button--negative Button--large u-block u-sizeFull u-textCenter" href="/demos/team-store-pages/fund-dash-new.html">
+        {{svg "dismiss" class="Icon u-spaceRightSm" role="presentation"}}
+        Cancel
+      </a>
+    </div>
+    <div class="Grid-cell u-size1of2 u-xs-size1of3">
+      <a class="Button Button--primary Button--large u-block u-sizeFull u-textCenter" href="/demos/team-store-pages/fund-dash-not-started.html">
+        {{svg "check" class="Icon u-spaceRightSm" role="presentation"}}
+        Save
+      </a>
+    </div>
+  </div>
+</div>

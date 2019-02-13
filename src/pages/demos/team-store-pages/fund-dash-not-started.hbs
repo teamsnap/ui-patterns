@@ -1,0 +1,54 @@
+---
+title: Fundraiser Not Yet Started
+layout: demo-no-nav
+labels:
+  - inprogress
+  - prototype
+order: 1
+styles:
+  - team-store-demo
+---
+
+{{> team-store-partials.header }}
+
+<div class="u-xs-padMd">
+  <div class="u-sm-spaceTopLg u-flexExpandSides Panel Panel--hiddenOnSmallestScreens u-maxWidthLg">
+    <div class="u-padMd u-xs-padSidesLg u-borderBottom u-flex u-flexAlignItemsCenter u-flexJustifyBetween">
+      <div class="u-flex u-flexAlignItemsCenter">
+        {{> team-store-partials.fundraising-icon}}
+        <h1 class="js-PageTitle u-spaceLeftXs u-xs-spaceLeftSm">Fundraising</h1>
+      </div>
+      <a href="/demos/team-store-pages/team-store-configured-fund-live.html" class="Button Button--large u-padSidesSm u-xs-padSidesMd">
+        Back <span class="u-hidden u-xs-inline">to Store</span>
+      </a>
+    </div>
+    <div class="Grid">
+      <div class="Grid-cell u-sizeFull u-sm-size1of2 u-sm-borderRight">
+        <div class="u-padMd u-md-padXl">
+          <!-- Turn On -->
+          <h2 style="color: #333" class="u-spaceBottomMd">
+            Almost Done!
+          </h2>
+          <p class="u-fontSizeLg u-spaceBottomLg">
+             When you're ready, turn on your fundraiser and start collecting funds!
+          </p>
+          <a href="/demos/team-store-pages/fund-dash-started.html" class="Button Button--primary Button--large">
+            Turn On Fundraiser
+          </a>
+        </div>
+        <hr class="Divider u-sm-hidden">
+      </div>
+      <div class="Grid-cell u-sizeFull u-sm-size1of2">
+        <div class="u-padMd u-md-padXl">
+          <!-- Settings -->
+          <div class="u-flex u-flexAlignItemsBaseline u-flexJustifyBetween u-spaceBottomMd">
+            <h2 style="color: #383838">Settings</h2>
+            <a class="u-fontSizeLg u-spaceLeftMd" href="/demos/team-store-pages/fund-config.html">Edit</a>
+          </div>
+          <!-- Summary -->
+          {{> team-store-partials.fund-summary}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
