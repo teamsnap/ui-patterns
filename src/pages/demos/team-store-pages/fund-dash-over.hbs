@@ -1,0 +1,118 @@
+---
+title: Fundraiser Over - Start New, Plus Archive
+layout: demo-no-nav
+labels:
+  - inprogress
+  - prototype
+order: 1
+styles:
+  - team-store-demo
+scripts:
+ - team-store
+---
+
+{{> team-store-partials.header }}
+
+<div class="u-xs-padMd">
+  <div class="u-sm-spaceTopLg u-flexExpandSides Panel Panel--hiddenOnSmallestScreens u-maxWidthLg" style="min-height: auto;">
+    <div class="u-padMd u-xs-padSidesLg u-borderBottom u-flex u-flexAlignItemsCenter u-flexJustifyBetween">
+      <div class="u-flex u-flexAlignItemsCenter">
+        {{> team-store-partials.fundraising-icon}}
+        <h1 class="js-PageTitle u-spaceLeftXs u-xs-spaceLeftSm">Fundraising</h1>
+      </div>
+      <a href="/demos/team-store-pages/team-store-configured-fund-live.html" class="Button Button--large u-padSidesSm u-xs-padSidesMd">
+        Back <span class="u-hidden u-xs-inline">to Store</span>
+      </a>
+    </div>
+    <div class="Grid Grid--alignMiddle">
+      <div class="Grid-cell u-sizeFull u-sm-size1of2 u-sm-flexOrderLast u-borderBottom  u-sm-borderBottomNone">
+        <div class="u-xs-size3of4 u-sm-sizeFull">
+          <img src="/team-store-images/funds-raised.png" class="u-block u-sizeFull">
+        </div>
+      </div>
+      <div class="Grid-cell u-sizeFull u-sm-size1of2">
+        <div class="u-padMd u-md-padXl">
+          <!-- Intro -->
+          <h2 style="color: #383838" class="u-spaceBottomMd">
+            Congratulations!
+          </h2>
+          <p class="u-fontSizeLg">
+            You've completed a fundraiser! Pat yourself on the back for a job well done.
+          </p>
+          <a href="/demos/team-store-pages/fund-config.html" class="Button Button--primary Button--large u-spaceTopLg">
+            Start New Fundraiser
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="u-sm-spaceTopLg u-flexExpandSides Panel Panel--hiddenOnSmallestScreens u-maxWidthLg">
+    <div class="u-padMd u-xs-padSidesLg u-borderBottom u-flex u-flexAlignItemsCenter u-flexJustifyBetween">
+      <div class="u-flex u-flexAlignItemsCenter">
+        <h1 class="js-PageTitle u-spaceLeftXs u-xs-spaceLeftSm">Past Fundraisers</h1>
+      </div>
+    </div>
+    <div class="u-padMd u-md-padXl u-fontSizeLg">
+      {{#iterate 3}}
+        <div class="PastFundraiser">
+          <div class="u-flex u-flexJustifyBetween DropDown js-dropTrigger">
+            <p class="u-textSemibold">
+              <span class="u-padRightSm">Jan, 6 2019 – Feb 6 2019</span>
+              <!-- <span style="color: #62c61d" class="ss-check"> -->
+            </p>
+            <p>
+              <span class="ss-dropdown"></span>
+            </p>
+          </div>
+          <div class="js-dropContent" style="display: none">
+            <div class="Grid Grid--withGutter u-fontSizeLg u-padTopLg">
+              <div class="Grid-cell u-size1of2 u-sm-size1of4 u-spaceBottomSm">
+                <div class="Panel u-padSidesSm u-sm-padSidesMd u-padEndsSm">
+                  <p class="u-textSemibold u-padBottomXs">
+                    Goal
+                  </p>
+                  <p class="">
+                    $1500
+                  </p>
+                </div>
+              </div>
+              <div class="Grid-cell u-size1of2 u-sm-size1of4 u-spaceBottomSm">
+                <div class="Panel u-padSidesSm u-sm-padSidesMd u-padEndsSm">
+                  <p class="u-textSemibold u-padBottomXs">
+                    Raised
+                  </p>
+                  <p class="">
+                    $1700
+                  </p>
+                </div>
+              </div>
+              <div class="Grid-cell u-size1of2 u-sm-size1of4 u-spaceBottomSm">
+                <div class="Panel u-padSidesSm u-sm-padSidesMd u-padEndsSm">
+                  <p class="u-textSemibold u-padBottomXs">
+                    # Donations
+                  </p>
+                  <p class="">
+                    134
+                  </p>
+                </div>
+              </div>
+              <div class="Grid-cell u-size1of2 u-sm-size1of4 u-spaceBottomSm u-padBottomSm">
+                <div class="Panel u-padSidesSm u-sm-padSidesMd u-padEndsSm">
+                  <p class="u-textSemibold u-padBottomXs">
+                    Avg. Donation
+                  </p>
+                  <p class="">
+                    $17.50
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      {{/iterate}}
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>

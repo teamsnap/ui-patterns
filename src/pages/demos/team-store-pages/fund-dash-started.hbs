@@ -1,0 +1,129 @@
+---
+title: Fundraiser In-Progress Dashboard
+layout: demo-no-nav
+labels:
+  - inprogress
+  - prototype
+order: 1
+styles:
+  - team-store-demo
+scripts:
+ - team-store
+---
+
+{{> team-store-partials.header }}
+
+<div class="u-xs-padMd">
+  <div class="u-sm-spaceTopLg u-flexExpandSides Panel Panel--hiddenOnSmallestScreens u-maxWidthLg">
+    <div class="u-padMd u-xs-padSidesLg u-borderBottom u-flex u-flexAlignItemsCenter u-flexJustifyBetween">
+      <div class="u-flex u-flexAlignItemsCenter">
+        {{> team-store-partials.fundraising-icon}}
+        <h1 class="js-PageTitle u-spaceLeftXs u-xs-spaceLeftSm">Fundraising</h1>
+      </div>
+      <a href="/demos/team-store-pages/team-store-configured-fund-live.html" class="Button Button--large u-padSidesSm u-xs-padSidesMd">
+        Back <span class="u-hidden u-xs-inline">to Store</span>
+      </a>
+    </div>
+    <div class="Grid Grid--withGutter">
+      <div class="Grid-cell u-sizeFull u-sm-size1of2 u-sm-borderRight">
+        <div class="u-padMd u-md-padXl">
+          <!-- Progress -->
+          <h2 class="u-spaceBottomMd" style="color: #383838" >Dashboard</h2>
+          <div class="u-spaceBottomMd">
+            <div class="u-fontSizeLg u-flex u-flexJustifyBetween u-flexAlignItemsCenter u-spaceBottomSm">
+              <p class="u-textSemibold">Progress to Goal:</p>
+              <p class="u-textSemibold">$200 / $1500</p>
+            </div>
+            <div class="ProgressBar ProgressBar--large">
+              <div class="ProgressBar-status" style="width: 35%;"></div>
+            </div>
+          </div>
+          <div class="Grid Grid--withGutter u-fontSizeLg u-padTopLg">
+            <div class="Grid-cell u-size1of2 u-spaceBottomSm">
+              <div class="Panel u-padSidesSm u-sm-padSidesMd u-padEndsSm">
+                <p class="u-textSemibold u-padBottomXs">
+                  Start Date
+                </p>
+                <p class="">
+                  1/10/19
+                </p>
+              </div>
+            </div>
+            <div class="Grid-cell u-size1of2 u-spaceBottomSm">
+              <div class="Panel u-padSidesSm u-sm-padSidesMd u-padEndsSm">
+                <p class="u-textSemibold u-padBottomXs">
+                  Next Check
+                </p>
+                <p class="">
+                  2/28/19
+                </p>
+              </div>
+            </div>
+            <div class="Grid-cell u-size1of2 u-spaceBottomSm">
+              <div class="Panel u-padSidesSm u-sm-padSidesMd u-padEndsSm">
+                <p class="u-textSemibold u-padBottomXs">
+                  # Donations
+                </p>
+                <p class="">
+                  12
+                </p>
+              </div>
+            </div>
+            <div class="Grid-cell u-size1of2 u-spaceBottomSm u-padBottomSm">
+              <div class="Panel u-padSidesSm u-sm-padSidesMd u-padEndsSm">
+                <p class="u-textSemibold u-padBottomXs">
+                  Avg. Donation
+                </p>
+                <p class="">
+                  $10
+                </p>
+              </div>
+            </div>
+          </div>
+          <button class="Button Button--large Button--negative u-spaceTopMd js-triggerModal">
+            End Fundraiser
+          </button>
+        </div>
+        <hr class="Divider u-sm-hidden">
+      </div>
+      <div class="Grid-cell u-sizeFull u-sm-size1of2">
+        <div class="u-padMd u-md-padXl">
+          <!-- Settings -->
+          <div class="u-flex u-flexAlignItemsBaseline u-flexJustifyBetween u-spaceBottomMd">
+            <h2 style="color: #383838">Settings</h2>
+            <a class="u-fontSizeLg u-spaceLeftMd" href="/demos/team-store-pages/fund-config.html">Edit</a>
+          </div>
+          <!-- Summary -->
+          {{> team-store-partials.fund-summary}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="Modal js-modal">
+  <div class="Modal-content">
+    <h2 class="Modal-heading">Confirm Changes</h2>
+    <div class="Modal-body">
+      <p class="u-fontSizeLg">
+        This will end the current fundraiser. You can start a new fundraiser at any time.
+      </p>
+      <div class="u-spaceTopMd u-spaceBottomLg">
+        <div class="Grid Grid--withGutter Grid--alignCenter">
+          <div class="Grid-cell u-sizeFull u-xs-size1of2 u-spaceBottomMd u-xs-spaceBottomNone">
+            <button class="Button Button--negative Button--large u-block u-sizeFull u-textCenter js-modalClose">
+              Not Now
+            </button>
+          </div>
+          <div class="Grid-cell u-sizeFull u-xs-size1of2">
+            <a class="Button Button--primary Button--large u-block u-sizeFull u-textCenter js-modalClose" href="/demos/team-store-pages/fund-dash-over.html">
+              End Fundraiser
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>

@@ -1,0 +1,129 @@
+---
+title: Cart with Fundraiser
+layout: demo-no-nav
+labels:
+  - inprogress
+  - prototype
+order: 1
+styles:
+  - team-store-demo
+scripts:
+ - team-store
+---
+
+{{> team-store-partials.header }}
+
+<div style="max-width: 1200px" class="u-padMd u-sm-padTopXl u-flexExpandSides u-flex u-flexJustifyBetween u-flexAlignItemsCenter">
+  <h2 style="line-height: 1.2" class="u-sm-fontSizeXxl">Your Cart</h2>
+  <div class="u-flex u-flexAlignItemsCenter">
+    <a class="u-block u-spaceLeftMd u-sm-spaceLeftLg" href=""><span style="font-size: 30px;" class="ss-cart"></span></a>
+  </div>
+</div>
+
+<div class="u-padSidesMd" style="max-width: 1200px; margin: 0 auto;">
+
+  <hr class="Divider u-spaceEndsNone">
+
+  <div class="Grid Grid--withGutter u-spaceTopXl u-posRelative">
+    <!-- Donation -->
+    <div class="Grid-cell u-sizeFull u-sm-size7of12">
+      <div class="Panel">
+        <div class="Panel-header">
+          <h2>Fundraising Drive</h2>
+        </div>
+        <div class="Panel-body u-padMd">
+          <p class="u-fontSizeLg">Help your team meet their fundraising goal!</p>
+          <div class="u-fontSizeLg u-flex u-flexJustifyBetween u-flexAlignItemsCenter u-spaceBottomSm u-spaceTopSm">
+            <p class="u-textSemibold">Progress:</p>
+            <p>$200 / $1500</p>
+          </div>
+          <div class="ProgressBar ProgressBar--large">
+            <div class="ProgressBar-status" style="width: 35%;"></div>
+          </div>
+          <p class="u-textSemibold u-fontSizeLg u-spaceTopMd u-spaceBottomSm">Select a donation amount:</p>
+          <div class="Grid Grid--withGutterSmall">
+            <div class="RadioButton Grid-cell u-size1of4">
+              <input class="js-donationRadio" type="radio" name="contributionAmount" id="5" value="5">
+              <label for="5">$5</label>
+            </div>
+            <div class="RadioButton Grid-cell u-size1of4">
+              <input class="js-donationRadio" type="radio" name="contributionAmount" id="10" value="10">
+              <label for="10">$10</label>
+            </div>
+            <div class="RadioButton Grid-cell u-size1of4">
+              <input class="js-donationRadio" type="radio" name="contributionAmount" id="15" value="15">
+              <label for="15">$15</label>
+            </div>
+            <div class="RadioButton Grid-cell u-size1of4">
+              <input class="js-donationRadio js-donationRadioOther" type="radio" name="contributionAmount" id="Other" value="Other">
+              <label for="Other">Other</label>
+            </div>
+          </div>
+          <div class="InputGroup InputGroup--leftIcon js-donationOtherAmount" style="display: none;">
+            <input class="Input Input--large u-spaceTopMd u-sizeFull" type="text" id="Input-1" placeholder="Enter custom amount">
+            <span class="InputGroup-icon u-textSemibold">$</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Summary -->
+    <div class="Grid-cell u-sizeFull u-sm-size5of12 u-sm-flexOrderLast Summary">
+      <div class="Panel">
+        <div class="Panel-header">
+          <h2>Summary</h2>
+        </div>
+        <div class="Panel-body  u-padMd">
+          <div class="u-fontSizeLg">
+            <p class="u-flex u-flexJustifyBetween u-spaceBottomSm">
+              <span>Subtotal:</span>
+              <span>$45.00</span>
+            </p>
+            <p class="u-flex u-flexJustifyBetween u-spaceBottomSm">
+              <span>Shipping:</span>
+              <span>$5.00</span>
+            </p>
+            <p class="u-flex u-flexJustifyBetween u-spaceBottomSm">
+              <span>Estimated Tax:</span>
+              <span>$__.__</span>
+            </p>
+            <p class="u-flex u-flexJustifyBetween u-spaceBottomSm">
+              <span>Donation Amount</span>
+              <span>$0.00</span>
+            </p>
+            <p class="u-flex u-flexJustifyBetween u-textBold">
+              <span>Order Total:</span>
+              <span>$50.00</span>
+            </p>
+          </div>
+          <button class="Button Button--large Button--primary u-sizeFull u-block u-spaceTopXl u-spaceBottomMd">
+            Checkout
+          </button>
+          <button class="Button Button--large Button--negative u-sizeFull u-spaceBottomMd">
+            Continue Shopping
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Products -->
+    <div class="Grid-cell u-sizeFull u-sm-size7of12">
+      {{#iterate 4}}
+        <div class="Panel u-flex u-overflowHidden">
+          <div class="u-size1of3">
+            <img class="u-block" style="width: 100%;" src="https://dummyimage.com/300x300/ccc/fff.jpg&text=Product+Image">
+          </div>
+          <div class="u-size2of3 u-padLg">
+            <p class="u-fontSizeLg" style="font-weight: 700; color: #494949;">
+              Product Info
+            </p>
+            <p class="u-fontSizeLg" style="color: #494949;">$0.00</p>
+          </div>
+        </div>
+      {{/iterate}}
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
