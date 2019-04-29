@@ -1,0 +1,42 @@
+column_headers:
+  - name: Team
+    class: u-sizeFill
+  - name: Role
+    class: u-size4of24 u-flexGrow0
+  - name: Registration
+    class: u-sizeFill
+  - name: Registration Status
+    class: u-size6of24 u-flexGrow0
+  - name: Action
+    class: u-size2of24 u-flexGrow0
+
+barts_teams_registrations:
+  - team: Little Tigers
+    team_division: (U5 Boys Recreational Soccer)
+    invite: true
+    role: Player
+    registration: 2019 Spring Registration
+    registration_fee_option: (U5 Competitive Soccer)
+    registration_status: Complete
+  - team: The Tigers
+    team_division: (U5 Boys Competitive Soccer)
+    invite:
+    role: Player
+    registration: 2019 Spring Registration
+    registration_fee_option: (U5 Competitive Soccer)
+    registration_status: Complete
+  - team: Spring Soccer Skills Camp
+    team_division: (U5 Boys Soccer Skills Camp)
+    invite:
+    role: Player
+    registration: 2019 Spring Registration
+    registration_fee_option: (Skills Camp)
+    registration_status: Complete
+  - team: Soccer Touraments
+    team_division: (Springfield Junior Soccer Tourament)
+    invite:
+    role: Player
+    registration: Springfield Junior Soccer Tourament
+    registration_fee_option: (U5 Competitive Soccer Tournament)
+    registration_status: Complete
+    
