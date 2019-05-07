@@ -1,0 +1,44 @@
+---
+title: Invite Opt-Out
+layout: demo-no-nav
+labels:
+  - inprogress
+  - prototype
+order: 1
+---
+
+
+<div class="u-borderBottom u-textCenter u-padMd" style="background: white">
+  <a href="https://www.teamsnap.com">
+    <img src="/TeamSnap_Logo-400x88.png" width="150">
+  </a>
+</div>
+<div class="u-padMd">
+  <div class="Panel u-flexExpandSides u-padLg u-sm-spaceTopXl" style="max-width: 600px">
+    <div class="js-confirm">
+      <h2 class="u-spaceBottomMd">Sorry for the confusion.</h2>
+      <p class="u-fontSizeLg">Please confirm that you would like to be removed from this team and we will see that it is done.</p>
+      <div class="u-spaceTopLg u-flex u-flexWrap u-flexJustifyEnd">
+        <button class="Button Button--primary Button--large u-sizeFull u-xs-sizeFit u-spaceBottomMd u-xs-spaceBottomNone u-xs-spaceRightSm js-remove">
+          Yes, remove me
+        </button>
+        <button class="Button Button--negative Button--large u-sizeFull u-xs-sizeFit">
+          Cancel
+        </button>
+      </div>
+    </div>
+    <div class="js-processed" style="display: none">
+      <h2 class="u-spaceBottomMd">Thank you.</h2>
+      <p class="u-fontSizeLg">Your request has been processed and you will no longer receive emails from this team.</p>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+
+<script>
+  $(".js-remove").click(function() {
+    $(".js-processed").show();
+    $(".js-confirm").hide();
+  });
+</script>
