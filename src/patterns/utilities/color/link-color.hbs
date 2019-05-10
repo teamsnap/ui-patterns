@@ -1,12 +1,22 @@
 ---
-order: 2
+order: 3
 notes: |
   Change the link color to something other than the default. You'll want this instead of plain ol' color utilities to set the interactive states.
+sourceless: true
 ---
 
-<p>
-  <a href="#">I am a normal link</a>
-</p>
-<p>
-  <a href="#" class="u-linkNegative">I am a link styled with u-linkNegative</a>
-</p>
+<div class="u-spaceBottomLg">
+  <h3 class="u-colorInfo">Normal links</h3>
+  <p>Links don't require a special class, and they will change with different color themes.</p>
+  <p class="u-spaceTopSm">
+    <a href="#">I am a normal link</a>
+  </p>
+</div>
+
+<div class="u-spaceBottomLg">
+  <h3 class="u-colorInfo"><code>u-linkNegative</code></h3>
+  <p>Styles links with red rather than the default link color.
+  <p class="u-spaceTopSm">
+    <a href="#" class="u-linkNegative">I am a link styled with u-linkNegative</a>
+  </p>
+</div>
