@@ -1,12 +1,3 @@
-- theme: blue-steel
-  name: Blue Steel
-
-- theme: care-bear
-  name: Care Bear
-
-- theme: christmas-sweater
-  name: Christmas Sweater
-
 - theme: custom-aquablue
   name: Aquablue
 
@@ -38,7 +29,7 @@
   name: Leaf Green
 
 - theme: custom-lemonyellow
-  name: Lemon Yellow
+  name: Yellow
 
 - theme: custom-lightblue
   name: Light Blue
@@ -58,14 +49,23 @@
 - theme: league
   name: League
 
-- theme: maple-leaf
-  name: Maple Leaf
+- theme: christmas-sweater
+  name: Christmas Sweater
 
-- theme: portland-oregon
-  name: Portland Oregon
+- theme: care-bear
+  name: Care Bear
 
 - theme: ranger-smith
   name: Ranger Smith
 
+- theme: blue-steel
+  name: Blue Steel
+
 - theme: up-beet
   name: Up Beet
+
+- theme: portland-oregon
+  name: Portland Oregon
+
+- theme: maple-leaf
+  name: Maple Leaf
