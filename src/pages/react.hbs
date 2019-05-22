@@ -1,0 +1,44 @@
+---
+title: React & Storybook
+layout: prose
+order: 3
+---
+
+<h1>{{title}}</h1>
+
+<p class="u-fontSizeLg u-spaceBottomXl u-padBottomMd u-borderBottom">
+  For ease of use we're actively creating a React component library that is directly 
+  based on the CSS components and utilities outlined here.
+</p>
+<a href="https://teamsnap-ui-storybook.netlify.com/" target='_blank'>
+  <img src="/getting-started/storybook.png" class="u-border">
+</a>
+
+<p class='doc-Intro-block'>
+  TeamSnap UI React components can be found in Storybook, at 
+  <a href='https://teamsnap-ui-storybook.netlify.com/' target='_blank'>teamsnap-ui-storybook.netlify.com</a>
+  To access Storybook locally simply clone <a href="https://github.com/teamsnap/teamsnap-ui" target='_blank'>TeamSnap UI</a>
+  and run `npm run storybook` inside the repo
+</p>
+
+<section class='doc-Intro'>
+  <h2>Utilities &amp; the Mod Prop</h2>
+  <p class='doc-Intro-block'>
+    Most the components are pretty straight forward to work with and more detailed documentation
+    can be found in storybook, but one quick callout is the use of the "mods" prop. By passing 
+    utility classes along to the mods prop, each component allows you to add additional classes
+    on top of the base. 
+  </p>
+  <small>Example:</small>
+  <pre class="language-markup u-padMd" data-bg="fill">
+  <code>
+  &#60;componentName 
+    columns= { columns }
+    rows= { select('Data Sets', dataOptions, defaultDataSet) } 
+    isLoading= { boolean("isLoading", false) } 
+    mods= 'u-padTopMd u-padBottomMd'
+  /&#62;
+  </code>
+  </pre>
+</section>
+

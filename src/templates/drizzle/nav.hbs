@@ -43,7 +43,7 @@
     </div>
 
     {{!-- Top-level pages --}}
-    <h3 class="drizzle-Nav-item">Intro</h3>
+    <h3 class="drizzle-Nav-item">Getting Started</h3>
     <ul class="drizzle-Nav-menu">
       {{#each (pages sortby="order")}}
         <li>
@@ -52,9 +52,18 @@
       {{/each}}
     </ul>
     {{!-- Element Patterns --}}
-    <h3 class="drizzle-Nav-item drizzle-u-marginTop">Elements</h3>
+    <h3 class="drizzle-Nav-item drizzle-u-marginTop">Design Elements</h3>
     <ul class="drizzle-Nav-menu">
-      {{#each (collections "elements" sortby="order")}}
+      {{#each (pages "design-elements" sortby="order")}}
+        <li>
+          {{> nav-item label=data.title}}
+        </li>
+      {{/each}}
+    </ul>
+    {{!-- Utility Patterns --}}
+    <h3 class="drizzle-Nav-item drizzle-u-marginTop">Utilities</h3>
+    <ul class="drizzle-Nav-menu">
+      {{#each (collections "utilities")}}
         <li>
           {{> nav-item label=name}}
         </li>
@@ -69,27 +78,11 @@
         </li>
       {{/each}}
     </ul>
-    {{!-- Utility Patterns --}}
-    <h3 class="drizzle-Nav-item drizzle-u-marginTop">Utilities</h3>
-    <ul class="drizzle-Nav-menu">
-      {{#each (collections "utilities")}}
-        <li>
-          {{> nav-item label=name}}
-        </li>
-      {{/each}}
-    </ul>
-
-
     {{!-- Other pages --}}
-    <h3 class="drizzle-Nav-item drizzle-u-marginTop">Content</h3>
+    <h3 class="drizzle-Nav-item drizzle-u-marginTop">Help Docs</h3>
     <ul class="drizzle-Nav-menu">
       <li>
         {{#with (page "docs/index")}}
-          {{> nav-item label=data.title}}
-        {{/with}}
-      </li>
-      <li>
-        {{#with (page "demos/index")}}
           {{> nav-item label=data.title}}
         {{/with}}
       </li>
