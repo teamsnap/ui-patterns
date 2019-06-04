@@ -1,0 +1,29 @@
+---
+title: Colors
+notes: |
+  TeamSnap brand, state and UI colors.
+layout: prose
+order: 2
+---
+
+<h1>{{title}}</h1>
+
+<img src="/design-elements/color_graphic.jpg">
+
+<p>
+Similar to spacing and typography, the same is done with the way we create variations of our brand colors. Here however a system of tinting and shading is applied on a 10% scale to insure our brand colors remain the same temperature and tone as various levels of lightness and darkness are needed for specific designs.
+</p>
+
+<section class='u-borderTop u-spaceTopXl u-padTopXl'>
+  <h2 class="u-padBottomMd">Web App Color Scheme</h2>
+  {{#each (data "colors")}}
+    <h3 class="drizzle-u-capitalize">{{@key}}</h3>
+    <ul class="drizzle-u-listInline drizzle-u-noPadBottom">
+      {{#each this}}
+        <li class="drizzle-u-marginBottom">
+          {{> drizzle.swatch }}
+        </li>
+      {{/each}}
+    </ul>
+  {{/each}}
+</section>

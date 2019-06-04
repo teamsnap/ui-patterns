@@ -8,7 +8,8 @@ This library includes the [teamsnap-ui](https://github.com/teamsnap/teamsnap-ui)
 
 1. Clone this repo.
 2. Make sure your `node` and `npm` versions are relatively up to date. Node versions as early as v4.2.3 are known to cause issues.
-3. `npm start`
+3. Pull in TeamSnap-UI as a submodule `git submodule update --init` 
+4. `npm start`
 
 ## Documentation
 

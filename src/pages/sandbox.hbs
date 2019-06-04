@@ -1,0 +1,20 @@
+---
+title: Sandbox
+notes: |
+  A collection of mockups, demonstrations, proofs-of-concept or
+  anything else that might not be production-ready.
+order: 4
+layout: prose
+---
+
+<h1>{{title}}</h1>
+
+<p class="u-fontSizeLg u-padBottomMd u-spaceBottomMd u-borderBottom">
+  A collection of mockups, demonstrations, proofs-of-concept or anything 
+  else that might not be production-ready. Feel free to clone the 
+  <a href="https://github.com/teamsnap/ui-patterns">ui-patterns repo</a>, and dive in.
+</p>
+
+{{#each (pages "demos" ignore="index" sortby="order")}}
+  {{> drizzle.page-item }}
+{{/each}}
