@@ -128,3 +128,17 @@ u('[data-control="tab"]').on('click', function() {
       $content.addClass('is-active');
 
 });
+
+// Show Hide logic
+
+u(".Input-showHideButton").on('click', function () {
+  var showHideField = u(this).siblings(".Input--showHide");
+  if (showHideField.attr("type") === "password") {
+    u(showHideField).attr("type", "text");
+    u(this).html("Hide")
+  }
+  else {
+    u(showHideField).attr("type", "password");
+    u(this).html("Show")
+  }
+});
