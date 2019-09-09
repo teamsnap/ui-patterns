@@ -29,6 +29,36 @@ u('.js-ButtonGroupDemo > .Button').on('click', function() {
   u(this).addClass('is-active');
 });
 
+// * 2. Modal demo
+
+var $demoModal        = u('[data-control="modal"]'),
+    $demoModalContent = u("[data-modal]");
+
+// function to change active tab and tab content
+u('[data-control="modal"]').on('click', function() {
+
+  var $this          = u(this),
+      target         = $this.data('open'),
+      $content       = $demoModalContent.filter('[data-modal="' + target + '"]');
+
+      $content.addClass('is-open');
+
+});
+
+// function to change active tab and tab content
+u('[data-dismiss="modal"]').on('click', function() {
+
+  var $this          = u(this),
+      $target        = $this.closest('[data-modal]');
+
+      $target.addClass('is-closing');
+      window.setTimeout(function () {
+        $target.removeClass('is-open');
+        $target.removeClass('is-closing');
+      }, 500);
+
+});
+
 
 // * 3. Radial Progress Bar
 
