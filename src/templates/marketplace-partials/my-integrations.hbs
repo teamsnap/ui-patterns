@@ -7,11 +7,13 @@
         <img class="media-object" src="{{this.image}}" alt="...">
       </div>
       <div class="media-body">
-        <button class="Button media-edit">
-          {{svg "edit" class="Icon" role="presentation"}}
-        </button>
         <h4 class="media-heading u-spaceTopSm">{{this.title}}</h4>
         <small>{{this.description}}</small>
+      </div>
+      <div class="media-right u-spaceRightSm">
+        <span class="media-edit">
+          {{svg "edit" class="Icon" role="presentation"}}
+        </span>
       </div>
     </div>
   </div>
@@ -74,6 +76,9 @@
     background: #fff;
     border: 1px solid #d6d6d6;
     border-radius: 8px;
+    display: flex;
+    justify-content: center; /* align horizontal */
+    align-items: center;
   }
 
   .media:first-child {
@@ -136,8 +141,7 @@
   }
 
   .media-edit {
-    float: right;
-    margin-top: 8px;
+    font-size: 20px;
     color: #7a7a7a;
   }
 </style>

@@ -22,6 +22,7 @@ all-integrations:
   - title: TeamSnap Org Store
     image: https://www.creativefabrica.com/wp-content/uploads/2018/10/Shopping-cart-logo-by-DEEMKA-STUDIO-580x406.jpg
     description: Create shirts and pants in TeamSnap.
+<<<<<<< HEAD
     suggested: true
     category: teamsnap
   - title: Gamesheet
@@ -44,12 +45,31 @@ all-integrations:
     description: Insurance for registration.
     suggested: true
     category: registration
+=======
+    suggested: false
+  - title: Gamesheet
+    image: https://d3grfap2l5ikgv.cloudfront.net/5c6c39651d82690d4e7d68da.png
+    description: Keep detailed score sheets.
+    suggested: false
+  - title: Skoresheet
+    image: https://mark.trademarkia.com/logo-images/skoresheet/skoresheet-87827087.jpg
+    description: Keep detailed score sheets and stats.
+    suggested: false
+  - title: Constant Contact
+    image: https://socialdentalnetwork.com/wp-content/uploads/2013/11/CC_484x252.png
+    description: Manage your email campaigns.
+    suggested: false
+  - title: Regsaver
+    image: https://www.registrationsaver.com/wp-content/uploads/2017/03/Regsaver-red.jpg
+    description: Insurance for registration.
+    suggested: false
+>>>>>>> dc15aff9af626b01fd18b090fe07e46428dde183
 my-integrations:
   - title: Mailchimp
     image: https://s3.amazonaws.com/www-inside-design/uploads/2018/10/mailchimp-sq-810x810.jpg
     description: Track email engagement from your fans.
-    suggested: true
+    suggested: false
   - title: Constant Contact
     image: https://socialdentalnetwork.com/wp-content/uploads/2013/11/CC_484x252.png
     description: Manage your email campaigns.
-    suggested: true
+    suggested: false
