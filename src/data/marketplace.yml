@@ -1,6 +1,18 @@
 all-integrations:
+  - title: Hun Business Analytics
+    image: https://www.logogenie.net/download/preview/medium/3589659
+    description: lorem ipsum doloar sit amet
+    suggested: true
+  - title: YouTube
+    image: https://thumbnail.imgbin.com/17/6/19/imgbin-youtube-logo-internet-marketing-subscribe-youtube-logo-ZStYAQskpiCPL1pGwgsrnF1Tj_t.jpg
+    description: lorem ipsum doloar sit amet
+    suggested: true
   - title: Hun
     image: https://www.logogenie.net/download/preview/medium/3589659
+    description: lorem ipsum doloar sit amet
+    suggested: true
+  - title: lorem ipsum
+    image: https://thumbnail.imgbin.com/17/6/19/imgbin-youtube-logo-internet-marketing-subscribe-youtube-logo-ZStYAQskpiCPL1pGwgsrnF1Tj_t.jpg
     description: lorem ipsum doloar sit amet
     suggested: true
   - title: Hun
@@ -11,20 +23,8 @@ all-integrations:
     image: https://www.logogenie.net/download/preview/medium/3589659
     description: lorem ipsum doloar sit amet
     suggested: true
-  - title: Hun
-    image: https://www.logogenie.net/download/preview/medium/3589659
-    description: lorem ipsum doloar sit amet
-    suggested: true
-  - title: Hun
-    image: https://www.logogenie.net/download/preview/medium/3589659
-    description: lorem ipsum doloar sit amet
-    suggested: true
-  - title: Hun
-    image: https://www.logogenie.net/download/preview/medium/3589659
-    description: lorem ipsum doloar sit amet
-    suggested: true
-  - title: Hun
-    image: https://www.logogenie.net/download/preview/medium/3589659
+  - title: lorem ipsum
+    image: https://thumbnail.imgbin.com/17/6/19/imgbin-youtube-logo-internet-marketing-subscribe-youtube-logo-ZStYAQskpiCPL1pGwgsrnF1Tj_t.jpg
     description: lorem ipsum doloar sit amet
     suggested: true
   - title: Hun
