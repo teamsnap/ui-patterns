@@ -7,12 +7,14 @@
       <div class="Card-image">
         <img src="{{this.image}}" />
       </div>
-      <div class="Card-title">
-        {{this.title}}
-      </div>
-      <small class="Card-description">{{this.description}}</small>
-      <div class="Card-footer">
-        <div class="Button Button--primary">Get Snapp</div>
+      <div class="Card-footer Grid">
+        <div class="Grid-cell u-sizeFill">
+            <div class="Card-title">{{this.title}}</div>
+            <small class="Card-description">{{this.description}}</small>
+        </div>
+        <div class="Grid-cell u-sizeFit">
+            <div class="Button Button--primary">Get Snapp</div>
+        </div>
       </div>
     </div>
   </div>
@@ -39,11 +41,7 @@
 
   .Card-image img {
     max-width: 100%;
-<<<<<<< Updated upstream
     height: 180px;
-=======
-    height: 200px;
->>>>>>> Stashed changes
     width: auto;
   }
 
@@ -52,18 +50,10 @@
     color: #1a6baf;
     font-size: 16px;
     font-weight: 700;
-    padding: 0 16px;
   }
 
   .Card-description {
-<<<<<<< Updated upstream
-      padding: 0 16px;
-      display: block;
-=======
-    text-align: center;
-    padding: 0 16px;
     display: block;
->>>>>>> Stashed changes
   }
 
   .Card-footer {
@@ -72,10 +62,5 @@
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
     padding: 16px;
-<<<<<<< Updated upstream
-=======
-    margin-top: 16px;
-    text-align: right;
->>>>>>> Stashed changes
   }
 </style>
