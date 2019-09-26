@@ -1,0 +1,54 @@
+<div class="Grid Grid--withGutter">
+
+    {{#each (data "marketplace.all-integrations")}}
+
+        <div class="Grid-cell u-xs-size1of2 u-sm-size1of3 u-padBottomMd">
+            <div class="Card">
+            <div class="Card-image">
+                <img src="{{this.image}}"/>
+            </div>
+            <div class="Card-title">
+                {{this.title}}
+            </div>
+            <div class="Card-footer">
+                <small>{{this.details}}</small>
+            </div>
+            </div>
+        </div>
+
+    {{/each}}
+
+
+</div>
+
+
+
+<style>
+
+  .Card {
+    background: #fff;
+    border: 1px solid #d6d6d6;
+    border-radius: 8px;
+  }
+
+  .Card-image {
+    max-width: 90%;
+    max-height: 200px; 
+    text-align: center;
+  }
+
+  .Card-title {
+    font-family: Open-sans;
+    color: #1a6baf;
+    font-size: 16px;
+    padding: 16px 0;
+    text-align: center;
+  }
+
+  .Card-footer {
+    background-color: #fcfcfc;
+    border-top: 1px solid #d6d6d6;
+    padding: 16px;
+  }
+
+</style>
