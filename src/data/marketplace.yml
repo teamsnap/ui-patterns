@@ -29,7 +29,7 @@ all-integrations:
     suggested: true
   - title: Constant Contact
     image: https://socialdentalnetwork.com/wp-content/uploads/2013/11/CC_484x252.png
-    description: Manage your email campaigns. 
+    description: Manage your email campaigns.
     suggested: true
   - title: Regsaver
     image: https://www.registrationsaver.com/wp-content/uploads/2017/03/Regsaver-red.jpg
@@ -38,9 +38,9 @@ all-integrations:
 my-integrations:
   - title: Mailchimp
     image: https://s3.amazonaws.com/www-inside-design/uploads/2018/10/mailchimp-sq-810x810.jpg
-    description: Mailchimp is the best
+    description: Send and track email engagement from your fans.
     suggested: true
-  - title: Mailchimp
-    image: https://s3.amazonaws.com/www-inside-design/uploads/2018/10/mailchimp-sq-810x810.jpg
-    description: Mailchimp is the best
+  - title: Constant Contact
+    image: https://socialdentalnetwork.com/wp-content/uploads/2013/11/CC_484x252.png
+    description: Manage your email campaigns.
     suggested: true
