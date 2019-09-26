@@ -4,26 +4,15 @@ notes: This example demonstrates the use of jello loader as a full page transiti
 layout: demo-no-nav
 ---
 
-<div class+"main-container">
-  {{> marketplace-partials.header }}
-
-<div class="main-container u-spaceSidesM">
-
-  <div class="u-padBottomMd">
-
-    <div class="u-spaceTopLg">
-      <div class="Grid Grid--withGutter">
-        {{> marketplace-partials.title }}
-        {{> marketplace-partials.filters }}
-      </div>
+{{> marketplace-partials.header }}
+<div class="main-container u-spaceSidesMd">
+  <div class="u-spaceTopLg u-padBottomMd">
+    <div class="Grid Grid--withGutter">
+      {{> marketplace-partials.title }}
+      {{> marketplace-partials.filters }}
     </div>
-
   </div>
-
   <div class="u-padBottomMd">
     {{> marketplace-partials.all-integrations }}
   </div>
-
 </div>
-
-
