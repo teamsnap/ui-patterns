@@ -4,6 +4,12 @@ notes: This example demonstrates the use of jello loader as a full page transiti
 layout: demo-no-nav
 ---
 
+<style>
+[class*="-container"], [class*="-header"], [class*="-footer"], [class*="-block"], [class*="-row"], [class*="__container"], [class*="__header"], [class*="__footer"], [class*="__block"], [class*="__row"] {
+    max-width: none;
+}
+</style>
+
 {{> marketplace-partials.header }}
 <div class="main-container u-spaceSidesMd">
   <div class="u-spaceTopLg u-padBottomMd">
@@ -16,3 +22,4 @@ layout: demo-no-nav
     {{> marketplace-partials.all-integrations }}
   </div>
 </div>
+{{> marketplace-partials.snapp-details-modal }}
