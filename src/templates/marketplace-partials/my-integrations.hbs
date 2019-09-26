@@ -7,6 +7,9 @@
         <img class="media-object" src="{{this.image}}" alt="...">
       </div>
       <div class="media-body">
+        <button class="Button media-edit">
+          {{svg "edit" class="Icon" role="presentation"}}
+        </button>
         <h4 class="media-heading u-spaceTopSm">{{this.title}}</h4>
         <small>{{this.description}}</small>
       </div>
@@ -130,5 +133,11 @@
     color: #1a6baf;
     font-weight: 700;
     font-size: 16px;
+  }
+
+  .media-edit {
+    float: right;
+    margin-top: 8px;
+    color: #7a7a7a;
   }
 </style>

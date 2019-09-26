@@ -2,18 +2,25 @@
 
   {{#each (data "marketplace.all-integrations")}}
 
-  <div class="Grid-cell u-xs-size1of2 u-sm-size1of3 u-padBottomMd">
-    <div class="Card">
-      <div class="Card-image">
-        <img src="{{this.image}}" />
-      </div>
-      <div class="Card-footer Grid">
-        <div class="Grid-cell u-sizeFill">
-            <div class="Card-title">{{this.title}}</div>
-            <small class="Card-description">{{this.description}}</small>
-        </div>
-        <div class="Grid-cell u-sizeFit">
-            <div class="Button Button--primary">Get Snapp</div>
+
+    <div class="Grid-cell u-xs-size1of2 u-sm-size1of3 u-padBottomMd">
+        <div class="Card">
+            <div class="Card-image">
+                <img src="{{this.image}}"/>
+            </div>
+            <div class="Card-footer Grid">
+                <div class="Grid-cell u-sizeFill">
+                    <div class="Card-title">{{this.title}}</div>
+                    <small class="Card-description">{{this.description}}</small>
+                </div>
+                <div class="Grid-cell u-sizeFit">
+                    <div class="Button Button--primary show-snap-details-button"
+                        data-control="modal" data-open="modal-snapp-details"
+                        data-title="{{this.title}}" data-logo="{{this.image}}"
+                        data-description="{{this.description}}"
+                    >Get Snapp</div>
+                </div>
+            </div>
         </div>
       </div>
       {{#if suggested}}
@@ -22,12 +29,11 @@
         </span>
       {{/if}}
     </div>
-  </div>
 
   {{/each}}
 
-
 </div>
+{{> marketplace-partials.snapp-details-modal }}
 
 
 
