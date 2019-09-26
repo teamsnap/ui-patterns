@@ -1,7 +1,8 @@
-<div class="Grid Grid--withGutter">
+<div class="Grid Grid--withGutter u-spaceTopMd">
 
-    {{#each (data "marketplace.all-integrations")}}
+  {{#each (data "marketplace.all-integrations")}}
 
+<<<<<<< HEAD
         <div class="Grid-cell u-xs-size1of2 u-sm-size1of3 u-padBottomMd">
             <div class="Card">
                 <div class="Card-image">
@@ -21,9 +22,26 @@
                     </div>
                 </div>
             </div>
+=======
+  <div class="Grid-cell u-xs-size1of2 u-sm-size1of3 u-padBottomMd">
+    <div class="Card">
+      <div class="Card-image">
+        <img src="{{this.image}}" />
+      </div>
+      <div class="Card-footer Grid">
+        <div class="Grid-cell u-sizeFill">
+            <div class="Card-title">{{this.title}}</div>
+            <small class="Card-description">{{this.description}}</small>
+>>>>>>> 21ca50e8da0d46c05d090d22e3670c75e52c2713
         </div>
+        <div class="Grid-cell u-sizeFit">
+            <div class="Button Button--primary">Get Snapp</div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-    {{/each}}
+  {{/each}}
 
 
 </div>
@@ -31,7 +49,6 @@
 
 
 <style>
-
   .Card {
     background: #fff;
     border: 1px solid #d6d6d6;
@@ -55,12 +72,10 @@
     color: #1a6baf;
     font-size: 16px;
     font-weight: 700;
-    padding: 0 16px;
   }
 
   .Card-description {
-      padding: 0 16px;
-      display: block;
+    display: block;
   }
 
   .Card-footer {
@@ -70,5 +85,4 @@
     border-bottom-right-radius: 8px;
     padding: 16px;
   }
-
 </style>
