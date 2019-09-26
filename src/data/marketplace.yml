@@ -35,5 +35,12 @@ all-integrations:
     image: https://www.registrationsaver.com/wp-content/uploads/2017/03/Regsaver-red.jpg
     description: Insurance for registration.
     suggested: true
-
-    
+my-integrations:
+  - title: Mailchimp
+    image: https://s3.amazonaws.com/www-inside-design/uploads/2018/10/mailchimp-sq-810x810.jpg
+    description: Mailchimp is the best
+    suggested: true
+  - title: Mailchimp
+    image: https://s3.amazonaws.com/www-inside-design/uploads/2018/10/mailchimp-sq-810x810.jpg
+    description: Mailchimp is the best
+    suggested: true

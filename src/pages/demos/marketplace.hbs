@@ -1,6 +1,6 @@
 ---
 title: Marketplace
-notes: This example demonstrates the use of jello loader as a full page transition. For example, Rosetta's loading screen as games are being scheduled by Fanapp and sent back to TeamSnap.
+notes: This example demonstrates the use of jello loader as a ful.
 layout: demo-no-nav
 ---
 
@@ -18,8 +18,19 @@ layout: demo-no-nav
       {{> marketplace-partials.filters }}
     </div>
   </div>
+
+
+
   <div class="u-padBottomMd">
+    <h1>My Integrations</h1>
+    <hr class=“Divider” />
+    {{> marketplace-partials.my-integrations }}
+  </div>
+
+
+  <div class="u-padBottomMd">
+    <h1>All Integrations</h1>
+    <hr class=“Divider” />
     {{> marketplace-partials.all-integrations }}
   </div>
 </div>
-{{> marketplace-partials.snapp-details-modal }}

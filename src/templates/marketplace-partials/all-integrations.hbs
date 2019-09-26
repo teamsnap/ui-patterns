@@ -1,25 +1,23 @@
-<div class="Grid Grid--withGutter">
+<div class="Grid Grid--withGutter u-spaceTopMd">
 
-    {{#each (data "marketplace.all-integrations")}}
+  {{#each (data "marketplace.all-integrations")}}
 
-        <div class="Grid-cell u-xs-size1of2 u-sm-size1of3 u-padBottomMd">
-            <div class="Card">
-                <div class="Card-image">
-                    <img src="{{this.image}}"/>
-                </div>
-                <div class="Card-footer Grid">
-                    <div class="Grid-cell u-sizeFill">
-                        <div class="Card-title">{{this.title}}</div>
-                        <small class="Card-description">{{this.description}}</small>
-                    </div>
-                    <div class="Grid-cell u-sizeFit">
-                        <div class="Button Button--primary" data-control="modal" data-open="modal-snapp-details">Get Snapp</div>
-                    </div>
-                </div>
-            </div>
-        </div>
+  <div class="Grid-cell u-xs-size1of2 u-sm-size1of3 u-padBottomMd">
+    <div class="Card">
+      <div class="Card-image">
+        <img src="{{this.image}}" />
+      </div>
+      <div class="Card-title">
+        {{this.title}}
+      </div>
+      <small class="Card-description">{{this.description}}</small>
+      <div class="Card-footer">
+        <div class="Button Button--primary">Get Snapp</div>
+      </div>
+    </div>
+  </div>
 
-    {{/each}}
+  {{/each}}
 
 
 </div>
@@ -27,7 +25,6 @@
 
 
 <style>
-
   .Card {
     background: #fff;
     border: 1px solid #d6d6d6;
@@ -42,7 +39,11 @@
 
   .Card-image img {
     max-width: 100%;
+<<<<<<< Updated upstream
     height: 180px;
+=======
+    height: 200px;
+>>>>>>> Stashed changes
     width: auto;
   }
 
@@ -55,8 +56,14 @@
   }
 
   .Card-description {
+<<<<<<< Updated upstream
       padding: 0 16px;
       display: block;
+=======
+    text-align: center;
+    padding: 0 16px;
+    display: block;
+>>>>>>> Stashed changes
   }
 
   .Card-footer {
@@ -65,6 +72,10 @@
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
     padding: 16px;
+<<<<<<< Updated upstream
+=======
+    margin-top: 16px;
+    text-align: right;
+>>>>>>> Stashed changes
   }
-
 </style>
