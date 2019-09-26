@@ -1,35 +1,39 @@
 all-integrations:
-  - title: Hun Business Analytics
-    image: https://www.logogenie.net/download/preview/medium/3589659
-    description: lorem ipsum doloar sit amet
+  - title: Flip Give
+    image: http://athleticventureadvisors.com/wp-content/uploads/2019/03/flipgive-logo-on-white_large.png
+    description: Give back to teams
     suggested: true
-  - title: YouTube
-    image: https://thumbnail.imgbin.com/17/6/19/imgbin-youtube-logo-internet-marketing-subscribe-youtube-logo-ZStYAQskpiCPL1pGwgsrnF1Tj_t.jpg
-    description: lorem ipsum doloar sit amet
+  - title: Player Health
+    image: http://siliconprairienews.com/wp-content/uploads/2019/07/ph-logo-1024x576.png
+    description: Healthy players are happy players.
     suggested: true
-  - title: Hun
-    image: https://www.logogenie.net/download/preview/medium/3589659
-    description: lorem ipsum doloar sit amet
+  - title: Team Genius
+    image: https://greatnorthlabs.com/wp-content/uploads/2018/09/Team-Genius-Logo-768x288.png
+    description: Be a genuis or an Owl.
     suggested: true
-  - title: lorem ipsum
-    image: https://thumbnail.imgbin.com/17/6/19/imgbin-youtube-logo-internet-marketing-subscribe-youtube-logo-ZStYAQskpiCPL1pGwgsrnF1Tj_t.jpg
-    description: lorem ipsum doloar sit amet
+  - title: Travel Planner
+    image: http://ww1.prweb.com/prfiles/2018/01/19/15449748/hotelplanner%20logo.png
+    description: Plan your tournement travel with TeamSnap.
     suggested: true
-  - title: Hun
-    image: https://www.logogenie.net/download/preview/medium/3589659
-    description: lorem ipsum doloar sit amet
+  - title: TeamSnap Org Store
+    image: https://www.creativefabrica.com/wp-content/uploads/2018/10/Shopping-cart-logo-by-DEEMKA-STUDIO-580x406.jpg
+    description: Create shirts and pants in TeamSnap.
     suggested: true
-  - title: Hun
-    image: https://www.logogenie.net/download/preview/medium/3589659
-    description: lorem ipsum doloar sit amet
+  - title: Gamesheet
+    image: https://d3grfap2l5ikgv.cloudfront.net/5c6c39651d82690d4e7d68da.png
+    description: Keep detailed score sheets.
     suggested: true
-  - title: lorem ipsum
-    image: https://thumbnail.imgbin.com/17/6/19/imgbin-youtube-logo-internet-marketing-subscribe-youtube-logo-ZStYAQskpiCPL1pGwgsrnF1Tj_t.jpg
-    description: lorem ipsum doloar sit amet
+  - title: Skoresheet
+    image: https://mark.trademarkia.com/logo-images/skoresheet/skoresheet-87827087.jpg
+    description: Keep detailed score sheets and stats.
     suggested: true
-  - title: Hun
-    image: https://www.logogenie.net/download/preview/medium/3589659
-    description: lorem ipsum doloar sit amet
+  - title: Constant Contact
+    image: https://socialdentalnetwork.com/wp-content/uploads/2013/11/CC_484x252.png
+    description: Manage your email campaigns. 
+    suggested: true
+  - title: Regsaver
+    image: https://www.registrationsaver.com/wp-content/uploads/2017/03/Regsaver-red.jpg
+    description: Insurance for registration.
     suggested: true
 
     
