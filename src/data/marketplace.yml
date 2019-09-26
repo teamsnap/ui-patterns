@@ -47,7 +47,7 @@ all-integrations:
 my-integrations:
   - title: Mailchimp
     image: https://s3.amazonaws.com/www-inside-design/uploads/2018/10/mailchimp-sq-810x810.jpg
-    description: Send and track email engagement from your fans.
+    description: Track email engagement from your fans.
     suggested: true
   - title: Constant Contact
     image: https://socialdentalnetwork.com/wp-content/uploads/2013/11/CC_484x252.png
