@@ -8,7 +8,7 @@
       </div>
       <div class="media-body">
         <h4 class="media-heading u-spaceTopSm">{{this.title}}</h4>
-        {{this.description}}
+        <small>{{this.description}}</small>
       </div>
     </div>
   </div>
@@ -85,6 +85,7 @@
 
   .media-body {
     width: 10000px;
+    padding-right: 5px;
   }
 
   .media-object {
@@ -125,6 +126,9 @@
 
   .media-heading {
     margin-top: 0;
-    margin-bottom: 5px;
+    font-family: Open Sans, Helvetica, sans-serif;
+    color: #1a6baf;
+    font-weight: 700;
+    font-size: 16px;
   }
 </style>
