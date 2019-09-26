@@ -1,11 +1,19 @@
 ---
 title: Marketplace
 notes: This example demonstrates the use of jello loader as a full page transition. For example, Rosetta's loading screen as games are being scheduled by Fanapp and sent back to TeamSnap.
-layout: demo
+layout: demo-no-nav
 ---
+
+{{> marketplace-partials.header }}
 
 <div class="main-container">
 
   <h1>Marketplace</h1>
+
+  <div class="SavedFilters__sub-panel" style="display: block;">
+    <a class="SavedFilterButton__pill-button SavedFilterButton">Travel</a>
+    <a class="SavedFilterButton__pill-button SavedFilterButton">Marketing</a>
+    <a class="SavedFilterButton__pill-button SavedFilterButton">Registration</a>
+  </div>
 
 </div>
