@@ -17,14 +17,3 @@
     background-color: #fff;
   }
 </style>
-
-<script>
-  jQuery(document).ready(function(){
-    jQuery('.filterBbutton').on('click', function(){
-      var filter = $(this).data('category-filter');
-      console.log(filter);
-      jQuery('.Grid-cell[data-category!='+filter+']').fadeOut();
-      jQuery('.Grid-cell[data-category!='+filter+']').fadeIn();
-    });
-  });
-</script>

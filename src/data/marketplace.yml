@@ -7,7 +7,7 @@ all-integrations:
   - title: Player's Health
     image: http://siliconprairienews.com/wp-content/uploads/2019/07/ph-logo-1024x576.png
     description: Healthy players are happy players.
-    suggested: true
+    suggested: false
     category: health
   - title: Team Genius
     image: https://greatnorthlabs.com/wp-content/uploads/2018/09/Team-Genius-Logo-768x288.png
@@ -22,7 +22,11 @@ all-integrations:
   - title: TeamSnap Org Store
     image: https://www.creativefabrica.com/wp-content/uploads/2018/10/Shopping-cart-logo-by-DEEMKA-STUDIO-580x406.jpg
     description: Create shirts and pants in TeamSnap.
+<<<<<<< HEAD
     suggested: false
+=======
+    suggested: true
+>>>>>>> 8235a520d0f21a0e7a054068d1f82cdc50c9b0f4
     category: teamsnap
   - title: Gamesheet
     image: https://d3grfap2l5ikgv.cloudfront.net/5c6c39651d82690d4e7d68da.png
@@ -57,9 +61,9 @@ all-integrations:
 my-integrations:
   - title: Mailchimp
     image: https://s3.amazonaws.com/www-inside-design/uploads/2018/10/mailchimp-sq-810x810.jpg
-    description: Track email engagement from your fans.
+    description: Send and track email engagement from your fans.
     suggested: false
   - title: Constant Contact
     image: https://socialdentalnetwork.com/wp-content/uploads/2013/11/CC_484x252.png
     description: Manage your email campaigns.
-    suggested: false
+    suggested: true
