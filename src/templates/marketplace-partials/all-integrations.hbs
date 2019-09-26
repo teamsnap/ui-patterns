@@ -3,7 +3,7 @@
   {{#each (data "marketplace.all-integrations")}}
 
 
-    <div class="Grid-cell u-xs-size1of2 u-sm-size1of3 u-padBottomMd">
+    <div class="Grid-cell u-xs-size1of2 u-sm-size1of3 u-padBottomMd" data-category="{{this.category}}">
         <div class="Card">
             <div class="Card-image">
                 <img src="{{this.image}}"/>

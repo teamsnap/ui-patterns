@@ -22,14 +22,21 @@ layout: demo-no-nav
 
 
   <div class="u-padBottomMd">
-    <h1>My Integrations</h1>
+    <h2>My Integrations</h2>
     <hr class="Divider" />
     {{> marketplace-partials.my-integrations }}
   </div>
 
 
   <div class="u-padBottomMd">
-    <h1>All Integrations</h1>
+    <div class="Grid Grid-withGutter">
+      <div class="Grid-cell u-size1of2">
+        <h2>All Integrations</h2>
+      </div>
+      <div class="Grid-cell u-size1of2 u-textRight">
+        <button class="Button Button--blue" data-control="modal" data-open="modal-recommend">Recommended</button>
+      </div>
+    </div>
     <hr class="Divider" />
     {{> marketplace-partials.all-integrations }}
   </div>
