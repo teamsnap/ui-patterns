@@ -1,0 +1,44 @@
+---
+title: Marketplace
+notes: This example demonstrates the use of jello loader as a ful.
+layout: demo-no-nav
+---
+
+<style>
+[class*="-container"], [class*="-header"], [class*="-footer"], [class*="-block"], [class*="-row"], [class*="__container"], [class*="__header"], [class*="__footer"], [class*="__block"], [class*="__row"] {
+    max-width: none;
+}
+</style>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+
+{{> marketplace-partials.header }}
+<div class="main-container u-spaceSidesMd">
+  <div class="u-spaceTopLg u-padBottomMd">
+    <div class="Grid Grid--withGutter">
+      {{> marketplace-partials.title }}
+      {{> marketplace-partials.filters }}
+    </div>
+  </div>
+
+
+
+  <div class="u-padBottomMd">
+    <h2>My Integrations</h2>
+    <hr class="Divider" />
+    {{> marketplace-partials.my-integrations }}
+  </div>
+
+
+  <div class="u-padBottomMd">
+    <div class="Grid Grid-withGutter">
+      <div class="Grid-cell u-size1of2">
+        <h2>All Integrations</h2>
+      </div>
+      <div class="Grid-cell u-size1of2 u-textRight">
+        <button class="Button Button--blue" data-control="modal" data-open="modal-recommend">Recommended</button>
+      </div>
+    </div>
+    <hr class="Divider" />
+    {{> marketplace-partials.all-integrations }}
+  </div>
+</div>
