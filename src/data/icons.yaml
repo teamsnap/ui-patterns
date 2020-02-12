@@ -1,6 +1,8 @@
 - home
 - roster
 - team
+- user
+- female-user
 - divisions
 - rostering
 - add-member
@@ -11,6 +13,7 @@
 - new-season
 - seasons
 - schedule
+- flag
 - availability
 - tracking
 - add-event
@@ -32,6 +35,7 @@
 - media
 - photos
 - video
+- stopwatch
 - statistics
 - dashboard
 - settings
@@ -50,7 +54,10 @@
 - down
 - left
 - right
+- caret-up
 - caret-down
+- caret-left
+- caret-right
 - sort
 - check
 - dismiss

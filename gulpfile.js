@@ -34,7 +34,7 @@ Object.assign(config.drizzle, { helpers });
 
 // Register special CSS tasks
 tasks.css(gulp, config['css:drizzle']);
-gulp.task('css', ['css:drizzle']);
+gulp.task('css', gulp.series('css:drizzle'));
 
 // Add sass function for compiling Sass
 function compileSass(cfg) {
@@ -45,9 +45,10 @@ function compileSass(cfg) {
 }
 
 // Run Sass compile on Teamsnap UI and Demo CSS
-gulp.task('sass', function() {
+gulp.task('sass', function(done) {
   compileSass(config.ui);
   compileSass(config.demos);
+  done();
 });
 
 // Register Drizzle builder task
@@ -57,19 +58,16 @@ gulp.task('drizzle', () => {
 });
 
 // Register frontend composite task
-gulp.task('frontend', [
+gulp.task('frontend', gulp.series(
   'drizzle',
   'copy',
   'css',
   'sass',
   'js'
-]);
+));
 
 // Register build task (for continuous deployment via Netflify)
-gulp.task('build', ['clean'], done => {
-  gulp.start('frontend');
-  done();
-});
+gulp.task('build', gulp.series('clean', 'frontend'));
 
 /**
  * Register demo task (deploy output to GitHub Pages)
@@ -84,10 +82,4 @@ gulp.task('demo', () => {
 });
 
 // Register default task
-gulp.task('default', ['frontend'], done => {
-  gulp.start('serve');
-  if (env.dev) {
-    gulp.start('watch');
-  }
-  done();
-});
+gulp.task('default', gulp.series('frontend', 'serve', 'watch'));
