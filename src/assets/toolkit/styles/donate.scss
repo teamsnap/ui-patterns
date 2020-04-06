@@ -1,0 +1,151 @@
+html {
+  background: #f6f6f6;
+}
+
+.DonationContent {
+  background: linear-gradient(#103558 0%, #103558 40%, transparent 25%);
+  margin-top: -1px;
+}
+
+.RadioButton-input {
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.RadioButton-label {
+  border-radius: 4px;
+  background: white;
+  border: solid 2px #0F3458;
+  color: #0F3458;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: ease 250ms all;
+
+  @media (min-width: 768px) {
+    height: 50px;
+  }
+
+  &:hover {
+    background: #0F3458;
+    color: white;
+  }
+}
+
+.RadioButton-input:checked + .RadioButton-label,
+.RadioButton-input:focus + .RadioButton-label,
+.RadioButton-input:active + .RadioButton-label {
+  background: #0F3458;
+  color: white;
+}
+
+.Grid--withGutterSmall {
+  @media (max-width: 479px) {
+    margin: 0 -4px;
+    width: calc(100% + 8px);
+
+    .Grid-cell {
+      padding: 0 4px;
+    }
+  }
+}
+
+.DonationInput {
+  max-height: 0;
+  transition: ease 250ms all;
+  opacity: 0;
+  overflow: hidden;
+
+  &.is-open {
+    max-height: 100px;
+    opacity: 1;
+  }
+
+  & .Input {
+    font-weight: 600;
+    border: solid 2px #0F3458;
+
+    @media (min-width: 768px) {
+      height: 50px;
+      line-height: 50px;
+      font-size: 16px;
+    }
+  }
+
+  & .InputGroup-icon {
+    color: #0F3458;
+    font-weight: 600;
+    top: 8px;
+    bottom: auto;
+
+    @media (min-width: 768px) {
+      top: 13px;
+    }
+  }
+}
+
+.Input {
+  color: #0F3458;
+  font-weight: 600;
+  border-color: #c0c0c0;
+}
+
+.Input:focus {
+  border-color: #0F3458;
+}
+
+.u-colorNavy {
+  color: #0F3458 !important;
+}
+
+.Panel--fullWidthMobile {
+  @media (max-width: 768px) {
+    border-radius: 0;
+    margin-left: -16px;
+    margin-right: -16px;
+  }
+  @media (min-width: 769px) {
+    margin-left: -32px;
+    margin-right: -32px;
+  }
+}
+
+.SummaryList-item {
+  @media (max-width: 479px) {
+    display: block;
+    height: auto;
+    padding-bottom: 8px;
+    border-bottom: solid 1px #ebebeb;
+    margin-bottom: 8px;
+
+    & span:first-child {
+      font-weight: 600;
+    }
+    & span:last-child {
+      display: block;
+      &:before {
+        margin: 0;
+      }
+    }
+  }
+
+  height: 40px;
+}
+
+.Button--donate {
+  border: none;
+  height: 50px;
+  line-height: 50px;
+  font-size: 18px;
+}
+
+@media print {
+  .PrintButton {
+    display: none;
+  }
+}
