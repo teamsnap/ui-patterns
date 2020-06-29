@@ -39,7 +39,9 @@ module.exports = {
           'toolkit/scripts/toolkit':
             './src/assets/toolkit/scripts/toolkit.js',
           'toolkit/scripts/team-store':
-            './src/assets/toolkit/scripts/team-store.js'
+            './src/assets/toolkit/scripts/team-store.js',
+          'toolkit/scripts/donate':
+            './src/assets/toolkit/scripts/donate.js'
         },
         output: {
           path: './dist/assets',
