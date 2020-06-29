@@ -1,21 +1,25 @@
 'use strict';
 
 module.exports = {
+  browserSync: {
+    files: ['**/*'],
+    server: { baseDir: 'dist' }
+  },
   'ui': {
-    src: [
-      './src/teamsnap-ui/src/css/teamsnap-ui.scss',
-      './src/teamsnap-ui/src/css/themes/*.scss'
-    ],
+    src: './src/teamsnap-ui/src/css/teamsnap-ui.scss',
     dest: './dist/assets/toolkit/styles',
     name: 'ui'
   },
-
   'demos': {
     src: './src/assets/toolkit/styles/*.scss',
     dest: './dist/assets/toolkit/styles',
     name: 'demos'
   },
-
+  'themes': {
+    src: './src/teamsnap-ui/src/css/themes/*.scss',
+    dest: './dist/assets/toolkit/styles',
+    name: 'themes'
+  },
   'css:drizzle': {
     src: './src/assets/**/drizzle.css',
     dest: './dist/assets',
