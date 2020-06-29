@@ -1,0 +1,157 @@
+---
+title: Invoice View
+layout: demo
+---
+
+<div class="u-spaceSm u-md-spaceLg">
+  <div style="max-width: 1268px;" class="u-flexExpandSides">
+    <div class="Grid u-flexAlignItemsEnd">
+      <div class="Grid-cell u-size1of2">
+        <div class="FieldGroup">
+          <p class="FieldGroup-label">
+            Advanced Search
+          </p>
+          <div class="Grid Grid--withGutter">
+            <div class="Grid-cell u-size1of2">
+              <div class="SelectBox">
+                <label class="u-hiddenVisually">Select search paramenter</label>
+                <select class="SelectBox-options">
+                  <option disabled selected>Select search parameter</option>
+                  <option value="">Status</option>
+                  <option value="">Batch title</option>
+                </select>
+              </div>
+            </div>
+            <div class="Grid-cell u-size1of2">
+              <label class="u-hiddenVisually">Enter search terms</label>
+              <input class="Input" placeholder='Search terms e.g. "open"'>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="Grid-cell u-size1of2">
+        <div class="u-flex u-flexAlignItemsCenter u-flexJustifyEnd u-spaceBottomMd">
+          <p class="u-spaceRightMd">1-46 of 46</p>
+          <div class="ButtonGroup">
+            <button disabled class="Button">
+              Prev
+            </button>
+            {{#iterate 4}}
+              <button class="Button {{#compare @count "==" 1}}is-active{{/compare}}">
+                {{@count}}
+              </button>
+            {{/iterate}}
+            <button class="Button">
+              Next
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="Panel">
+      <div class="Panel-body">
+        <div class="Panel-row Panel-row--withCells">
+          {{#each (data "invoice-view.column_headers")}}
+            <div class="Panel-cell {{this.class}}">
+              <h4 class="Panel-title u-textNoWrap">
+                <a class="" href="sortColumn">
+                  <span class="u-colorInfo">{{this.name}}</span>
+                  <div class="u-fontSizeXs headerIcons">
+                    {{svg "up" class="Icon headerIcon headerIconTop" role="presentation"}}
+                    {{svg "down" class="Icon headerIcon headerIconBottom" role="presentation"}}
+                  </div>
+                </a>
+              </h4>
+            </div>
+          {{/each}}
+        </div>
+        {{#each (data "invoice-view.batch_titles")}}
+          {{#iterate (random min=3 max=7)}}
+            <div class="Panel-row Panel-row--withCells">
+            <!-- Batch Title -->
+            <div class="Panel-cell u-size3of24">
+              <a href="">
+                {{../this}}
+              </a>
+            </div>
+            <!-- Recipient -->
+            <div class="Panel-cell u-size1of12">
+              {{random "first"}} {{random "last"}}
+            </div>
+            <!-- ID -->
+            <div class="Panel-cell u-size1of12 u-textNoWrap">
+              <a href="">{{random min=100000 max=999999}}</a>
+            </div>
+            <!-- Date Sent -->
+            <div class="Panel-cell u-textNoWrap u-size1of12">
+              {{random "date" string=true year=2020}}
+            </div>
+            <!-- Due Date -->
+            <div class="Panel-cell u-textNoWrap u-size1of12">
+              {{random "date" string=true year=2020}}
+            </div>
+            <!-- Status -->
+            <div class="Panel-cell u-size3of24">
+              {{#maybe}}
+                <h4 class="u-spaceBottomXs">Paid</h4>
+                <div class="ProgressBar ProgressBar--xsmall">
+                  <div class="ProgressBar-status" style="width: 100%;"></div>
+                </div>
+              {{else}}
+                <h4 class="u-spaceBottomXs">Open</h4>
+                <div class="ProgressBar ProgressBar--xsmall">
+                  <div class="ProgressBar-status" style="width: {{random min=0 max=90}}%;"></div>
+                </div>
+              {{/maybe}}
+            </div>
+            <!-- Total -->
+            <div class="Panel-cell u-textRight u-size1of12">
+              {{random "dollar" max=1000}}
+            </div>
+            <!-- Payments -->
+            <div class="Panel-cell u-textRight u-size1of12">
+              {{random "dollar" max=1000}}
+            </div>
+            <!-- Adjustments -->
+            <div class="Panel-cell u-textRight u-size1of12">
+              {{random "dollar" max=1000}}
+            </div>
+            <!-- Balance -->
+            <div class="Panel-cell u-textRight u-size1of12">
+              {{random "dollar" max=1000}}
+            </div>
+            <!-- Actions -->
+            <div class="Panel-cell u-textCenter u-size1of12">
+              <button class="Button Button--small">
+                  ...
+              </button>
+            </div>
+          </div>
+          {{/iterate}}
+        {{/each}}
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .headerIcons{
+    pointer-events: none!important;
+    display: inline-block!important;
+    position: relative!important;
+    vertical-align: middle!important;
+    padding-left: 4px!important;`
+  }
+  .headerIcon {
+    position: absolute!important;
+    text-align: center!important;
+    font-size: 10px!important;
+    color: #d6d6d6!important;
+  }
+  .headerIconTop {
+    margin-top: -8px!important;
+  }
+  .headerIconBottom {
+    margin-bottom: -8px!important;
+  }
+</style>

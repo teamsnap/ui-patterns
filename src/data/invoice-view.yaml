@@ -1,0 +1,30 @@
+column_headers:
+  - name: Batch
+    class: u-size3of24
+  - name: Recipient
+    class: u-size1of12
+  - name: ID
+    class: u-size1of12
+  - name: Sent
+    class: u-size1of12
+  - name: Due
+    class: u-size1of12
+  - name: Status
+    class: u-size3of24
+  - name: Total
+    class: u-textRight u-size1of12
+  - name: Paid
+    class: u-textRight u-size1of12
+  - name: Adjusted
+    class: u-textRight u-size1of12
+  - name: Balance
+    class: u-textRight u-size1of12
+  - name: Actions
+    class: u-textCenter u-size1of12
+
+batch_titles:
+  - Spring Tournament
+  - Fall Jersey Fee
+  - Summer Camp
+  - Summer Tournament U7
+  - Summer Tournament U8
