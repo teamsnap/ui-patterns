@@ -10,7 +10,7 @@ const config = require('./config');
 
 const prefix = require('gulp-autoprefixer');
 const rename = require('gulp-rename');
-const sass = require('gulp-sass');
+const sass = require('gulp-sass')(require('sass'));
 const gulpif = require('gulp-if');
 const csso = require('gulp-csso');
 
