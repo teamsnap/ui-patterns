@@ -66,8 +66,8 @@ gulp.task('frontend', gulp.series(
   'js'
 ));
 
-// Register build task (for continuous deployment via Netflify)
-gulp.task('build', gulp.series('clean', 'frontend'));
+// Register deploy task (for continuous deployment via Netflify)
+gulp.task('deploy', gulp.series('clean', 'frontend'));
 
 /**
  * Register demo task (deploy output to GitHub Pages)
