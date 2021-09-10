@@ -2,39 +2,80 @@
 
 const drizzle = require('drizzle-builder');
 const gulp = require('gulp');
-const ghPages = require('gulp-gh-pages');
 const helpers = require('@cloudfour/hbs-helpers');
-const tasks = require('@cloudfour/gulp-tasks');
+const del = require('del');
+const browserSync = require('browser-sync').create();
+const watch = require('gulp-watch');
+const runSequence = require('run-sequence');
 const env = require('gulp-util').env;
 const config = require('./config');
-
 const prefix = require('gulp-autoprefixer');
 const rename = require('gulp-rename');
 const sass = require('gulp-sass')(require('sass'));
 const gulpif = require('gulp-if');
-const csso = require('gulp-csso');
+const postcss = require('gulp-postcss');
+const cssnext = require('postcss-cssnext');
+const importer = require('postcss-import');
+const use = require('postcss-use');
+const prefixer = require('postcss-class-prefix');
 
 // Customize inline SVG helper base path
 helpers.svg = helpers.svg.create({
   basePath: './src/teamsnap-ui/src/assets/icons/'
 });
 
-
 // Append config
 Object.assign(config.drizzle, { helpers });
 
-// Register core tasks
-[
-  'clean',
-  'copy',
-  'js',
-  'serve',
-  'watch'
-].forEach(name => tasks[name](gulp, config[name]));
+gulp.task('clean', function(done) {
+  del.sync(config.clean.dest);
+  done();
+});
 
-// Register special CSS tasks
-tasks.css(gulp, config['css:drizzle']);
-gulp.task('css', gulp.series('css:drizzle'));
+gulp.task('copy', function(done) {
+  gulp.src(config.copy.src).pipe(gulp.dest(config.copy.dest));
+  done();
+});
+
+gulp.task('js', function(done) {
+  gulp.src(config.js.src).pipe(gulp.dest(config.js.dest));
+  done();
+});
+
+gulp.task('serve', function() {
+  browserSync.init(config.serve.plugins.browserSync);
+});
+
+gulp.task('watch', function() {
+  watchers.forEach(function(item) {
+    watch(item.match, function() {
+      runSequence(item.tasks);
+    });
+  });
+});
+
+gulp.task('cssDocs', function () {
+  const plugins = [
+    importer(),
+    use({ modules: '*', resolveFromFile: true }),
+    cssnext({browsers: ['last 1 version']})
+  ];
+  return gulp.src(config.cssDocs.src)
+    .pipe(postcss(plugins))
+    .pipe(gulp.dest(config.cssDocs.dest));
+});
+
+gulp.task('cssDrizzle', function () {
+  const plugins = [
+    importer(),
+    use({ modules: '*', resolveFromFile: true }),
+    cssnext({browsers: ['last 1 version']}),
+    prefixer(config.cssDrizzle.prefix, config.cssDrizzle.ignore)
+  ];
+  return gulp.src(config.cssDrizzle.src)
+    .pipe(postcss(plugins))
+    .pipe(gulp.dest(config.cssDrizzle.dest));
+});
 
 // Add sass function for compiling Sass
 function compileSass(cfg) {
@@ -61,7 +102,8 @@ gulp.task('drizzle', () => {
 gulp.task('frontend', gulp.series(
   'drizzle',
   'copy',
-  'css',
+  'cssDocs',
+  'cssDrizzle',
   'sass',
   'js'
 ));
@@ -69,17 +111,6 @@ gulp.task('frontend', gulp.series(
 // Register deploy task (for continuous deployment via Netflify)
 gulp.task('deploy', gulp.series('clean', 'frontend'));
 
-/**
- * Register demo task (deploy output to GitHub Pages)
- * NOTE: Run this after building.
- */
-gulp.task('demo', () => {
-  const buildDest = `${config.drizzle.dest.pages}/**/*`;
-  return gulp.src(buildDest)
-    .pipe(ghPages({
-      cacheDir: 'demo'
-    }));
-});
 
 // Register default task
 gulp.task('default', gulp.series('frontend', 'serve', 'watch'));

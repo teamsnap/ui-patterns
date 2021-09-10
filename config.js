@@ -16,11 +16,16 @@ module.exports = {
     name: 'demos'
   },
 
-  'css:drizzle': {
-    src: './src/assets/**/drizzle.css',
-    dest: './dist/assets',
+  cssDocs: {
+    src: './src/assets/drizzle/styles/documentation.css',
+    dest: './dist/assets/drizzle/styles'
+  },
+
+  cssDrizzle: {
+    src: './src/assets/drizzle/styles/drizzle.css',
+    dest: './dist/assets/drizzle/styles',
     prefix: 'drizzle-',
-    name: 'css:drizzle'
+    ignore: [/^[^A-Zu-]/, /^(is|has)-/],
   },
 
   copy: {
@@ -29,33 +34,12 @@ module.exports = {
   },
 
   js: {
-    plugins: {
-      webpack: {
-        entry: {
-          // Drizzle UI scripts
-          'drizzle/scripts/drizzle':
-            './src/assets/drizzle/scripts/drizzle.js',
-          // Common toolkit scripts
-          'toolkit/scripts/toolkit':
-            './src/assets/toolkit/scripts/toolkit.js',
-          'toolkit/scripts/team-store':
-            './src/assets/toolkit/scripts/team-store.js'
-        },
-        output: {
-          path: './dist/assets',
-          filename: '[name].js'
-        },
-        module: {
-          loaders: [
-            {
-              test: /\.js$/,
-              loaders: ['babel-loader']
-            }
-          ]
-        },
-        externals: {}
-      }
-    }
+    src: './src/assets/**/**/*.js',
+    dest: './dist/assets'
+  },
+
+  clean: {
+    dest: './dist'
   },
 
   serve: {
