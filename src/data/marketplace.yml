@@ -1,24 +1,9 @@
 all-integrations:
-  - title: Flip Give
-    image: http://athleticventureadvisors.com/wp-content/uploads/2019/03/flipgive-logo-on-white_large.png
-    description: Give back to teams
-    suggested: true
-    category: donations
-  - title: Player's Health
-    image: http://siliconprairienews.com/wp-content/uploads/2019/07/ph-logo-1024x576.png
-    description: Healthy players are happy players.
-    suggested: false
-    category: health
   - title: Team Genius
     image: https://greatnorthlabs.com/wp-content/uploads/2018/09/Team-Genius-Logo-768x288.png
     description: Be a genuis or an Owl.
     suggested: true
-    category: evaluations
-  - title: Travel Planner
-    image: http://ww1.prweb.com/prfiles/2018/01/19/15449748/hotelplanner%20logo.png
-    description: Plan your tournement travel with TeamSnap.
-    suggested: true
-    category: travel
+    category: evaluations  
   - title: TeamSnap Org Store
     image: https://www.creativefabrica.com/wp-content/uploads/2018/10/Shopping-cart-logo-by-DEEMKA-STUDIO-580x406.jpg
     description: Create shirts and pants in TeamSnap.

@@ -8,7 +8,7 @@ order: 1
 
 <p class="u-fontSizeLg">
   TeamSnap UI is a CSS framework, React component library, and design language
-  for all things TeamSnap web. Currently in development, but this will be 
+  for all things TeamSnap web. Currently in development, but this will be
   the go to place for any designer or developer to start up any web project.
 </p>
 
@@ -46,11 +46,11 @@ order: 1
     For the fastest and simplest use, you can easily just drop in our CDN link to the &#60;head&#62; of your document.
     Themes are also accessible by referencing the themes directory and theme file at the end of the URL <code>/css/themes/league.css</code>.
   </p>
-  <pre class="language-markup u-padMd" data-bg="fill"><code>&#60;link rel="stylesheet" type="text/css" href="https://dugout.teamsnap.com/teamsnap-ui/2.15.1/css/teamsnap-ui.css"&#62;</code></pre>
+  <pre class="language-markup u-padMd" data-bg="fill"><code>&#60;link rel="stylesheet" type="text/css" href="https://teamsnap-ui.teamsnap.com/css/teamsnap-ui.css"&#62;</code></pre>
   <small><a href='https://github.com/teamsnap/teamsnap-ui/blob/master/CHANGELOG.md' target='_blank'>Find the the latest verison here</a></small>
   <h3 class="u-padTopLg">npm</h3>
   <p class="u-padTopSm u-padBottomSm">
-    If you're looking to customize the variable settings or pull specific parts of TeamSnap UI to compile your own CSS, 
+    If you're looking to customize the variable settings or pull specific parts of TeamSnap UI to compile your own CSS,
     we recomend installing the <a href="https://www.npmjs.com/package/@teamsnap/teamsnap-ui" target='_blank'>TeamSnap-UI npm module</a>.
   </p>
   <pre class="language-markup u-padMd" data-bg="fill"><code>npm i @teamsnap/teamsnap-ui</code></pre>
@@ -69,7 +69,7 @@ order: 1
   <h2 class="doc-Intro-header">The SUIT Naming Convention</h2>
   <p class="doc-Intro-block u-padTopSm u-padBottomSm">
     The TeamSnap-UI CSS framework is based on <a href="https://github.com/suitcss/suit/blob/master/doc/naming-conventions.md" target='_blank'>SUIT CSS</a>.
-    A baseline framwork that relies on structured class names and meaningful hyphens (i.e., not using hyphens merely to separate words). This helps to work 
+    A baseline framwork that relies on structured class names and meaningful hyphens (i.e., not using hyphens merely to separate words). This helps to work
     around the current limits of applying CSS to the DOM (i.e., the lack of style encapsulation), and to better communicate the relationships between classes.
   </p>
   <small>Example:</small>
@@ -91,10 +91,10 @@ order: 1
 <section class='doc-Intro'>
   <h2 class="doc-Intro-header">SASS Functions &amp; Variables</h2>
   <p class="u-padTopSm u-padBottomSm">
-    TeamSnap-UI's base styling is configured with a system of SASS functions and variables that create a 
+    TeamSnap-UI's base styling is configured with a system of SASS functions and variables that create a
     <a href="https://github.com/teamsnap/teamsnap-ui/blob/master/src/css/config/config.scss" target='_blank'>core set of values</a>.
-    First <a href="https://github.com/teamsnap/teamsnap-ui/blob/master/src/css/config/functions.scss" target='_blank'>functions</a> are used to create value scales 
-    for basic design elements like color. Then those functions are then combined with some base values to define a set of common styles 
+    First <a href="https://github.com/teamsnap/teamsnap-ui/blob/master/src/css/config/functions.scss" target='_blank'>functions</a> are used to create value scales
+    for basic design elements like color. Then those functions are then combined with some base values to define a set of common styles
     that can be used in various design patterns.
   </p>
   <small>Example:</small>
@@ -106,18 +106,18 @@ $cu-primary--bg:       scaleColor($cu-primary, 10) !default;
   </code></pre>
   <b class="u-colorPositive">DO</b>
   <pre class="language-css u-padMd" data-bg="fill"><code>
-.new-class { 
+.new-class {
   padding: $su-medium; /* 16px, scaleGrid(2) */
   color: $cu-primary;
 }</code></pre>
   <b class="u-colorNegative">DON'T</b>
   <pre class="language-css u-padMd" data-bg="fill"><code>
-.new-class { 
+.new-class {
   padding: 20px;
   color: blue;
 }</code></pre>
   <p class="u-padTopSm u-padBottomSm">
-    Basing styles on a set of SASS variables and functions allows for a lot of flexibility in updating design patterns across all 
+    Basing styles on a set of SASS variables and functions allows for a lot of flexibility in updating design patterns across all
     TeamSnap's web presence or in specific places by redefining variables and compiling a new stylesheet. Rather than overriding
     styles, themes can be created with a few lines of code.
   </p>
@@ -144,7 +144,7 @@ $color-links--hover: scaleColor($color-links, -2);
   </code></pre>
   <b class="u-colorPositive">DO</b>
   <pre class="language-css u-padMd" data-bg="fill"><code>
-.new-class { 
+.new-class {
   padding: $su-medium; /* 16px, scaleGrid(2) */
   color: $cu-primary;  /* #1a801a */
   background-color: $cu-middleground; /* #fdfdfd, scaleColor($ts-grey, 10) */
@@ -152,7 +152,7 @@ $color-links--hover: scaleColor($color-links, -2);
 }</code></pre>
   <b class="u-colorNegative">DON'T</b>
   <pre class="language-css u-padMd" data-bg="fill"><code>
-.new-class { 
+.new-class {
   padding: 16px;
   color: #1a801a;
   background-color: #fdfdfd;
@@ -163,20 +163,20 @@ $color-links--hover: scaleColor($color-links, -2);
 <section class='doc-Intro'>
   <h2 class="doc-Intro-header">Utility Classes</h2>
   <p class="u-padTopSm u-padBottomSm">
-    Similar to the variable utilities, TeamSnap UI also offers a wide range of utility classes to easily make tweaks 
-    on layouts and components along the way. Utilities cover things like setting the width of an element, adding margins 
+    Similar to the variable utilities, TeamSnap UI also offers a wide range of utility classes to easily make tweaks
+    on layouts and components along the way. Utilities cover things like setting the width of an element, adding margins
     or padding, border, background colors, font colors, font sizes, etc. These utilites all carry the !important flag
     to ensure specificity.
   </p>
   <small>Example:</small>
   <pre class="language-css u-padMd" data-bg="fill"><code>
-.u-padTopMd { 
+.u-padTopMd {
   padding-top: $su-medium !important; /* 16px, scaleGrid(2) */
 }</code></pre>
   <p class="u-padTopSm u-padBottomSm">
-    Utilities are all tied back to the core set of styles and fall in line with the spacing, color, and typography. 
-    As those values grow and change over time or based on theme, so two will the tweaks made along the way. 
-    <a href="https://github.com/teamsnap/teamsnap-ui/tree/master/src/css/utils" target='_blank'>Utility classes</a> should be viewed 
+    Utilities are all tied back to the core set of styles and fall in line with the spacing, color, and typography.
+    As those values grow and change over time or based on theme, so two will the tweaks made along the way.
+    <a href="https://github.com/teamsnap/teamsnap-ui/tree/master/src/css/utils" target='_blank'>Utility classes</a> should be viewed
     as a direct replacement for inline styling and extra classes to accomplish minor tweaks.
   </p>
   <b class="u-colorPositive">DO</b>
@@ -196,7 +196,7 @@ $color-links--hover: scaleColor($color-links, -2);
 <section class='doc-Intro'>
   <h2 class="doc-Intro-header">Components</h2>
   <p class="doc-Intro-block u-padTopSm u-padBottomSm">
-    As with any CSS Framework, TeamSnap UI comes with a slew of design patterns built out in HTML and CSS. 
+    As with any CSS Framework, TeamSnap UI comes with a slew of design patterns built out in HTML and CSS.
     TeamSnap UI's CSS components are built on a top level class like "Button", then modifier classes
     are added to create variations of that component like in the case below with "Button--primary". Button
     provides the base button styling, then Button--primary updates it to change it's color.
@@ -204,8 +204,8 @@ $color-links--hover: scaleColor($color-links, -2);
   <small>Example</small>
   <pre class="language-markup u-padMd" data-bg="fill"><code>&#60;button class="Button Button--primary"&#62;Primary Button&#60;/button&#62;</code></pre>
   <p class="u-padTopSm u-padBottomSm">
-    When changes need to be made to a given component to fit a design, additional modifiers should be added. Additional modifiers 
-    may be added outside of TeamSnap UI in any repo you're working in, but component classes shouldn't be directly updated as it 
+    When changes need to be made to a given component to fit a design, additional modifiers should be added. Additional modifiers
+    may be added outside of TeamSnap UI in any repo you're working in, but component classes shouldn't be directly updated as it
     leads to conflicts and inconsistent styling. As modifiers are added in new repo's the goal is to bring them into TeamSnap UI
     over time so they can be managed in a single place. Ofcourse utilites are welcome to pair with components too.
   </p>
@@ -224,4 +224,3 @@ $color-links--hover: scaleColor($color-links, -2);
 }
   </code></pre>
 </section>
-
