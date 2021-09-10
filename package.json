@@ -23,7 +23,7 @@
     "url": "https://github.com/cloudfour/drizzle.git"
   },
   "engines": {
-    "node": ">=14.7.0"
+    "node": ">=6.0.0"
   },
   "devDependencies": {
     "@cloudfour/hbs-helpers": "^0.10.0",
