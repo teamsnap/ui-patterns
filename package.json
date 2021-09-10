@@ -22,9 +22,6 @@
     "type": "git",
     "url": "https://github.com/cloudfour/drizzle.git"
   },
-  "engines": {
-    "node": ">=6.0.0"
-  },
   "devDependencies": {
     "@cloudfour/hbs-helpers": "^0.10.0",
     "babel-core": "^6.26.3",
