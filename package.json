@@ -63,7 +63,7 @@
   "resolutions": {
     "glob-parent": "^5.1.2",
     "trim": "^0.0.3",
-    "marked": ">=0.6.2"
+    "marked": "^0.6.2"
   },
   "dependencies": {
     "browser-sync": "^2.27.5",
