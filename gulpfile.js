@@ -47,7 +47,7 @@ gulp.task('serve', function() {
 });
 
 gulp.task('watch', function() {
-  watchers.forEach(function(item) {
+  config.watch.watchers.forEach(function(item) {
     watch(item.match, function() {
       runSequence(item.tasks);
     });

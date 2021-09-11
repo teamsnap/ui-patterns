@@ -27,7 +27,7 @@
   right: 0;
   bottom: 0;
 
-  @media (--lg-viewport) {
+  @media (--md-viewport) {
     display: none;
   }
 
@@ -54,7 +54,7 @@
   display: none;
   padding-bottom: var(--space);
 
-  @media (--lg-viewport) {
+  @media (--md-viewport) {
     display: block;
   }
 }

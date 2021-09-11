@@ -71,7 +71,7 @@ module.exports = {
         tasks: ['sass']
       },
       {
-        match: ['./src/assets/**/*.js'],
+        match: ['./src/assets/**/**/*.js'],
         tasks: ['js']
       },
       {

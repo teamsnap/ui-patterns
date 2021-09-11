@@ -26,9 +26,9 @@
   --Arrange-gutter-size: calc(var(--space) / 2);
 }
 
-@custom-media --sm-viewport (max-width: 30em);
-@custom-media --md-viewport (min-width: 40em);
-@custom-media --lg-viewport (min-width: 60em);
+@custom-media --sm-viewport (max-width: 500px);
+@custom-media --md-viewport (min-width: 900px);
+@custom-media --lg-viewport (min-width: 1200px);
 
 @custom-selector :--enter :matches(:hover, :focus, :active);
 @custom-selector :--heading h1, h2, h3, h4, h5, h6;

@@ -14,7 +14,7 @@
   position: relative;
 }
 
-@media (--lg-viewport) {
+@media (--md-viewport) {
   .Layout-nav {
     position: fixed;
     z-index: 1;

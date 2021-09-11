@@ -1,8 +1,5 @@
 'use strict';
 
-import 'prismjs';
-import {u} from 'umbrellajs';
-
 const dom = {};
 
 dom.nav = document.getElementById('nav');
@@ -15,14 +12,14 @@ function setActiveNavItem (pathname) {
   const isMatch = a => noIndex(a.pathname) === noIndex(pathname);
   const item = Array.from(dom.navLinks).find(isMatch);
   if (item) {
-    item.classList.add('is-active');
+    item.classList.add('drizzle-is-active');
   }
 }
 
-if (dom.navToggle.length) {
+if (dom.navToggle) {
   dom.navToggle.addEventListener('click', event => {
     event.preventDefault();
-    dom.nav.classList.toggle('is-active');
+    dom.nav.classList.toggle('drizzle-is-active');
   });
 }
 

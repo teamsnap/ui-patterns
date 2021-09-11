@@ -1,26 +1,6 @@
-//------------------------------------------------------------//
-
-// * Demo Javascript
-// * 1. Basic Setup
-// * 2. Button Group
-// * 3. Radial Progress Bar
-// * 4. Collapsable Panel Row
-// * 5. Feedback trigger and dismiss
-// * 6. Popup Javascript
-// * 7. Tabs Javascript
-
-// Notes:
-// *
-
-//------------------------------------------------------------//
-
-// * 1. Basic Setup
-
 'use strict';
 
 console.log(`toolkit.js is being used at ${Date.now()}.`);
-
-import {u} from 'umbrellajs';
 
 // * 2. Button Group
 
