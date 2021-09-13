@@ -3,7 +3,7 @@ all-integrations:
     image: https://greatnorthlabs.com/wp-content/uploads/2018/09/Team-Genius-Logo-768x288.png
     description: Be a genuis or an Owl.
     suggested: true
-    category: evaluations  
+    category: evaluations
   - title: TeamSnap Org Store
     image: https://www.creativefabrica.com/wp-content/uploads/2018/10/Shopping-cart-logo-by-DEEMKA-STUDIO-580x406.jpg
     description: Create shirts and pants in TeamSnap.
@@ -27,11 +27,6 @@ all-integrations:
   - title: Regsaver
     image: https://www.registrationsaver.com/wp-content/uploads/2017/03/Regsaver-red.jpg
     description: Insurance for registration.
-    suggested: false
-    category: registration
-  - title: Skill Shark
-    image: https://www.skillshark.net/wp-content/uploads/2019/05/Skillshark-Athlete-Evaluations-Shark-Logo.png
-    description: Player evaluations
     suggested: false
     category: registration
   - title: TeamSnap Tournaments

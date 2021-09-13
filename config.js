@@ -60,13 +60,10 @@ module.exports = {
         tasks: ['copy']
       },
       {
-        match: ['./src/assets/**/*.css'],
-        tasks: ['css']
-      },
-      {
         match: [
+          './src/teamsnap-ui/src/css/teamsnap-ui.scss',
           './src/teamsnap-ui/src/css/**/*.scss',
-          './src/assets/**/*.scss'
+          './src/assets/toolkit/styles/*.scss'
         ],
         tasks: ['sass']
       },
@@ -77,6 +74,7 @@ module.exports = {
       {
         match: [
           './src/**/*.hbs',
+          './src/**/**/*.hbs',
           './src/**/*.md',
           './src/data/**/*'
         ],
