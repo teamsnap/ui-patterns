@@ -38,12 +38,9 @@ gulp.task('copy', function(done) {
   done();
 });
 
+// This creates a new task for the JavaScript task
 jsTask(gulp, config['js']);
 
-// gulp.task('js', function(done) {
-//   gulp.src(config.js.src).pipe(gulp.dest(config.js.dest));
-//   done();
-// });
 
 gulp.task('serve', function() {
   browserSync.init(config.serve.plugins.browserSync);
