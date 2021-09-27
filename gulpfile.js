@@ -2,6 +2,7 @@
 
 const drizzle = require('drizzle-builder');
 const gulp = require('gulp');
+const jsTask = require('./js-gulptask');
 const helpers = require('@cloudfour/hbs-helpers');
 const del = require('del');
 const browserSync = require('browser-sync').create();
@@ -37,10 +38,9 @@ gulp.task('copy', function(done) {
   done();
 });
 
-gulp.task('js', function(done) {
-  gulp.src(config.js.src).pipe(gulp.dest(config.js.dest));
-  done();
-});
+// This creates a new task for the JavaScript task
+jsTask(gulp, config['js']);
+
 
 gulp.task('serve', function() {
   browserSync.init(config.serve.plugins.browserSync);
