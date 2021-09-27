@@ -16,11 +16,9 @@
 
 // * 1. Basic Setup
 
-'use strict';
+import {u} from 'umbrellajs';
 
 console.log(`toolkit.js is being used at ${Date.now()}.`);
-
-import {u} from 'umbrellajs';
 
 // * 2. Button Group
 
