@@ -34,8 +34,33 @@ module.exports = {
   },
 
   js: {
-    src: './src/assets/**/**/*.js',
-    dest: './dist/assets'
+    plugins: {
+      webpack: {
+        entry: {
+          // Drizzle UI scripts
+          'drizzle/scripts/drizzle':
+            './src/assets/drizzle/scripts/drizzle.js',
+          // Common toolkit scripts
+          'toolkit/scripts/toolkit':
+            './src/assets/toolkit/scripts/toolkit.js',
+          'toolkit/scripts/team-store':
+            './src/assets/toolkit/scripts/team-store.js'
+        },
+        output: {
+          path: __dirname + '/dist/assets',
+          filename: '[name].js'
+        },
+        module: {
+          rules: [
+            {
+              test: /\.js$/,
+              loader: 'babel-loader'
+            }
+          ]
+        },
+        externals: {}
+      }
+    }
   },
 
   clean: {
