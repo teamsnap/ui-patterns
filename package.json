@@ -63,7 +63,7 @@
     "suitcss-utils": "^1.0.0",
     "suitcss-utils-flex": "^2.0.1",
     "umbrellajs": "^2.10.3",
-    "webpack": "^5.52.1"
+    "webpack": "^5.76.0"
   },
   "scripts": {
     "start": "gulp --dev",
